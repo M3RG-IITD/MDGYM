@@ -1,0 +1,11 @@
+{
+  "id": "64_vashishta",
+  "problem_description": "Compute the average total energy per molecules in eV for a crystalline silicon dioxide (SiO2). The system is using Vashishta interatomic potential. The dimention of the box is 4.9134*4.2551*5.405 (metal unit). Initally, three SiO2 molecules were generated in the box and then replicated 4*4*4 times to generate the bulk system. PBC is maintained in all three direction.  The initial velocities were initialize at a temperature of 2000 K, and the equation of motion were integrated using the NVE ensemble. The system was evolved for a total of 1000 timesteps.",
+  "level": "1",
+  "metrics": [
+    "average_total_energy_per_molecule"
+  ],
+  "ground_truth": {},
+  "time_limit": 48,
+  "engine": "lammps"
+}

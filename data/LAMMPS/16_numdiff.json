@@ -1,0 +1,14 @@
+{
+  "id": "16_numdiff",
+  "problem_description": "Perform a 3D-MD simulation of a face-centered cubic (FCC) lattice (with lattice constant 5.358) composed of atoms of mass 39.903 using a truncated Lennard-Jones potential with \u03b5 = 0.0102701 and \u03c3 = 3.42, and a cutoff of 5.0. The lattice should have a box size of 3 * 3 * 3 unit cells, and the system should be initialized at a temperature of 10.0 (in metal units) with velocities drawn from a Gaussian distribution. The objective is to compute the numerical differences in atomic forces, the virial stress tensor, and the Born elastic matrix by finite-difference methods. Use small displacements of 1.0 * 10\u207b\u2074 for forces, 1.0 * 10\u207b\u2076 for virial strains, and 1.0 * 10\u207b\u2078 for Born matrix strains. Apply an NVE ensemble for time integration with a timestep of 0.001, and ensure that neighbor lists are updated every step with zero bin size. Calculate the average of potential energy per particles, relative errors for forces (frelerr), virial stresses (vrelerr), and Born matrix elements (brelerr), using a small regularization parameter of 1.0 * 10\u207b\u2076 to avoid division by zero. Record thermodynamic data every 10 steps and dump atomistic errors every 50 steps for analysis.",
+  "level": "3",
+  "metrics": [
+    "average_potential_energy_per_particle",
+    "average_numerical_force_relative_error",
+    "average_numerical_virial_stress_tensor_relative_error",
+    "average_numerical_born_matrix_relative_error"
+  ],
+  "ground_truth": {},
+  "time_limit": 45,
+  "engine": "lammps"
+}

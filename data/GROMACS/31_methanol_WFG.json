@@ -1,0 +1,13 @@
+{
+  "id": "31_methanol_WFG",
+  "problem_description": "Compute the average temperature in K, pressure in bar, and density in kg/m^3 of a methanol liquid system. The system consisted of 400 methanol molecules in a cubic simulation box of dimensions 3.00557 \u00d7 3.00557 \u00d7 3.00557 nm\u00b3. Energy minimization was performed using the steepest descent algorithm for 10000 steps with a step size of 0.002 nm. Molecular dynamics equilibration was performed in the NPT ensemble using the md integrator with a time step of 0.001 ps for 500000 steps with neighbor list updates every 5 steps. Long-range electrostatic interactions were calculated using the Particle Mesh Ewald (PME) method with a real-space cutoff of 1.3 nm, while van der Waals interactions were treated using a shifted potential with a cutoff distance of 1.3 nm. No bond constraints were applied during the simulations. Temperature coupling was applied using the Berendsen thermostat with a coupling constant of 0.1 ps and a reference temperature of 300 K. Pressure coupling was applied using the Berendsen barostat with a coupling constant of 1.0 ps and a reference pressure of 1.0 bar. The compressibility used for pressure coupling was 4.5e-5 bar\u207b\u00b9. Production simulations were performed using the md integrator with a time step of 0.001 ps for 500000 steps using the same thermostat and barostat parameters.",
+  "level": "1",
+  "metrics": [
+    "average_temperature",
+    "average_pressure",
+    "average_density"
+  ],
+  "ground_truth": {},
+  "time_limit": 1000,
+  "engine": "gromacs"
+}

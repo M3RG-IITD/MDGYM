@@ -1,0 +1,11 @@
+{
+  "id": "106_graphene",
+  "problem_description": "Compute the Young's modulus in GPa of a single-layer graphene sheet at room temperature (300K) assuming an effective sheet thickness of 3.35 \u00c5 for stress volume conversion. The graphene sheet should be modeled using the ReaxFF (reactive force field) potential with charge equilibration disabled. The simulation box should have the dimension as 30*19.05*20 A^3 (in real units), with periodic boundary conditions applied in the x and y directions, and non-periodic boundary conditions in the z direction. The graphene sheet should be oriented in the xy plane, with its normal along the z-axis. The graphene structure should have 440 carbon atoms. The system should initialize at a temperature of 300 K. The simulation must utilize a time step of 0.25 fs. The initial equlibration should conducted in the NPT ensemble allowing the box dimensions to relax in both the x and y directions at 0 atm using fix command for 1000 time steps. Following equilibration, uniaxial tensile deformation should applied along the x-direction using a continuous box deformation scheme, where the simulation box length in the x-direction was gradually scaled up to twice its original size. During deformation, the system temperature should be maintained at 300 K and the simulation box must be allowed to relax in the y-direction at 0 atm (again use fix command) pressure using an NPT ensemble to account for the Poisson effect. The production run should be carried out for 5000 time steps, with the strain and stress values written to an output file every 100 steps, while post-processing the Young modulus, use the per sheet thickness correction.",
+  "level": "3",
+  "metrics": [
+    "youngs_modulus"
+  ],
+  "ground_truth": {},
+  "time_limit": 933,
+  "engine": "lammps"
+}

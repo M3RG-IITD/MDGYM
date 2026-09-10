@@ -1,0 +1,14 @@
+{
+  "id": "40_pic",
+  "problem_description": "Compute the average potential energy in kJ/mol, pressure in bar, temperature in K, and density in kg/m^3  of single PIC dye (1,1'-Diethyl-2,2'-cyanine iodide) solvated in 4037 SPC/E water molecules of the cubix box of 5 nm. One clhoride ion was added to neutralize the system. The force-field parameters of PIC dye is using GROMOS53a6. First, the system preparation must include an explicit gmx genion step to neutralize the system by adding one Cl\u207b ion, utilizing a 500-step preparation run. Next, energy minimization should be performed using the steepest descent algorithm until the convergence criterion of emtol = 100 is met. During this minimization step, electrostatic interactions must be treated using the Particle Mesh Ewald (PME) method with a Coulomb cutoff of 1.4 nm, and van der Waals interactions should also be truncated at a 1.4 nm cutoff. For all subsequent molecular dynamics phases, the equations of motion must be integrated using a 2 fs (0.002 ps) timestep. The equilibration phase must then be performed for 2000 ps in the NPT ensemble. During this phase, non-bonded interactions should be modeled using a Lennard-Jones potential for dispersion with a 1.4 nm cut-off, while electrostatic interactions must be computed with a 1.4 nm cutoff, beyond which the energy is calculated using the reaction-field method with a relative permittivity of 54. The system temperature should be maintained at 298 K using the Berendsen thermostat (coupling constant of 0.1 ps), and the pressure must be maintained at 1 atm (1.0 bar) using the Berendsen barostat (coupling constant of 0.5 ps) alongside a specific compressibility of 4.6e-6 bar\u207b\u00b9. Throughout equilibration, all bonds must be constrained using the LINCS algorithm (constraints = all-bonds). Finally, the production run must be executed for 200 ps in the NPT ensemble under the exact same thermodynamic and non-bonded conditions as the equilibration phase. Crucially, however, the constraint parameters must be modified so that only hydrogen-containing bonds are constrained (constraints = h-bonds) using LINCS. Upon completion, the average interaction energy should be calculated directly from this production trajectory.",
+  "level": "3",
+  "metrics": [
+    "average_temperature",
+    "average_pressure",
+    "average_density",
+    "average_potential_energy"
+  ],
+  "ground_truth": {},
+  "time_limit": 500,
+  "engine": "gromacs"
+}

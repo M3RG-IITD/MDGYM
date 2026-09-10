@@ -1,0 +1,13 @@
+{
+  "id": "9_protein",
+  "problem_description": "Compute the average temperature in K, pressure in bar, and density in kg/m^3 of the protein (1CTA)system solvated in spce water. The system contained 1 protein molecule, 3563 water molecules, 81 sodium ions, and 75 chloride ions in a 5 \u00d7 5 \u00d7 5 nm\u00b3 cubic box and was modeled using the AMBER03 force field. The enrgy minimization should be performed using the steepest-descent algorithm using minimization step size as 0.01 nm until the force converge to the default value. The system should be neutralize by adding the counter ions. Long-range electrostatic interactions were treated using the Particle Mesh Ewald (PME) method with a 1.0 nm cutoff, while van der Waals interactions were truncated at 1.0 nm. Molecular dynamics simulations were performed with a time step of 0.001 ps using the Verlet cutoff scheme, and hydrogen-containing bonds were constrained. The system was equilibrated in the NVT ensemble using the velocity-rescale thermostat at 300 K with a coupling constant of 0.5 ps, followed by NPT equilibration and production runs using the velocity-rescale thermostat and the C-rescale barostat for a time step of 20,000 each.",
+  "level": "2",
+  "metrics": [
+    "average_temperature",
+    "average_pressure",
+    "average_density"
+  ],
+  "ground_truth": {},
+  "time_limit": 2000,
+  "engine": "gromacs"
+}

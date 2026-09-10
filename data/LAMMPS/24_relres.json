@@ -1,0 +1,12 @@
+{
+  "id": "24_relres",
+  "problem_description": "Compute the average temperature and average potential energy per particle for a system of 2,2-dimethylhexane (DMH). The simulation should be carried out in a real units with periodic boundary conditions in all directions, and DHM should use relative-resolution Lennard-Jones (LJ) model. The system should described using a molecular atom style, with harmonic potentials for bonds and angles and Fourier dihedrals for torsional interactions. Non-bonded interactions were modeled using the lj/relres pair style for the initial phases, and lj/smooth for the final reference phase, with all pair potentials shifted to zero at the cutoff. Neighbor lists were built using a binning algorithm with a skin distance of 2.0 \u00c5 and updated every two steps. Simulation is supposed to be conducted in the NVT ensemble at 290 K using a Nos\u00e9\u2013Hoover thermostat with a damping constant of 200 fs. A time step of 1.0 fs was used. The workflow consists of four distinct runs utilizing a shared restart file: an initial lj/relres run (Rso = 6.25) for 1,000 steps, a second run (Rso = 7.25) for 5,000 steps, a third run with mixed Rso (6.25 & 7.25) values for 5,000 steps, and a final lj/smooth reference run for 10,000 steps. The analysis should be performed only for the reference run of 10,000 time steps. During the reference run, atomic trajectories are dumped every 30 steps. Thermodynamic quantities were printed every 100 steps.",
+  "level": "2",
+  "metrics": [
+    "average_temperature",
+    "average_potential_energy_per_particle"
+  ],
+  "ground_truth": {},
+  "time_limit": 1710,
+  "engine": "lammps"
+}

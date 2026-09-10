@@ -1,0 +1,13 @@
+{
+  "id": "22_qeq_reaxff",
+  "problem_description": "Compute the average charge on atom type 1 (H), atom type 2 (C), and atom type 3 (O) for a multicomponent reactive system containing carbon (C), hydrogen (H), and oxygen (O) to study dynamic charge equilibration under a reactive force field. The system should be modelled with real units and an atom style charge. The atomic configuration of CHO should have in total 105 atoms (with 60 H, 25 C, and 20 O), and three different atoms types in the cubic box of side length 25 A distributed randomly. Interatomic interactions should be described using the ReaxFF reactive force field, with appropriate force-field parameters assigned to H, C, and O species. Short-range neighbour lists must be constructed using a binning method with a cutoff of 1.0. The system should be initialised at a temperature of 300 K, with atomic velocities assigned from a Maxwell-Boltzmann distribution, and the equations of motion integrated using the NVE ensemble with a timestep of 0.25 fs. To account for charge redistribution during bond formation and breaking, charge equilibration (QEq) must be applied dynamically using the qeq/reax method every 1 timestep, applying a 10.0 \u00c5 cutoff, a 1e-6 tolerance, and utilizing the parameter file param.qeq.reax. The total simulation should be run for 10000 steps. During the simulation, atoms should be grouped according to their chemical species (H, C, and O), and the average atomic charge of each species must be computed and monitored as a function of time.",
+  "level": "3",
+  "metrics": [
+    "Average_charge_on_atom_type_1",
+    "Average_charge_on_atom_type_2",
+    "Average_charge_on_atom_type_3"
+  ],
+  "ground_truth": {},
+  "time_limit": 114,
+  "engine": "lammps"
+}

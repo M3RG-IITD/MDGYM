@@ -1,0 +1,11 @@
+{
+  "id": "117_vacancy_formation",
+  "problem_description": "Compute the vacancy formation energy in eV for a single vacancy in a bulk Cu (Cu) crystal (with 2048 atoms). The three dimension periodic simulation box should be constructed using an FCC lattice with a lattice constant of 3.615 A. The simulation box should extend from -4 to 4 unit cells (metal units) in all directions which should result in a bulk-like system with PBC in all directions. The crystal should be modelled using the Embedded Atom Method (EAM) potential parameterized suing FeCuNi.eam.alloy with parameters corresponding to Cu atoms. The vacancy formation energy was determined by performing two separate energy minimizations: one for the perfect system (E_{perfect}) and one for the defective system with N-1 atoms after removing the a single Cu atom within a small spherical region at the center of the simulation box to obtain (E_{vacancy}). The formation energy should then be calculated using a normalized reference energy to account for the change in system size. Now, the system should be energy minimized using the conjugate gradient method with a force tolerance of 1e-15 eV/A.",
+  "level": "1",
+  "metrics": [
+    "vacancy_formation_energy"
+  ],
+  "ground_truth": {},
+  "time_limit": 0,
+  "engine": "lammps"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "47_speptide",
+  "problem_description": "Compute the average radius of gyration in nm, root mean square deviation in nm along the backbone of the peptide, temperature (K), pressure (bar), and radius of gyration (nm) for a solvated peptide system. The system consists of a 19-residue model peptide with the sequence LYS\u2013GLU\u2013THR\u2013ALA\u2013ALA\u2013ALA\u2013LYS\u2013PHE\u2013GLU\u2013ARG\u2013GLN\u2013HIS\u2013MET\u2013ASP\u2013SER\u2013SER\u2013THR\u2013SER\u2013ALA, representing a short synthetic oligopeptide with mixed charged, polar, and hydrophobic residues. The peptide is solvated in 5299 spc water molecules in a cubic simulation box of dimension 5.51732  nm. The system was modeled using the GROMOS54A7 force field. Energy minimization was performed using the steepest descent algorithm for 10,000 steps with emtol to be 100. This was followed by an NPT equilibration run using the md integrator with a 2 fs time step for 50,000 steps. Temperature was maintained at 300 K using the V-rescale thermostat, and pressure was controlled using the Parrinello\u2013Rahman barostat at 1 bar with a compressibility of 4.5\u00d710\u207b\u2075 bar\u207b\u00b9. Electrostatic interactions were treated using the PME method, and van der Waals interactions employed a cutoff of 1.0 nm. DispCorr = EnerPres applies a long-range dispersion correction to both the energy and pressure to account for the truncated van der Waals interactions beyond the cutoff distance. All bonds were constrained using the LINCS algorithm. The simulation should not involve with production run.",
+  "level": "3",
+  "metrics": [
+    "average_root_mean_square_deviation",
+    "average_temperature",
+    "average_pressure",
+    "average_radius_of_gyration"
+  ],
+  "ground_truth": {},
+  "time_limit": 1000,
+  "engine": "gromacs"
+}

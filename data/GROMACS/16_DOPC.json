@@ -1,0 +1,13 @@
+{
+  "id": "16_DOPC",
+  "problem_description": "Compute the average temperature in K, pressure in bar, and density in kg/m^3 of the DOPC lipid bilayer system solvated in water. The system contained 128 DOPC lipid molecules and 4789 water molecules (spc) in a simulation box of dimensions 6.58170 \u00d7 6.47570 \u00d7 7.41430 nm\u00b3. The force-field for DOPC should be used as GROMOS53A6 with Berger lipid parameters for tail regions. Energy minimization was performed using the steepest descent algorithm for 100000 steps with an integration step size of 0.002 nm using the Verlet cutoff scheme and neighbor list updates every step (nstlist = 1). Long-range electrostatic interactions were treated using the Particle Mesh Ewald (PME) method with a cutoff of 1.2 nm during minimization and 1.0 nm during equilibration and production, while van der Waals interactions were truncated at the same cutoff distances. Molecular dynamics simulations were performed using the md integrator with a time step of 0.002 ps and neighbor list updates every 5 steps. Bond constraints were applied to all bonds. During the NPT equilibration the temperature should be set to 303 K, meanwhile the pressure should be set to 1.01325 bar and the pressure coupling type should be set as semiisotropic. The equilibration should be performed for 20 ps using the Berendsen thermostat and Berendsen barostat with a coupling constant of 1.0 ps and 2.0 ps, respectively, and production run for 20 ps using the Nose-Hoover thermostat and Parinello-Rahman barostat with a coupling constant of 1.0 ps and 2.0 ps. PBC should be applied in the xyz directions. During the equilibration and production runs, the system compressibility was set to 4.5e-5",
+  "level": "1",
+  "metrics": [
+    "average_temperature",
+    "average_pressure",
+    "average_density"
+  ],
+  "ground_truth": {},
+  "time_limit": 400,
+  "engine": "gromacs"
+}

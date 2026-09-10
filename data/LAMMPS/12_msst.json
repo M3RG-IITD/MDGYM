@@ -1,0 +1,14 @@
+{
+  "id": "12_msst",
+  "problem_description": "Compute the average_Hugoniot_distance (v_dhug) in eV/atom, Rayleigh_line_distance (v_dray) in eV/\u00c5\u00b3, Lagrangian_velocity (v_lgr_vel) in \u00c5/ps, and Lagrangian_position (v_lgr_pos) in \u00c5 for A three-dimensional MD simulation to study shock-wave propagation in a crystalline solid using the Multi-Scale Shock Technique (MSST). The system should consist of atoms arranged on a face-centered cubic (FCC) lattice with a lattice constant of 5.3589 \u00c5, forming a cubic simulation box containing 18 * 18 * 18 unit cells in metals unit with full PBC in all direction. Assigned mass to all atoms of 40.0 amu and interact via a Lennard\u2013Jones potential with parameters \u03b5 = 0.01032 eV, \u03c3 = 3.405 \u00c5, and a cutoff distance of 10 \u00c5. Initial atomic velocities should be assigned from a Maxwell\u2013Boltzmann distribution corresponding to a temperature of approximately 600 K. First, equilibrate the system using NVE ensemble for 100 steps. After equilibration, a shock wave should be generated along the z-direction using the Multi-Scale Shock Technique (MSST). The shock velocity is prescribed as 28 \u00c5/ps, with a Rayleigh line parameter q = 200, viscosity coefficient \u03bc = 300, and a temperature scaling factor of 0.01. The MSST algorithm dynamically adjusts the simulation cell length in the shock direction while conserving the Hugoniot and Rayleigh relations. The simulation is performed with a timestep of 2 fs. Thermodynamic properties should be output every 10 steps, and atomic trajectories must be dumped every 50 steps to a file named 'dump.msst'. The final MSST production run should be carried out for 10000 time steps.",
+  "level": "3",
+  "metrics": [
+    "average_Hugoniot_distance",
+    "average_Rayleigh_line_distance",
+    "average_Lagrangian_velocity",
+    "average_Lagrangian_position"
+  ],
+  "ground_truth": {},
+  "time_limit": 267,
+  "engine": "lammps"
+}

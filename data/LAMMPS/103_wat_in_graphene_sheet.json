@@ -1,0 +1,13 @@
+{
+  "id": "103_wat_in_graphene_sheet",
+  "problem_description": "Compute the average temperature in K, pressure in bar and total energy in kcal/mol of a system consisting of water confined between two graphene sheets at 300K. The system should have 22,728 atoms in which 4 graphene sheets are present at the bottom of the box and two graphene sheet at the top of the simulation box, the water molecules should packed in between the group of four graphene sheets and two graphene sheets. Three atom types should be defined: oxygen (15.9994 g/mol), hydrogen (1.008 g/mol), and carbon (12.011 g/mol). Water molecules (types 1 and 2) and carbon atoms (type 3) needed to grouped separately to enable selective control of their dynamics. The simulation box dimension should be 81.7*81.5*33.1 A^3 (in real unit), with periodic boundary conditions in all three dimensions. The interactions should be modelled using a combination of bonded and non-bonded potentials. The bonded interactions should include harmonic potentials for bonds and angles, OPLS dihedral potential, and harmonic improper interactions. The non-bonded interactions should described using the LJ potential combination with long-range electrostatics implemented via the lj/cut/tip4p/long pair style with cutoff of 10 A. The long range coulombic interactions should be computed using the PPPM method with a precision of 1e-4. Lorentz-Berthelot mixing rules should be applied for the cross interactions between water and graphene. The geometry of water molecules should be constrained using the SHAKE algorithm. The equation of motion should be integrated using the velocity-Verlet algorithm (fix nve). The temperature should control only the y and z- velocity component using the Berendsen thermostat at 300K with a damping parameter of 100 fs. Use the recenter command to keep the graphene sheet at the center. To induce flow, a constant external force of 2*10^-4 kcal/mol/A should be applied to the water molecules in the x-direction, which should generate the non-equlibrium steady-state flow. The production run should be carried out for 50,000 steps, and the output frequency should be set to every 1000 steps. The timestep should be 2 fs.",
+  "level": "1",
+  "metrics": [
+    "average_temperature",
+    "average_pressure",
+    "average_total_energy"
+  ],
+  "ground_truth": {},
+  "time_limit": 6801,
+  "engine": "lammps"
+}

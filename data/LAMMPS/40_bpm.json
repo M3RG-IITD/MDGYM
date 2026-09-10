@@ -1,0 +1,14 @@
+{
+  "id": "40_bpm",
+  "problem_description": "Compute the average Poisson's ratio for a system of 4 pillars (in 3D) modeled using the bpm/spring framework (after equilibration), which enable effective elastic properties in a simulation box of 20*20*22 (in lj units). The initial structure is generated using an FCC lattice with lattice constant 1.41 and confined within a cylindrical region of radius of 7 and height 20 (in LJ unit), and the outer confining wall of radius 8 during equlibration in NVE ensemble with initial velocities assigned at temperature 0.1 (LJ units) for 10,000 time steps. After equilibration, the harmonic confining wall should be removed and the system is replicated four times along the x-direction with command (replicate 4 1 1) to generate four pillars. The system is compressed along the z-direction by imposing a constant velocity (-0.0025) on the top boundary (z = 18.0 to 21.0) meanwhile the bottom boundary (z = -1.0 to 2.0) is fixed by setting atomic forces to zero. Periodic boundary conditions are applied in the x-and y-directions, while shrink-wrapped boundary condition is applied in the z-direction. The bond coefficients for the four pillars is mentioned as (1.0 0 1.0 -0.8; 1.0 0 1.0 0.0; 1.0 0 1.0 2.0; 1.0 0 1.0 10.0), and these bonds should be created with 'create_bonds many piN piN N 0.0 1.5' command. The lateral dimension (x-direction) and axial (z-direction) dimensions for each of the four pillars should be monitored and printed out every 100 time steps. Atomic trajectories, including forces, must be dumped every 10 steps, and the compression run should be carried out for 25000 time steps.",
+  "level": "3",
+  "metrics": [
+    "average_poisson_ratio_on_pillar_1",
+    "average_poisson_ratio_on_pillar_2",
+    "average_poisson_ratio_on_pillar_3",
+    "average_poisson_ratio_on_pillar_4"
+  ],
+  "ground_truth": {},
+  "time_limit": 435,
+  "engine": "lammps"
+}

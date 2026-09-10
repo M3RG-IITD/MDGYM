@@ -1,0 +1,11 @@
+{
+  "id": "78_viscosity",
+  "problem_description": "Compute the average viscosity of the 2D LJ fluid. The system should be simulated in the box of 20*20 (in LJ units), with PBC applied in x and y-direction. Particles must initialized on a sq2 lattice corresponding to a reduced number density of 0.6, and all particles must assigned (mass = 1, \u03c3 = 1, \u03f5 = 1) through LJ potential with a cuttoff of 2.5\u03c3. The initial velocities should generated from Maxwell-Boltzmann distribution at a temperature of 1.0 (reduced unit). The system equilibrated in NVE ensemble and a Langevin thermostat for thermalization. After equilibration for 10,000 steps, thermostat is switched off to allow the system in pure NVE. The viscosity is computed using the Green-Kubo method by evaluating the autocorrelation of the symmetric traceless stress tensor components (pxy and pxx), utilizing a sample interval of 5 steps and a correlation length of 400 steps. The production run executed for 5,00,000 timesteps.",
+  "level": "3",
+  "metrics": [
+    "average_viscosity"
+  ],
+  "ground_truth": {},
+  "time_limit": 429,
+  "engine": "lammps"
+}

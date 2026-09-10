@@ -1,0 +1,12 @@
+{
+  "id": "74_diffuse",
+  "problem_description": "Compute the average of mean square deviation (MSD) and diffusion coeeficient (using fitting the slope with slope(f_9)/4/(10*dt)) of the 2D LJ fluid. The LJ fluid must restrcited in two dimention with size of 40*40 (LJ unit). Particles should arrange initially on a sq2 lattice with a number density of 0.6, and they interact via LJ potential with a cutoff radius of 2.5 \u03c3. All particles should have unit mass, and velocitites must assigned at a temperature of 1.0. The system is first equilibrated for 5000 timesteps using NVE enseble and Langevin thermostate is used to maintain the temperature. After equlibration thermostate should be removed. Production run should be in NVE ensemble for 1,00,000 timesteps.",
+  "level": "3",
+  "metrics": [
+    "average_of_mean_square_deviation",
+    "average_of_diffusion_cofficient"
+  ],
+  "ground_truth": {},
+  "time_limit": 2661,
+  "engine": "lammps"
+}

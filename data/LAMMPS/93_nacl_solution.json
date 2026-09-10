@@ -1,0 +1,13 @@
+{
+  "id": "93_nacl_solution",
+  "problem_description": "Compute the average temperature in K, pressure in bar and the total energy per water molecules (kcal/mol) for a bulk aqueous system. The system should have TIP4P/2005 water molecules (1834) and dissolved NaCl (82) ions in it. Therefore, the system is having the a total of 5666 atoms, including oxygen and hydrogen (types 1 and 2) and sodium and chloride ions (types 3 and 4). The simulation box should be cubic with dimention from \u221227.8 \u00c5 to 27.8 \u00c5 (in real unit), and PBC should applied in all three directions. The TIP4P/2005 water model is employed with harmonic bond and angle potentials (O\u2013H bond length 0.9572 \u00c5 and H\u2013O\u2013H angle 104.52\u00b0), and the bond_style and angle_style is harmonic in nature. The ions interact via Lennard-Jones potentials with parameters as mentioned (pair_coeff 1 1 0.1852 3.1589; pair_coeff 2 2 0.0 0.0; pair_coeff 3 3 0.10755 2.31; pair_coeff 4 4 0.10038 4.3), while the long-range electrostatics handled by the PPPM solver specialized for TIP4P water. Shake algorithm should be used to constraints the bonds and angle. The interactions use a 1 nm cutoff with tail corrections, and mixing rules are arithmetic for \u03c3 and geometric for \u03b5. The system is equilibrated at 293.15 K and 1 atm using an NPT ensemble with a timestep of 2 fs. The equilibration runs for 1,000 steps, and a production run for 10,000 stps.",
+  "level": "1",
+  "metrics": [
+    "average_temperature",
+    "average_pressure",
+    "average_total_energy_per_water_molecule"
+  ],
+  "ground_truth": {},
+  "time_limit": 3375,
+  "engine": "lammps"
+}

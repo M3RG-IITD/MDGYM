@@ -1,0 +1,13 @@
+{
+  "id": "96_salt_dissolution_wat",
+  "problem_description": "Compute the average temperature in K, pressure in bar and the total energy per water molecules (kcal/mol) for a bulk aqueous system. The system should have TIP4P/2005 water molecules (2644) and dissolved NaCl (25) ions in it. Therefore, the system is having the a total of 7982 atoms, including oxygen and hydrogen (types 1 and 2) and sodium and chloride ions (types 3 and 4). The simulation box is cubic with dimension from \u221221.2 \u00c5 to 21.2 \u00c5 (in real units), and PBC is applied in all three directions. The TIP4P/2005 water model is employed with harmonic bond and angle potentials (O\u2013H bond length 0.9572 \u00c5 and H\u2013O\u2013H angle 104.52\u00b0), and the bond_style and angle_style is harmonic in nature. To maintain rigidity, the internal geometry of the water molecules is constrained using the SHAKE algorithm with a tolerance of 1.0e-4 and a maximum of 200 iterations. The ions interact via Lennard-Jones potentials with parameters as mentioned (pair_coeff 1 1 0.1852 3.1589; pair_coeff 2 2 0.0 0.0; pair_coeff 3 3 0.10755 2.31; pair_coeff 4 4 0.10038 4.3), while the long-range electrostatics are handled by the PPPM solver specialized for TIP4P water using an accuracy threshold of 1.0e-4. Nonbonded interactions use a 12.0 \u00c5 cutoff alongside a TIP4P massless site distance (OM) of 0.105 \u00c5. The system is equilibrated at 360 K and 1 atm using an NPT ensemble with temperature and pressure damping parameters of 100 fs and 1000 fs, respectively, with a timestep of 1.0 fs. During the simulation, the salt ions are dynamically recentered to their initial positions. A single production run is executed for 50,000 stps steps, with thermodynamic data and atomic trajectories output every 500 steps.",
+  "level": "2",
+  "metrics": [
+    "average_temperature",
+    "average_pressure",
+    "average_total_energy_per_water"
+  ],
+  "ground_truth": {},
+  "time_limit": 4854,
+  "engine": "lammps"
+}

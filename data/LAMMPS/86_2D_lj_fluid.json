@@ -1,0 +1,11 @@
+{
+  "id": "86_2D_lj_fluid",
+  "problem_description": "Compute the average total energy for a system of LJ particles in a 2D simulation shell with dimension of 60*60*1 (in LJ unit). The system contains 1500 atoms of type 1(mass = 1, epsilon = 1, sigma = 1) and 100 atoms of type 2 (mass = 1, epsilon = 0.5, sigma =3) randomly distributed. The interactions must modelled using the LJ potential with a cutoff of 2.5\u03c3. The pair coefficient should follow (1 1 1.0 1.0) for pair type 1 1 and (2 2 0.5 3.0) for pair type 2. The system should first energy-minimized using a conjugate gradient algorithm, then it should evolved using the NVE ensemble combined with a Langevin thermostat at temperature T = 1.0 and damping parameter 0.1. The timestep is 0.005, and the simulation runs for 20,000 steps.",
+  "level": "1",
+  "metrics": [
+    "average_total_energy"
+  ],
+  "ground_truth": {},
+  "time_limit": 21,
+  "engine": "lammps"
+}

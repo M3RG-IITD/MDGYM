@@ -1,0 +1,11 @@
+{
+  "id": "90_bulk_silicate",
+  "problem_description": "Compute the average total energy per particles for a system of SiO2 (having 1634 atoms (number of atom 548) of silicon and oxygen (number of atoms 1086)). The system should confined within a rectangular simulation box of dimentions approximately 44.66 * 32.62 * 32.14 \u00c5\u00b3. Periodic boundary conditions should applied in all three directions. The interactions between atoms must modeled using the Tersoff potential (SiO.tersoff). The simulation employed metal units and an atomic atom style, with a timestep of 0.0005 ps. The system must maintaine at a constant temperature of 300 K using the NVT ensemble via a Nose-Hoover thermostat with a damping parameter of 0.1 ps. The total simulations should be executed for 20,000 time step.",
+  "level": "3",
+  "metrics": [
+    "average_total_energy_per_particle"
+  ],
+  "ground_truth": {},
+  "time_limit": 207,
+  "engine": "lammps"
+}

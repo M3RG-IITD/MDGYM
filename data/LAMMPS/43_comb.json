@@ -1,0 +1,11 @@
+{
+  "id": "43_comb",
+  "problem_description": "Compute the average potential energy per particle in eV for a system of Graphene-OH on Cu2 (110) surface. The simulation should investigate the interaction of hydroxyl-functionalize graphene (graphene-OH) with a Cu2O (110) surface in a periodic box of 21.3*24.6*33.8162 in metal units and atom_style charge which have in total 682 atoms. The COMB3 potential should be used. The system is having the five atom types (O, Cu, H, C, and C) and the charge distribution on the atoms is performed via qeq/comb method. Velocity-Verlet algorithm should be used for integration within the NVE ensemble. The system is initialize at a temperature of 300 K using Maxwell-Boltzmann distribution and the simulation should be carried out for a total of 1,000 steps with a timestep of 0.002 ps. ",
+  "level": "2",
+  "metrics": [
+    "average_potential_energy_per_particle"
+  ],
+  "ground_truth": {},
+  "time_limit": 540,
+  "engine": "lammps"
+}

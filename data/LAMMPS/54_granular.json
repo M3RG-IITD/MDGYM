@@ -1,0 +1,11 @@
+{
+  "id": "54_granular",
+  "problem_description": "Compute the average of rotational angle of the drum (v_theta) of the system consist of two types of spherical particles; cohesive and non-cohesive. The particles are in a box of dimention 30*30*50 (in LJ unit), where PBC is applied in x-andy direction while fixed boundary in z-direction. A cylindrical drum of radius 15 and height 20 is defined at the center of the simulation box. Particles are inserted into the drum using a pouring protocol. Particle type 1 (non-cohesive interact via Hertzian contact model) and particle type 2 (cohesive interactive via Johnson\u2013Kendall\u2013Roberts model). A total of 4000 particles (2000 each type)  are introduced into the cylindercal insertion region. Initially particles are allowed to settled using gravity in -Z direction, and later it required to change to -y direction for rotating the drum. The system is integrated using the NVE/sphere algorithm for 2000 steps. The rotational motion of the drum is implemeted by dynamically rotating the cylindrical and planner wall using variable theta equal '2*PI*elapsed/20000.0', therefore one rotation completed in every 20000 timestep. The production run (rotating drum)for 5,000 timesteps.",
+  "level": "3",
+  "metrics": [
+    "average_rotational_angle"
+  ],
+  "ground_truth": {},
+  "time_limit": 102,
+  "engine": "lammps"
+}

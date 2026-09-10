@@ -1,0 +1,12 @@
+{
+  "id": "84_spin",
+  "problem_description": "Compute the average of total magnetization in \u03bcB and total magnetic energy in eV of a system of spin-lattice whose atoms should arranged on a simple cubic lattice with a lattice constant of 3.96 A. The arrangment of atoms forms a slab geometry of dimentions 34*34*5 (in metal units). PBC applied in x and y direction, while z-direction is non-periodic. Each lattice should assign a classical spin with a magnitude of 2.5 \u03bcB and random initial orientation. The magnetic interactions should modeled using a hybrid Hamiltonian that includes exchange interaction with cutoff 6, magnetoelectric coupling with cutoff 4.5, and Dzyaloshinskii\u2013Moriya interaction (DMI) with cutoff 4.5. The exchange interaction parameter must set to \u22120.01575 eV, favoring antiferromagnetic alignment, while the DMI and magnetoelectric terms introduce chiral and coupled spin-electric effects, respectively. Spin dynamics (using nve/spin lattice frozen) must evolved using a precession-based integrator incorporating magnetic anisotropy along the z-axis and Langevin spin dynamics to account for thermal fluctuations in the temperature range of 0.0\u20130.1 (in reduced units). A timestep of 0.0002 ps was used for numerical integration, and the system was simulated for 5000 timesteps.",
+  "level": "3",
+  "metrics": [
+    "average_total_magnetization",
+    "average_total_magnetic_energy"
+  ],
+  "ground_truth": {},
+  "time_limit": 1113,
+  "engine": "lammps"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "45_ethanol_adsorption",
+  "problem_description": "Compute the average density of water and ethanol along the x-axis in kg/m^3 for a system containing 64 (BIPQ) molecules and 858 solvent molecules in a simulation box of 20.0 \u00d7 3.2 \u00d7 3.2 nm^3. The system was modeled using the GROMOS54A7_ATB force field. Energy minimization was performed using the steepest descent algorithm for 5000 steps with a 1 fs time step. This was followed by NVT equilibration using the md integrator with a 1 fs time step for 100,000 steps (1000 ps), maintaining the temperature at 300 K using the v-rescale thermostat with a coupling constant of 0.5 ps. The production simulations were carried out using stochastic dynamics with a 1 fs time step for 100 ps at 300 K. Electrostatic interactions were treated using PME, with a 1.0 nm cutoff for both Coulomb and van der Waals interactions, and hydrogen bonds were constrained using the LINCS algorithm. Umbrella sampling was applied by restraining the center-of-mass distance between ethanol and water along the Y-direction using a harmonic potential with a force constant of 1000 kJ\u00b7mol\u207b\u00b9\u00b7nm\u207b\u00b2 at a fixed distance of 2.0 nm. Coordinates and pull forces were recorded periodically for analysis. For equilibration and production runs, the fourierspacing for PME was set to 0.10 nm.",
+  "level": "3",
+  "metrics": [
+    "average_density_of_water_along_x_axis",
+    "average_density_of_ethanol_along_x_axis"
+  ],
+  "ground_truth": {},
+  "time_limit": 1000,
+  "engine": "gromacs"
+}

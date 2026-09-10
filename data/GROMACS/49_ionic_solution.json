@@ -1,0 +1,13 @@
+{
+  "id": "49_ionic_solution",
+  "problem_description": "Compute the coordination number of water molecules around water oxygen atoms (OW), sodium ions (Na\u207a), and the sulfur atom (S1) of sulfate ions (SO\u2084\u00b2\u207b) in a bulk aqueous solution containing 800 water molecules and dissolved Na\u207a and SO\u2084\u00b2\u207b ions. Energy minimization was performed using the steepest descent algorithm for 5000 time steps. Equilibration was carried out in the NVT (20,000 time steps) and NPT (80,000 time steps) ensembles using the md integrator with a typical time step of 1 fs. Temperature was maintained at 360 K using a velocity-rescale thermostat, and pressure was controlled using a C-rescale barostat. Electrostatic interactions were treated using the Particle Mesh Ewald (PME) method, and van der Waals interactions employed a Verlet scheme. The production run was performed in the NVT ensemble for 400,000 time steps with a time step of 1 fs. The radial distribution function (RDF) should be calculated between the water oxygen atoms (OW) and the sodium ions (Na\u207a), as well as between the water oxygen atoms (OW) and the sulfur atom (S1) of sulfate ions (SO\u2084\u00b2\u207b). The coordination number should be calculated by integrating the RDF up to the first minimum after the first peak.",
+  "level": "3",
+  "metrics": [
+    "coordination_number_OW",
+    "coordination_number_Na",
+    "coordination_number_S1"
+  ],
+  "ground_truth": {},
+  "time_limit": 800,
+  "engine": "gromacs"
+}

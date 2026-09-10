@@ -1,0 +1,11 @@
+{
+  "id": "47_dreiding",
+  "problem_description": "Compute the average hydrogen bonds for a system methanol box constructed using the DREIDING force field. The simulation is performed in real units, and pbc should be applied in all directions. The interatomic potential are modelled using hybrid/overlay hbond/dreiding/lj 2 6 6.5 90 lj/cut/coul/long 8.5 11.5 pair style with an additional hydrogen bonding potneitla hbond/dreiding/lj. The LJ interactions accounts for van der Waals forces with a cutoff of 8.5 A and the 11.5 A is the cutoff for the Coulombic interaction, while electrostatic interactions are treated using the PPPM method with an accuracy of 10^-3. Moreover, turn-off LJ and Coulomb interactions for 1\u20132 and 1\u20133 atom pairs, and keep full interactions for 1\u20134 pairs. the The equation of motions are integrated using the NVE ensemle, and the simulaion is run for 10,000 steps.",
+  "level": "1",
+  "metrics": [
+    "average_hbond"
+  ],
+  "ground_truth": {},
+  "time_limit": 102,
+  "engine": "lammps"
+}

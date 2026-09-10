@@ -1,0 +1,14 @@
+{
+  "id": "20_methane_in_water",
+  "problem_description": "Compute the coordination number in the first solvation shell, and average temperature in K, pressure in bar, and density in kg/m^3 of a methane molecule solvated in water. The system contained one methane molecule and 391 water molecules in a cubic simulation box of dimensions 2.3 \u00d7 2.3 \u00d7 2.3 nm\u00b3 and was modeled using the OPLS-AA force field. Energy minimization was performed using the steepest descent algorithm for 1000 steps using the Verlet cutoff scheme with electrostatic interactions treated using the Particle Mesh Ewald (PME) method with a real-space cutoff of 1.0 nm. Em should treat the water molecules as the flexible using define = -DFLEXIBLE. The equilibration run should performed using the md integrator with a time step of 0.002 ps for 50000 steps. All bonds involving hydrogen atoms were constrained. Long-range electrostatic interactions were calculated using the PME method with a cutoff of 1.0 nm, and van der Waals interactions were truncated at 1.0 nm. Temperature was controlled using the Nose\u2013Hoover thermostat with a coupling constant of 2.0 ps and a reference temperature of 298.15 K. The compressibility used as 4.46e-5. The production run should be performed using the md integrator with a time step of 0.002 ps for 50,000 steps under the same conditions as the equilibration run, it should be using the same thermostat while Parrinello-Rahman barostat with the reference pressure of 1 bar and coupling constant of 2 ps. During the equilibration and production runs, periodic boundary conditions were applied in all directions, and the nhchainlength should be set to 1.",
+  "level": "2",
+  "metrics": [
+    "average_temperature",
+    "average_pressure",
+    "average_density",
+    "coordination_number"
+  ],
+  "ground_truth": {},
+  "time_limit": 100,
+  "engine": "gromacs"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "155_velocity",
+  "problem_description": "Compute the average number of type 1 atoms inside the cylinder, and type 2 atoms inside the cylinder, and the coordination number of type 2 atoms around type 1 atoms for a system of consisting of two particle types interacting via a truncated Lennard-Jones potential with a cutoff of 4.0 (in reduced LJ units). The system should have a mixture of 1150 atoms distributed in a cubic simulation box of size [-20,20] and required the pre-minimized data file, and the PBC applied in all directions. The system should have two atom types with different masses and interaction parameters: type 1 particles have mass 1 and LJ parameters \u03f5 = 1, \u03c3 = 1 while type 2 particles have mass 10 and LJ parameters \u03f5 = 0.5, \u03c3=3. Lorentz\u2013Berthelot mixing rule should be used for cross-interactions. To generate spatial heterogeneity, cylindrical regions centered along the z-axis should defined. Particles of type 1 located inside the cylinder need to be removed, while particles of type 2 located outside the cylinder must removed. This procedure should creates an initial segregated configuration resembling a core-shell or confined cylindrical domain structure. The system should evolve using Newtonian dynamics in the NVE ensemble combined with a Langevin thermostat at temperature T = 1.0, ensuring thermal equilibration while maintaining stochastic energy exchange with a heat bath. The integration timestep is set to 0.005 (reduced LJ time units), and the system is simulated for 3,00,000 steps. ",
+  "level": "3",
+  "metrics": [
+    "coordination_number",
+    "average_number_of_type_1_atoms_inside_cylinder",
+    "average_number_of_type_2_atoms_inside_cylinder"
+  ],
+  "ground_truth": {},
+  "time_limit": 192,
+  "engine": "lammps"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "60_melt",
+  "problem_description": "Compute the average of temperature, pressure and the potential energy of the 3D LJ fluid. Particles are arranged in a FCC lattice at a density of 0.8442 within a box of 10*10*10 (LJ unit). Velocities are assigned corresponding to a temperature of 3.0. The particles (4000) are interactine via Lennard-Jones potential with standard parameters (\u03b5 = 1, \u03c3 = 1) and a cutoff distance of 2.5\u03c3. The system evolves in the microcanonical (NVE) ensemble. The simulation is run for 1000 timesteps  ",
+  "level": "2",
+  "metrics": [
+    "average_temperature",
+    "average_pressure",
+    "average_total_energy"
+  ],
+  "ground_truth": {},
+  "time_limit": 48,
+  "engine": "lammps"
+}

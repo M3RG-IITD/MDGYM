@@ -1,0 +1,11 @@
+{
+  "id": "101_wat_vapour",
+  "problem_description": "Compute the average surface tension in milliNewton/meter of a water liquid-vapour at 293.15 K. The system should use TIP4P/2005 water model (256 water molecules), implemented via the lj/cut/tip4p/long pair style with a cutoff distance of 12.0 \u00c5 and shifted potentials using arithmetic mixing. Electrostatic interactions should be computed using the PPPM method with a precision of 1e-5. The simulation should be carried out in the real unit system, with periodic boundary conditions in all three dimensions. A simulation box of 6*6*14 lattice units (defined by a simple cubic lattice with a 3.4 \u00c5 spacing) should be used, and the water molecules should be inserted within a central slab region along the z-direction spanning 6 lattice units, while leaving the vacuum regions on either side. The velocities of the atoms should be initialized according to the Maxwell-Boltzmann distribution at 293.15K. The system should be evolved using the velocity-verlet integration scheme (fix nve), meanwhile the temperature should be maintained using the Berendsen thermostat with a damping parameter of 100 fs. The Shake algorithm should be used to constrain the O-H bond lengths and the H-O-H angle with a tolerance of 1e-5 and up to 200 iterations. A timestep of 2.0 fs should be used. The system should first be equlibrated for 10,000 steps to get the thermal stability. After equilibration, the production run should be carried out for 1,00,000 steps, and the surface tension should be computed every 1000 steps. The surface tension should be calculated using the mechanical definition based on the anisotropy of the pressure tensor, specifically from the difference between the normal and tangential components of the pressure tensor multiplied by the box length in z and appropriate unit conversion factors. The time-average values of temperature and surface tension should be obtained using block averaging (fix ave/time) by sampling every 10 steps, averaging over 500 such samples, and outputting the average every 5000 steps to specific data files. Additionally, atomic configurations must be written to a trajectory file every 5000 steps.",
+  "level": "1",
+  "metrics": [
+    "average_surface_tension"
+  ],
+  "ground_truth": {},
+  "time_limit": 1749,
+  "engine": "lammps"
+}

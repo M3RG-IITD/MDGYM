@@ -1,0 +1,11 @@
+{
+  "id": "32_graphene_sheet",
+  "problem_description": "Compute the young modulus in GPa of a graphene sheet using the AIREBO potential. The graphene sheet (with 1008 atoms in it) should be modelled as a two-dimensional carbon structure placed in a three-dimensional simulation domain with periodic boundary conditions along the in-plane directions and a free boundary condition in the out-of-plane direction. The simulation should be carried out using metal units, with a time step of 0.5 fs. First, equilibrate the graphene system at a temperature of 300 K using a Nos\u00e9-Hoover thermostat and barostat (NPT ensemble) for 50,000 steps under zero in-plane pressure conditions with damping parameters of 0.05 ps for temperature and 0.5 ps for pressure to remove any initial residual stresses. After achieving thermal equilibrium, apply a uniaxial tensile deformation along specifically the y-direction at a constant strain rate of 10^{-3}/ps, while maintaining zero pressure in the transverse in-plane (x-axis) direction to allow lateral relaxation. The deformation process should be conducted under isothermal conditions at 300 K. During the deformation, it should run for 100 steps initially. During the tensile loading, compute the stress response of the system using atomic-level stress calculations and obtain the averaged macroscopic stress components using a 100-step time average. For stress evaluation, assume an effective graphene thickness of 3.4 \u00c5 to convert the two-dimensional stress into three-dimensional stress units. It needs to run the simulation until a large deformation or fracture occurs and record the stress\u2013strain data throughout the loading process. by printing customized thermodynamic outputs every 100 steps and dumping atomic trajectories every 5,000 steps. The simulation should be carried out for 500000 steps.",
+  "level": "2",
+  "metrics": [
+    "Young's_modulus"
+  ],
+  "ground_truth": {},
+  "time_limit": 969,
+  "engine": "lammps"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "88_graphene_oxide_nanoparticle",
+  "problem_description": "Compute the average total energy per particle in kcal/mol for a system of the adsorption of water molecules on the graphene oxide. The system is simulated in a cubic box of side length 54.5 A (real unit). PBC should be applied in all three dimension. The system contains a total of 272 atoms having 15 distinct atom types including carbon, oxygen, and hydrogen atoms belonging to various functional groups. Interatomic interactions should described using a combination of bonded and non-bonded potentials. Bonded interactions include harmonic potentials for bonds and angles, the OPLS functional form for dihedral interactions, and harmonic potentials for improper interactions. A cutoff distance of 12.0 \u00c5 was used for short-range interactions, and arithmetic mixing rules were applied for cross-interactions. The system includes 336 bonds, 616 angles, 1188 dihedrals, and 147 improper interactions, reflecting the structural complexity of the GO nanoparticle. Non-bonded interactions are modeled using the Lennard-Jones (LJ) potential combined with long-range electrostatics via the TIP4P water model. Electrostatic interactions are treated using the particle\u2013particle particle\u2013mesh (PPPM) method. The equations of motion were integrated using the NVE ensemble, while temperature control was maintained at 300 K using a Berendsen thermostat. The 3 water molecules are represented using a rigid TIP4P geometry. The geometry of water molecules was constrained using the SHAKE algorithm. The system was simulated for a total of 50,000 steps using 1 ps timesteps.",
+  "level": "3",
+  "metrics": [
+    "average_total_energy_per_particle"
+  ],
+  "ground_truth": {},
+  "time_limit": 285,
+  "engine": "lammps"
+}

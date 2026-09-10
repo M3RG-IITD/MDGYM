@@ -1,0 +1,11 @@
+{
+  "id": "1_beta_hairpin",
+  "problem_description": "Compute the radius of gyration of a beta-hairpin peptide (2GB1) in nm. The peptide is solvated with TIP3P water molecules in a cubic box with dimension 10 nm. The CHARMM27 force field was used to model the peptide. The energy minimization should be performed using the steepest-descent algorithm with energy minimization steps of 0.01 nm and 50,000 steps. The equlibration (NPT) should be conducted with long-range electrostatic interactions were calculated using the Particle Mesh Ewald (PME) method with a real-space cutoff of 1.0 nm. Short-range van der Waals interactions must treated using a spherical cutoff of 1.0 nm. The temperature was maintained at 300 K using the velocity-rescale thermostat with a coupling constant of 0.1 ps. Pressure was maintained at 1 atm using the Parrinello\u2013Rahman barostat with a coupling constant of 2 ps. Bond lengths within the solute were constrained using the LINCS algorithm. The equilibration should be conducted for 100 ps with a time step of 2 fs, and followed by the production run which should be performed for 100 ps with the same parameters as the equilibration run.",
+  "level": "2",
+  "metrics": [
+    "radius_of_gyration"
+  ],
+  "ground_truth": {},
+  "time_limit": 1000,
+  "engine": "gromacs"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "23_SGML",
+  "problem_description": "Compute the average temperature in K, pressure in bar, and density in kg/m^3 of a sphingomyelin (SGML) lipid bilayer system solvated in water. The system contained 100 SGML lipid molecules and 3162 water molecules (spc) in a simulation box of dimensions 5.27 \u00d7 5.08 \u00d7 8.14 nm\u00b3 and should modeled using the gromos43A1-S3 force field. Energy minimization was carried out using the steepest descent algorithm for 100000 steps with an energy minimization step size of 0.002 nm using the Verlet cutoff scheme with neighbor list updates every step (nstlist = 1). After minimization, equilibration and production simulations must performed using the md integrator with a time step of 0.002 ps for 10000 steps with neighbor list updates every 5 steps. Long-range electrostatic interactions were calculated using the Particle Mesh Ewald (PME) method with a real-space cutoff of 1.0 nm, while van der Waals interactions were truncated at 1.0 nm. All bonds were constrained during the simulations. Temperature coupling should applied using a Nose-Hoover thermostat with coupling constants of 1.00 ps and reference temperatures of 325.0 K. Pressure coupling was applied using a Parrinello-Rahman barostat with a coupling constant of 2.0 ps and reference pressures of 1.01325 bar and the pressure coupling type is set as semiisotropic. The compressibility used for pressure coupling was 4.5e-5 bar\u207b\u00b9. Periodic boundary conditions must applied in all three spatial directions (xyz).",
+  "level": "1",
+  "metrics": [
+    "average_temperature",
+    "average_pressure",
+    "average_density"
+  ],
+  "ground_truth": {},
+  "time_limit": 600,
+  "engine": "gromacs"
+}

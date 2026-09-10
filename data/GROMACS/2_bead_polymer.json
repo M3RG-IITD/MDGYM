@@ -1,0 +1,11 @@
+{
+  "id": "2_bead_polymer",
+  "problem_description": "Compute the radius of gyration in nm of the 50-bead linear uncharged polymer. The nonbonded dispersion interactions were modeled using the Lennard\u2013Jones (LJ) potential, with the bead size parameter \ud835\udf0e = 0.40 nm and the interaction energyparameter \ud835\udf00 = 1.0 kJ mol\u22121. The polymer has harmonic bonds of 0.153\u202fnm with a force constant of 330,000\u202fkJ/mol\u00b7nm\u00b2 and harmonic angles of 111\u00b0 with a force constant of 100\u202fkJ/mol\u00b7rad\u00b2. Lorentz\u2013Berthelot mixing rules were employed to model the unlike interactions. The polymer chain was solvated with SPC/E water molecules in a cubic simulation box of 5.03 nm with periodic boundary conditions. The energy minimization should be performed using the steepest-descent algorithm with energy minimization steps of 0.01 nm and 50,000 steps. NVT equilibration should be performed followed by energy minimization for 20 ps using the Nose-Hoover thermostat. The NPT equilibration should maintained the temperature and pressure using the Nose\u2013Hoover thermostat and Parrinello\u2013Rahman barostat, respectively, with damping coefficients of \ud835\udf0f\ud835\udc47 = 0.5 ps and \ud835\udf0f\ud835\udc43 = 2.0 ps for 1000 steps at 1 bar pressure. During the equilibration position restrain should be used (define=-DPOSRES_B). A production runs (10,000 steps) must be performed using the same thermostate (tau_t = 1.0 nm) and the barostat as NPT equlibration while keeping the same parameter. A cutoff distance of 1.0 nm was employed to compute the van der Waals interactions, while electrostatic interactions were calculated using the Particle Mesh Ewald (PME) method with a grid spacing of 0.12 nm and a real-space cutoff radius of 1.0 nm. The bond lengths of the solute molecules were constrained using the LINCS algorithm.",
+  "level": "2",
+  "metrics": [
+    "radius_of_gyration"
+  ],
+  "ground_truth": {},
+  "time_limit": 100,
+  "engine": "gromacs"
+}

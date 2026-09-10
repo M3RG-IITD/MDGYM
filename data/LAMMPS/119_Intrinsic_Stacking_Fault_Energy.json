@@ -1,0 +1,11 @@
+{
+  "id": "119_Intrinsic_Stacking_Fault_Energy",
+  "problem_description": "Compute the intrinsic stacking fault energy in mJ/m^2 for a stacking fault in a bulk Nickel (Ni) crystal. The Ni crystals should arranged in a FCC structure with a lattice parameter of 3.52 A, and the simulations should be performed using the metal unit system, with PBC applied in plane direction (x and y) and a non-periodic (free surface) boundary along the z-directions to avoid the artificial interactions across the fault plane. The orientation of the FCC lattice of Ni should be such that the [111] direction is along the z-axis, and the stacking fault should be created by removing a single (111) plane of atoms at the center of the simulation box. The simulation box should be devided into two regions along the z-axis: bottom slab and a top slab, representing the two pieces of the crystal separated by the fault plane. The interatomic interactions should be modeled using the Embedded Atom Method (EAM) potential parameterized by FeCuNi.eam.alloy with parameters corresponding to the nickel. An intrinsic stacking fault was introduced by rigidly displacing the top half of the crystal along the \u27e8112\u27e9 direction by a magnitude equal to a/sqrt(6), where a is the lattice parameter. The system was energy-minimized using the conjugate gradient algorithm. During minimization, atomic motion in the x and y directions was constrained, allowing relaxation only along the z-direction to maintain the imposed fault geometry while permitting structural relaxation perpendicular to the fault plane. ",
+  "level": "1",
+  "metrics": [
+    "stacking_fault_energy"
+  ],
+  "ground_truth": {},
+  "time_limit": 9,
+  "engine": "lammps"
+}

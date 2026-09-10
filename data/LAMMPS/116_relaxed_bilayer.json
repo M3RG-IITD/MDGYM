@@ -1,0 +1,11 @@
+{
+  "id": "116_relaxed_bilayer",
+  "problem_description": "Compute the average potential energy per particle in eV for a relaxed bilayer system. The system should consist of Nickel (Ni) and Aluminum (Al) atoms arranged in a bilayer structure. The upper layer should be modelled as an FCC Ni structure with a lattice parameter of 3.52 A, while the lower layer consist of an FCC AL crystal with a lattice parameter of 4.05 A. These two reasons should be stacked along the z-direction with a slight overlap at the interface. The interatomic interactions should be modeled using the Embedded Atom Method (EAM) potential alloy potential parameterized by Mishin et al (Mishin-Ni-Al-2009.eam.alloy). for Ni-Al systems. The upper block (Ni region) should have the dimension of 54*54*7 A^3 (in metal units) while the lower block (Al region) should have the dimension of 47*47*6.5 A^3, and there should be an overlap of 0.5 A between the two blocks. The PBC should be applied in all three dimension. The energy minimization should be performed using the conjugate gradient method with a energy and force tolerance value of 1e-15 eV and eV/A units, respectively. ",
+  "level": "3",
+  "metrics": [
+    "average_potential_energy_per_particle"
+  ],
+  "ground_truth": {},
+  "time_limit": 9420,
+  "engine": "lammps"
+}

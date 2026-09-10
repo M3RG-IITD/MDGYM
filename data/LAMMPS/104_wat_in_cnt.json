@@ -1,0 +1,11 @@
+{
+  "id": "104_wat_in_cnt",
+  "problem_description": "Compute the average number of water molecules passed through a carbon nanotube (CNT) of diameter 1 nm and length 5.66 nm at 300K. The system should consist of a single-walled carbon nanotube (SWCNT) filled with water molecules. The simulation box dimension should be 20*20*56.63 A^3, with periodic boundary conditions in all three directions. The water insertion inside the nanotube should be first achieved using the GCMC approach and the simulation should carried out using a hybrid force field combining with the AIREBO potential for carbon atoms in CNT and the TIP4P/2005 water model for water molecules. The Long-range electrostatic interactions should be computed using the PPPM method with a precision of 1e-4, while the short-range interactions should be computed using a cutoff of 12 A. The simulation should be carried out in the metal unit system, with periodic boundary conditions applied in all three dimensions. A cylindrical region corresponding to the CNT interior should defined along the axial (z) direction, within which water molecules should inserted using the GCMC method (with (3 trans + 2 rot) / 3 trans) at a temperature of 300 K and a pressure of 1 bar. The chemical potential of water should be set to -8.1 (in metal units), and the shake algorithm should be used to constrain the geometry of water molecules. The system should be equilibrated for 20000 steps in the NVT ensemble using the Nose-Hoover thermostat, followed by a production run of 10000 steps in the NVE ensemble with temperature control applied via Berendsen thermostat to maintain thermal stability. All the simulation steps should be performed using time steps of 0.0005 ps.",
+  "level": "2",
+  "metrics": [
+    "average_number_of_water_molecules"
+  ],
+  "ground_truth": {},
+  "time_limit": 2361,
+  "engine": "lammps"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "7_lysozyme_in_water",
+  "problem_description": "Compute the average temperature in K, Pressure in bar, and density in kg/m^3 of the protein lysozyme (1AKI) in tip3p water. The charmm27.ff force field has been used for the protein. The system was energy minimized using the steepest descent algorithm with a maximum of 50,000 steps and a convergence criterion of 1000 kJ/mol/nm. The equilibration was performed for 20 ps with timestep of 2 fs in the NPT ensemble at 300 K and 1 bar. The data was saved with 10 ps interval. The system should be neutralize using the softwares command. During the equilibration it should use the define = -DPOSRES just to restrain the heavy atoms in proteins. The velocity rescale thermostat and the Parrinello-Rahman barostat were used to control the temperature and pressure, respectively. Coulomic and van der Waals interactions were calculated with a cutoff of 1.0 nm. The particle mesh Ewald method was used to compute long-range electrostatic interactions. The production run was performed for 50,000 steps with the same parameters as the equlibration run with a time step of 2 fs.",
+  "level": "1",
+  "metrics": [
+    "average_temperature",
+    "average_pressure",
+    "average_density"
+  ],
+  "ground_truth": {},
+  "time_limit": 400,
+  "engine": "gromacs"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "55_grid",
+  "problem_description": "Compute the average tempetrature, pressure and the total energy of a 2D LJ fluid. Particles (2500) are initially arranged in a square lattice at a density of 0.5 within a box of 50*50*1 (in LJ unit). The velocities are corresponding to temperature of 1.44, initially. The particles are interact via LJ potential (\u03b5 = 1, \u03c3 = 1) and a cuttoff of 2.5\u03c3. The system is simulated in NVE ensemble, while the motion is restricted only in 2D. The spatial averaging of particle velocities is performed on a 10 * 10 grid to obtain local velocity fields. The simulation is run for 10000 steps.",
+  "level": "1",
+  "metrics": [
+    "average_temperature",
+    "average_pressure",
+    "average_total_energy"
+  ],
+  "ground_truth": {},
+  "time_limit": 33,
+  "engine": "lammps"
+}

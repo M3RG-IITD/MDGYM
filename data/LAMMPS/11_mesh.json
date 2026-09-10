@@ -1,0 +1,11 @@
+{
+  "id": "11_mesh",
+  "problem_description": "Compute the average_kinetic_energy_per_particle for a a three-dimensional simulation to be performed to study the motion of spherical particles inside a confined domain interacting with a rotating rigid boundary. The system should consists of mono-disperse spherical particles of diameter 7.0 \u00c5 and mass 39.95 amu, initially placed inside a cubic region of side length 80 \u00c5, centered within a larger cubic simulation box of dimensions 200 * 200 * 200 \u00c5\u00b3 (in real units). It should use the atom style to be 'hybrid sphere bond'. The particles are free to move and do not form permanent bonds. The particles interact with each other via a Lennard\u2013Jones potential with parameters \u03b5 = 0.2339 kcal/mol, \u03c3 = 3.504 \u00c5, and a cutoff distance of 8.76 \u00c5. Interactions between particles and the rigid boundary are also modeled using a Lennard\u2013Jones potential with the same energy parameter but an effective interaction length of 7.008 \u00c5, chosen to ensure repulsive particle\u2013wall interactions. Interactions within the rigid boundary itself shoud be neglected. The rigid boundary represented by a three-dimensional mesh geometry and should be subjected to a prescribed rotational motion about the x-axis for 5,00,000 fs, with the axis of rotation passing through the center of the simulation box. The mesh atoms treated as rigid and do not respond to forces from the particles. Evolve the system using NVE dynamics with a timestep of 1.0 fs. Assigned the initial particle velocities from a Maxwell\u2013Boltzmann distribution corresponding to a temperature of 150 K. maintained computational efficiency during the simulation, with dynamic load balancing. The simulation should run for 50000 timesteps.",
+  "level": "3",
+  "metrics": [
+    "average_kinetic_energy_per_particle"
+  ],
+  "ground_truth": {},
+  "time_limit": 66,
+  "engine": "lammps"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "22_POPC",
+  "problem_description": "Compute the average temperature in K, pressure in bar, and density in kg/m^3 of a POPC lipid bilayer system solvated in water. The system should have 128 POPC lipid molecules and 3552 water molecules in a simulation box of dimensions 6.33494 \u00d7 6.40481 \u00d7 6.56968 nm\u00b3 and should modeled using the gromos43A1-S3 force field. Energy minimization should performed using the steepest descent algorithm for 100000 steps with an energy minimization step size parameter of 0.002 nm. Equlibration should performed using the md integrator with a time step of 0.002 ps for 10000 steps with neighbor list updates every 5 steps. All bonds were constrained during the simulations. Temperature should controlled using a Nose-hoover thermostat with coupling constants of 1.0 ps for each temperature coupling group with reference temperatures of 303.0 K. During equilibration, electrostatic interactions must calculate using PME with a cutoff of 1.2 nm, and van der Waals interactions were truncated at 1.2 nm. Pressure should controlled using a Parinello-Rahman barostat with a coupling constant of 2.0 ps and reference pressures of 1.01325 bar and the pressure coupling type should be set as semiisotropic. The compressibility used for pressure coupling should be 4.5e-5. Periodic boundary conditions were applied in the xyz directions. The production run should performed using the md integrator with a time step of 0.002 ps for 10,000 steps using the same thermostat and barostat parameters.",
+  "level": "1",
+  "metrics": [
+    "average_temperature",
+    "average_pressure",
+    "average_density"
+  ],
+  "ground_truth": {},
+  "time_limit": 500,
+  "engine": "gromacs"
+}

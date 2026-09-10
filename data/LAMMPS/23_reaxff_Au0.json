@@ -1,0 +1,12 @@
+{
+  "id": "23_reaxff_Au0",
+  "problem_description": "Compute the average temperature and average potential energy per particle for a system of gold (Au)and oxygen (O) atoms using the ReaxFF force field. The simulation should be carried out in real units with an atom style charge. The system consist of gold (Au) and oxygen (O) atoms in total 960 atoms (where 576 are O and 384 are Au) in a box of 26.15618*21.54252*24.00246 A^3. The interatomic interactions must be described using the ReaxFF potential. The ReaxFF potential (ffield.reax.AuO) is employed to accurately model reactive interactions between Au and O atoms. Charge equilibration is handled using the qeq/reax fix, ensuring that atomic charges evolve dynamically throughout the simulation. A Berendsen thermostat is applied to maintain the system at a target temperature of 500 K. The simulation is run in the NVE ensemble to propagate the system dynamics with a time step of 0.25 fs for 5000 steps.",
+  "level": "2",
+  "metrics": [
+    "average_temperature",
+    "average_potential_energy_per_particle"
+  ],
+  "ground_truth": {},
+  "time_limit": 2013,
+  "engine": "lammps"
+}

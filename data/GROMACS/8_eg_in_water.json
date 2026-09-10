@@ -1,0 +1,13 @@
+{
+  "id": "8_eg_in_water",
+  "problem_description": "Compute the average temperature in K, Pressure in bar, and density in kg/m^3 of the ethylene glycol (EG) in spce water. The system was simulated using the GROMACS 2021.4. The system contained 645 EG molecules and 30,634 water molecules in a 10 \u00d7 10 \u00d7 10 nm\u00b3 cubic box and was modeled using the GROMOS54A7-ATB force field. Energy minimization was performed using the steepest descent algorithm. Long-range electrostatic interactions were treated using the Particle Mesh Ewald (PME) method with a 1.2 nm cutoff, while van der Waals interactions were truncated at 1.2 nm. Molecular dynamics simulations were performed with a time step of 0.002 ps, and all bonds were constrained using the LINCS algorithm. The system was equilibrated in the NPT ensemble for 20 ps using the Berendsen thermostat and barostat, followed by a production run for 10 ps using the Nose\u2013Hoover thermostat and Parrinello\u2013Rahman barostat with 300 K and 1 bar, respectively. The fourier_spacing was set to 0.12 nm, and the pme_order was set to 4.",
+  "level": "1",
+  "metrics": [
+    "average_temperature",
+    "average_pressure",
+    "average_density"
+  ],
+  "ground_truth": {},
+  "time_limit": 400,
+  "engine": "gromacs"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "107_silicene",
+  "problem_description": "Compute the Young's modulus of silicene. The simulations should be carried out in real units, with a timestep of 1 fs. The simulation box should be periodic in the x and y directions, while the z-direction was kept non-periodic. The silicene sheet should be created with a lattice constant of 2.1834 A (with 400 atoms in it), and the box dimension should be 65.502*37.8176*20 A^3. The interatomic interactions should be modelled using the reactive force field (reax/c) potential, specifically the pair coefficients for silicine are from ffield.reax.CHONSSi.2. It should be assumed that the silicene sheet is 3.35 A thick. The system should equilibrated at 300 K using an NPT ensemble, where zero pressure should imposed in the x and y directions, allowing the simulation box to relax accordingly. The equlibration run should be performed for 1000 timesteps, during which temperature and pressure should controlled using the Nose-Hoover thermoststae and barostate, respectively. After equilibration, the system should be subjected to uniaxial tensile deformation along the x direction at a strain rate of 1e-4 /fs, while maintaining zero pressure in the y direction. The deformation should be applied for a total of 10000 timesteps. ",
+  "level": "1",
+  "metrics": [
+    "youngs_modulus"
+  ],
+  "ground_truth": {},
+  "time_limit": 615,
+  "engine": "lammps"
+}

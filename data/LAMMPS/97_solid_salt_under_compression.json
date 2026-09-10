@@ -1,0 +1,12 @@
+{
+  "id": "97_solid_salt_under_compression",
+  "problem_description": "Compute the average temperature in K and the total energy per particle (kcal/mol) for a system of solid salt under compression. The system consists of 1000 atoms of Na^{+}, Cl^{-} arranged in a FCC crystal structure. The simulation box should cubic with dimensions from \u221214.2 \u00c5 to 14.2 \u00c5 (in real units) in all three directions, and periodic boundary conditions must applied in all directions. The interactions between the atoms should be described using a Lennard-Jones potential and Coulombic interactions via implemented via the lj/cut/coul/long pair style with a cutoff of 10 \u00c5. Long-range electrostatic interactions should treated using the Particle-Particle Particle-Mesh (PPPM). Lorentz-Berthelot mixing rules (arithmetic for \u03c3 and geometric for \u03b5) should used to define cross-interactions, along with long-range tail corrections to the LJ potential. The system must initialized by assigning velocities according to a Maxwell-Boltzmann distribution at 300 K. A Nos\u00e9\u2013Hoover thermostat and barostat (fix npt) should employed to maintain the system at a constant temperature of 300 K and anisotropic pressure of 1 atm, with damping parameters of 100 fs (thermostat) and 1000 fs (barostat). After an initial equilibration run of 5000 steps, the system underwent a controlled compression process. This was achieved by iteratively scaling the simulation box along the x-direction by a factor of 0.99 over 20 cycles. Each compression step was followed by a short equilibration run of 500 steps, allowing the system to relax between successive deformations.",
+  "level": "1",
+  "metrics": [
+    "average_temperature",
+    "average_total_energy_per_particle"
+  ],
+  "ground_truth": {},
+  "time_limit": 327,
+  "engine": "lammps"
+}

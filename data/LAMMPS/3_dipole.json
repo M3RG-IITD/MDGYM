@@ -1,0 +1,11 @@
+{
+  "id": "3_dipole",
+  "problem_description": "Perform a MD simulation in reduced Lennard-Jones units to calculate the average rotational energy per sphere in a two-dimensional system. The 2D geometry must be explicitly enforced throughout the simulation to zero out z-velocities and forces. The system consists of identical spherical particles arranged initially on a sq2 lattice with lattice density 0.7 inside a simulation box extending from x=0 to 10 and y=0 to 10, with a small thickness in the z direction (from z=-0.5 to 0.5) (in lj units), where atom_style is 'hybrid sphere dipole'. Each particle carries a permanent point dipole moment of fixed magnitude 0.75, with dipole orientations initially assigned at random. The particles interact through a combined Lennard-Jones and dipole-dipole potential using a global cutoff radius of 2.5, with Lennard-Jones parameters epsilon = 1.0 and sigma = 1.0. All particles have unit mass and are allowed both translational and rotational degrees of freedom. The system is initialized with zero translational velocity, and the equations of motion are integrated using an NVE ensemble specifically formulated for extended spherical particles to update dipole orientations. A timestep of 0.005 should be used. Additionally, custom atomic configurations that include the x and y dipole components (mux, muy) must be written every 500 steps, and standard atomic trajectories every 50 steps. Finally, the simulation should be run for 50,000 timesteps.",
+  "level": "2",
+  "metrics": [
+    "average_rotational_energy_per_sphere"
+  ],
+  "ground_truth": {},
+  "time_limit": 15,
+  "engine": "lammps"
+}

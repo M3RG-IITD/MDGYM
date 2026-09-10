@@ -1,0 +1,14 @@
+{
+  "id": "81_elastic_T",
+  "problem_description": "Compute the bulk modulus in GPa, Shear_Modulus_1 in GPa, Shear_Modulus_2 in GPa, and Poisson_Ratio for a silicon-like crystalline structure (in a box of 3*3*3 unit cell) at finite temperature. The crystal must constructed using a diamond lattice with a lattice constant of 5.431 \u00c5. Atoms (216) should placed at lattice sites inside a triclinic simulation box with periodic boundary conditions applied in all directions. Interatomic interactions needs to be modeled using the Stillinger-Weber potential for silicon. The system must equilibrated at 2000 K using the NVE ensemble combined with a Langevin thermostat, with a timestep of 0.001 ps, thermostat and Langevin damping paramter of 0.01 ps, and mass of 28.06 amu per atom. After equilibration, small finite deformations of 0.02 strain units must applied sequentially along each of the six independent strain components defined in Voigt notation. After each deformation, the system is re-minimized using the conjugate gradient (CG) algorithm to allow internal atomic relaxation. The stress responses from these deformations are then used to compute the full elastic stiffness tensor via numerical differentiation of stress with respect to strain.  ",
+  "level": "3",
+  "metrics": [
+    "Bulk_modulus",
+    "Shear_Modulus_1",
+    "Shear_Modulus 2",
+    "Poisson_Ratio"
+  ],
+  "ground_truth": {},
+  "time_limit": 45,
+  "engine": "lammps"
+}

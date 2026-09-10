@@ -1,0 +1,11 @@
+{
+  "id": "125_Si-25_C-75_per_rdf",
+  "problem_description": "Compute the young modulus in GPa for a diamond cubic silicon system. The system should be prepared in the metal unit system, and the PBC should be applied in all directions. The initial structure should be generated using a diamond lattice with a lattice constant of 5.43 A. A cubic box of dimentions 20*20*20 unit cell (in metal unit) should be prepared, and atoms were assigned as type 1 (Si), and total of 64000 atoms should be there. To model a silicon\u2013carbon system, 75% of silicon atoms were randomly replaced with carbon atoms, resulting in a binary Si\u2013C structure. The interatomic interactions should be should be described using the Tersoff potential (SiC.tersoff), which is suitable for covalent bonding in silicon and silicon-carbon systems. The system should first equilibrated at a temperature of 300 K using a Nose\u2013Hoover thermostat and barostat (NPT ensemble). Isotropic pressure control was applied to maintain zero external pressure, allowing the simulation box to relax in all directions. The equilibration needs to be performed with a timestep of 1 fs for 2000 steps. Following equilibration, uniaxial tensile deformation was applied along the x-direction using a constant engineering strain rate of 5*10^12 /s. During deformation, the system was maintained at 300 K. The deformation simulation should carried out for 10,000 timesteps, and the resulting data need to be used to analyze the mechanical response of the system.",
+  "level": "3",
+  "metrics": [
+    "young_modulus"
+  ],
+  "ground_truth": {},
+  "time_limit": 1029,
+  "engine": "lammps"
+}

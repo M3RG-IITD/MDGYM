@@ -1,0 +1,11 @@
+{
+  "id": "72_srd",
+  "problem_description": "Compute the average potential energy per big particles for a system of a mixture of large particles immersed in a mesoscopic solvent. The system must consist of two types of particles: large particles (type 1) representing as colloidal particles and smaller particles (type 2) as solvent particles. The small particles should modelled via Stochatic Rotational Dynamics (SRD). Periodic boundary conditions should be applied in both spatial directions, and all simulaitons needs to be carried out in reduced LJ units. The simulation avoids overlap between large and small particles using a two-step initialization procedure. First, the large particles are equilibrated for 1000 timesteps under NVE dynamics, after which small SRD particles are inserted at high density using a square lattice with density 85.0. Any overlapping small particles within a cutoff distance of 0.5 from large particles are removed using an overlap deletion criterion. The timestep is then reset, and the full SRD simulation is performed using a slip (frictionless) collision rule. The SRD parameters are explicitly defined as a streaming step ratio of 20, target temperature 0.25, random seed 49894, collision radius 0.88, and search distance 0.2. The large particles should be placed on a square lattice (lattice constant = 0.4 ) within a box of 10*10 (LJ units) and mass = 1, diameter = 1.0 (reduced unit). Large particles interactions should be described using a LJ potential with a cutoff of 2.5\u03c3. The system of large particles simulated in NVE ensemble. Small particles should be introduce at high number density, acting as the solvent. Small particles should have (mass = 0.01) and (diameter = 0). There should not be no LJ interaction between them and with the large particles. The solvent dynamics should follow the SRD method. There should not be overlap between large particles and small ones. The velocities must be generated at a temperature of 1.44 in reduced unit. The simulaion should be run for 5,000 steps with a time step of 0.001 (reduced unit).",
+  "level": "1",
+  "metrics": [
+    "average_potential_energy_per_big_particle"
+  ],
+  "ground_truth": {},
+  "time_limit": 486,
+  "engine": "lammps"
+}

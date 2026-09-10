@@ -1,0 +1,12 @@
+{
+  "id": "63_wall",
+  "problem_description": "Compute the average temperature in K, and the potential energy per water molecule in kcal/mol for system of 5000 TIP3P water molecules in a cubic box of 200*200*200 A^3 (real unit). The system is equlibrated in NVT ensemble (Nose-Hoover thermostate) at a temperature of 300 K. Water molecules were randomly inserted within a smaller cubic region (\u221270 \u00c5 to 70 \u00c5) to avoid initial overlaps. The system was confined within an inner region (\u221280 \u00c5 to 80 \u00c5) using a harmonic wall potential. The Shake algorithm should be used to treat the water molecules. Non-bonded interactions were modeled using a Lennard-Jones plus Coulombic potential with a cutoff of 8.0 \u00c5. LJ interactions were applied only between oxygen atoms with parameters \u03b5 = 0.1521 kcal/mol and \u03c3 = 3.1507 \u00c5, while hydrogen atoms did not participate in LJ interactions. Before the simulation run, all atoms are displaced by a small vector using the command displace_atoms all move 0.05 0.9 0.4 units box, which breaks the perfect crystal symmetry and influences the subsequent energy trajectory, although this step is not mentioned in the description. The bonds and angles in the system are constrained using zero-energy styles, where the bond length is fixed at 0.9574 \u00c5 using bond_style zero and bond_coeff, and the bond angle is fixed at 104.52\u00b0 using angle_style zero and angle_coeff, ensuring rigid molecular geometry without contributing any additional potential energy. The simulations should be executed for 1000 steps. The timestep should be 1 fs.",
+  "level": "1",
+  "metrics": [
+    "average_temperature",
+    "average_potential_energy_per_water_molecule"
+  ],
+  "ground_truth": {},
+  "time_limit": 132,
+  "engine": "lammps"
+}

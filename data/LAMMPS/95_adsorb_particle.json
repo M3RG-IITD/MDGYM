@@ -1,0 +1,14 @@
+{
+  "id": "95_adsorb_particle",
+  "problem_description": "Compute the average temperature in K, pressure in bar and the total energy (kcal/mol), and the average number of adsorbed particles for a system of reversible adsorption of neutral particles inside a cylindrical nanopore. The system consists of 92 atoms divided into 10 atom types, where atom types 1 and 2 forms a solid cylindrical framework (representing the nanopore wall), and atom types 3 to 10 represent the mobile particles that can adsorb onto the nanopore surface. All atoms are assigned a same mass (40 amu). The simulation box is periodic in all three directions, with dimentions extending from \u221226.07 \u00c5 to 26.07 \u00c5 in the x and y directions and \u221212 \u00c5 to 12 \u00c5 along the z-axis (in real units). A cylindrical region of radius ~20 \u00c5 is defined along the z-axis, and a repulsive wall potential (LJ 9-3 type with epsilon = 10, sigma =1, and cutoof = 1) confines the particles within this nanopore. Nonbonded interactions are described using a truncated Lennard-Jones potential with a cutoff of ~3.37 \u00c5. The non-bonded environment uses a potential with parameters \u03f5=0.3 and \u03c3=3.0 while the structural connectivity relies on a soft harmonic potential defined by a weak spring constant ( K=0.01 ) and an equilibrium length of 0.0. A key feature of this setup is its dynamic reactivity: the simulation employs sixteen distinct fix commands to manage the instantaneous creation and breakage of bonds across eight groups. Whenever atoms come within a cutoff distance of 3.0 units, bonds are formed or dissolved with 100% probability. To maintain computational focus on relevant interactions, the neighbor list explicitly excludes interactions within the solide group. The dynamics is governed using an NVE ensemble with a Langevin thermostat, effectively sampling the NVT ensemble at 300 K with a damping parameter of 23 fs. The simulation is also implementing the dynamic bonding, where particles can reversibly adsorb onto the nanopore surface, forming and breaking bonds with the wall atoms. Multiple fix bond/create and fix bond/break commands are used to allow bonds to form between surface atoms (type 2) and mobile particles (types 3\u201310) within a cutoff distance of 3.0 \u00c5. The simulation proceed with an initial short equlibration (10,000 steps) using short timesteps of 0.1, followed by a longer equlibration (100,000 steps) using timestep of 2.0, and a production run of 1,000,000 steps.",
+  "level": "3",
+  "metrics": [
+    "average_temperature",
+    "average_pressure",
+    "average_total_energy",
+    "average_of_total_number_of_adsorbed_particles"
+  ],
+  "ground_truth": {},
+  "time_limit": 129,
+  "engine": "lammps"
+}

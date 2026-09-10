@@ -1,0 +1,11 @@
+{
+  "id": "114_SFG_cal_Al",
+  "problem_description": "Compute the average of the generalized stacking fault (GSF) energy in J/m^2 for FCC aluminum. The simulation employed metal units in a three-dimesional box (49.59*28.64*200) with PBC applied in x and y direction while shrink-wrapped boundaries along z. An FCC lattice with a lattice constant of 4.05 A should created, and the crystal should be oriented along the [1 1 2], [-1 1 0], and [-1 -1 1] direction along x, y, and z. Initially, the force should be set to zero in x-andy-direction, z-direction is allowed to minimize only. The simulation box should be devided into two regions (with 20A each)across the slip plane, which is known as the top and the bottom halves, with atoms in each region created separately. The interatomic interactions should be modelled using the EAM potential, specially the Al99.eam.alloy for the Al. For computing the GSF energy, the bottom half of the crystal should incrementally displaced (-1 A) along the slip direction while the top half should remain fix. There is a loop (n = 40)for displacement. After each incremental displacement, the system should be energy minimized using the conjugate gradient method (with etol & ftol to be 1e^{-10}).",
+  "level": "1",
+  "metrics": [
+    "average_of_gsf_energy"
+  ],
+  "ground_truth": {},
+  "time_limit": 762,
+  "engine": "lammps"
+}

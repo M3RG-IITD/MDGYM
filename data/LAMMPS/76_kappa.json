@@ -1,0 +1,11 @@
+{
+  "id": "76_kappa",
+  "problem_description": "Compute the average thermal conductivity of a simple liquid system (mass = 1, \u03c3 = 1, \u03b5 =1, and the cutoff is 2.5\u03c3). The system must be created in a 3D simulation box of dimension 10*10*20 (in LJ unit), and atoms should arranged on an FCC lattice at a reduced density of 0.6. The system is first equilibrated at a target temperature of 1.35 using the NVT (Nose-Hoover thermostat) ensemble for 1000 time steps and then unfix it. Subsequently, the system is evolved in the NVE ensemble while a constant heat flux is imposed using the fix ehex method for 10,000 steps for establishing the thermal gradient . The thermal conductivity is calculated using Fourier's law. The simulation should be run for 20,000 timesteps.",
+  "level": "3",
+  "metrics": [
+    "average_thermal_conductivity"
+  ],
+  "ground_truth": {},
+  "time_limit": 1944,
+  "engine": "lammps"
+}

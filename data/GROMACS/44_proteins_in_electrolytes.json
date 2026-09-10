@@ -1,0 +1,13 @@
+{
+  "id": "44_proteins_in_electrolytes",
+  "problem_description": "Compute the average temperature in K, pressure in bar, and density in kg/m^3 for a protein\u2013electrolyte system simulated in a 5.0 \u00d7 5.0 \u00d7 5.0 nm^3 box. The system consists of one protein (1cta.pdb) solvated in 3563 water molecules along with 81 sodium (Na+) and 75 chloride (Cl\u2212) ions, modeled using the AMBER03 force field. Energy minimization was performed using the steepest descent algorithm for 50 steps. This was followed by NVT equilibration using the md integrator with a 1 fs time step for 20,000 steps (20 ps), maintaining the temperature at 300 K using the v-rescale thermostat with a coupling constant of 0.5 ps. Subsequently, NPT equilibration was carried out for 200,000 steps (200 ps) using the same integrator and thermostat, while pressure was maintained at 1 bar using the c-rescale barostat with a coupling constant of 1.0 ps and a compressibility of 4.5 \u00d7 10^-5 bar^-1. Electrostatic interactions were treated using PME, and a cutoff of 1.0 nm was applied for both Coulomb and van der Waals interactions. All bonds involving hydrogen atoms were constrained using the LINCS algorithm, and periodic boundary conditions were applied in all directions. This simulations does not involve a production run, and the average temperature, pressure, and density should be calculated from the NPT equilibration run.",
+  "level": "2",
+  "metrics": [
+    "average_temperature",
+    "average_pressure",
+    "average_density"
+  ],
+  "ground_truth": {},
+  "time_limit": 1000,
+  "engine": "gromacs"
+}

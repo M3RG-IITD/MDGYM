@@ -1,0 +1,11 @@
+{
+  "id": "13_multi_colloids",
+  "problem_description": "Compute the average_potential_energy_per_particle for a two-dimensional molecular dynamics simulation studying large colloidal particles embedded in a dense bath of smaller Lennard\u2013Jones particles. The system consists of a square simulation box of size 60 * 60 (reduced LJ units) with periodic boundary conditions, and particle motion is restricted to two dimensions. Initially, small particles are placed on a square lattice with lattice spacing 0.1 and are divided into four species with approximately equal populations and unit mass. Two circular regions of radius 30 are cleared of small particles, and two large colloidal particles are inserted at the centers of these regions. The colloids have a mass of 400 and interact with the surrounding small particles through a colloid interaction potential that enforces strong excluded-volume repulsion. Interactions among small particles and between colloids are also included via the same potential with appropriate parameters. Initial velocities correspond to a reduced temperature of 2.0. The system is evolved using NPT dynamics with isotropic pressure control near zero and Nose\u2013Hoover temperature regulation. The simulation uses a timestep of 0.005 and is run for 500000 steps.",
+  "level": "1",
+  "metrics": [
+    "average_potential_energy_per_particle"
+  ],
+  "ground_truth": {},
+  "time_limit": 168,
+  "engine": "lammps"
+}

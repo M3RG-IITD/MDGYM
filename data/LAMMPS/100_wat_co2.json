@@ -1,0 +1,13 @@
+{
+  "id": "100_wat_co2",
+  "problem_description": "Compute the average temperature in K, pressure in bar and the total energy per CO2 molecule (kcal/mol) for a system of mixture of water and carbon dioxide. The system consists of 300 water molecules modelled using the TIP4P/2005 force field and 300 carbon dioxide molecules described by a TraPPE-based force field, resulting in a total of 600 molecules. The simulation box is cubic with dimensions from -20 to 20 (in real units) in all three directions, and periodic boundary conditions should applied in all directions. The interactions of interemolecular interactions must represented using a combination of Lennard-Jones and long-range Coulombic potentials. The lj/cut/tip4p/long pair style was employed with a cutoff of 12, and long-range electrostatics were treated using the particle-particle particle-mesh (PPPM). Lorentz-Berthelot mixing rules were applied for cross-interactions. The system was initialized by randomly placing carbon dioxide and water molecules while avoiding atomic overlaps. The geomery of water molecules was constrained using the SHAKE algorithm. The system was first equilibrated under the NVT ensemble at a temperature of 300 K for 5000 timestspes using a Nose-Hoover thermostat. Subsequently, the system was equilibrated in the NPT ensemble at 300 K and pressure ramp from 100 to 1 atm (isotropically) for 20,000 timesteps using a Nose-Hoover barostat.",
+  "level": "2",
+  "metrics": [
+    "average_temperature",
+    "average_pressure",
+    "average_total_energy_per_CO2_molecule"
+  ],
+  "ground_truth": {},
+  "time_limit": 1848,
+  "engine": "lammps"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "102_wat_toluence_interface",
+  "problem_description": "Compute the average temperature in K, pressure in bar and total energy in kcal/mol of a system consisting of water and toluene at 300K. The system should use the GROMOS force field for toluene and the TIP4P/2005 water model, implemented via the lj/cut/tip4p/long pair style, with a cutoff distance of 12 A for short range interactions. The bond, angle, dihedral, improper styles should defined as harmonic. Intramolecular nonbonded interactions were excluded for 1\u20132 and 1\u20133 pairs and scaled for 1\u20134 pairs (LJ: 0.5, Coulomb: 1.0), consistent with OPLS-type force field conventions, where 1\u20133 and 1\u20134 neighbors were defined based on the specified angle and dihedral topology. Long range electrostatics should be computed using the PPPM method with a precision of 1e-5. Lorentz-Berthelot mixing rules should be applied for the cross interactions between water and toluene. The simulation should be carried out in the real unit system. The system should constructed in a three-dimensional orthorhombic box of dimensions 120*40*40 A^3, with periodic boundary conditions in all three dimensions. Initially, molecules should be randomly inserted in the central region of the box of size 40*40*40 A^3 to promote the spontaneous separation. The system should be having 1000 water molecules and 100 toluene molecules. The system should be equilibrated in the canonical (NVT) ensemble using Nose-Hoover thermostat with a temperature damping parameter of 100 fs. A timestep of 1.0 fs must be used. Additionally, the SHAKE algorithm must be applied specifically to the water molecules to constrain the O-H bonds and H-O-H angles with a tolerance of 1e-5 and up to 200 iterations. Initially, the temperature must be ramped up from 10 K to 300 K over a period of 5000 timesteps, this should be followed by an equilibration run of 20000 timesteps at 300K.",
+  "level": "1",
+  "metrics": [
+    "average_temperature",
+    "average_pressure",
+    "average_total_energy"
+  ],
+  "ground_truth": {},
+  "time_limit": 2973,
+  "engine": "lammps"
+}

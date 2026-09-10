@@ -1,0 +1,11 @@
+{
+  "id": "15_nemd",
+  "problem_description": "Simulate a two-dimensional atomic system using Non-Equilibrium Molecular Dynamics (NEMD) to study shear flow and compute the shear viscosity of a Lennard-Jones fluid. The system consists of particles arranged initially on a 2D sq2 lattice with a lattice spacing of 0.8442, confined in a simulation box of dimensions 10 * 8 with a small thickness in the z-direction to enforce 2D behavior. The structure should have the block region of 2 unit wide in x-direction and infinity in y- and z-direction defined with 'slice block 4 6 INF INF INF INF'. All particles have a mass of 1.0, and a uniform initial velocity is assigned corresponding to a temperature of 1.44 in reduced Lennard-Jones units. Interactions are modeled via a truncated Lennard-Jones potential with a cutoff of 4.0, and periodic boundary conditions are applied in all directions. Shear flow is imposed using a constant shear rate of 0.01 along the xy-plane, with the SLLOD equations of motion and a Nose\u2013Hoover thermostat (tchain = 1) to maintain temperature at 1.0 while ensuring correct non-equilibrium behavior. Neighbor lists are updated every step with a bin size of 0.3, and the system is evolved with a time step of 0.005 (in LJ units) for a total of 100000 steps to reach a non-equilibrium steady state. Calculate the shear viscosity to the externally imposed deformation.",
+  "level": "2",
+  "metrics": [
+    "average_shear_viscosity"
+  ],
+  "ground_truth": {},
+  "time_limit": 30,
+  "engine": "lammps"
+}

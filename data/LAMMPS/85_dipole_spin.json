@@ -1,0 +1,11 @@
+{
+  "id": "85_dipole_spin",
+  "problem_description": "Compute the average of total magnetic energy of the system of iron atoms which are arranged in a BCC lattice structure with lattice constant of 2.8665 \u00c5, and a simulation box of dimensions 12 * 12 * 12 (in metal units). The PBC applied in all directions. Each iron atoms should have a mass of 55.845 amu and an initial magnetic moment of magnitude 2.2 \u03bcB aligned along the -x-direction. The interatomic interactions must modeled using a hybrid overlay potential that combines an embedded atom method (EAM) potential (Mishin 2006) for atomic interactions, a Heisenberg-type exchange interaction for spin coupling with cutoff 3.4, and long-range dipole\u2013dipole interactions with cutoff 8.0 treated using an Ewald summation scheme (ewald/dipole/spin) with a precision of 10\u207b\u2074. The system should initialized at a temperature of 100 K with velocities drawn from a Gaussian distribution. The spin dynamics should evolve using a precession integrator with cubic anisotropy, while a Langevin thermostat for spins is applied at 0 K to control spin fluctuations. Atomic motion (lattice moving) is integrated using the NVE ensemble combined with spin dynamics. A timestep of 0.1 fs is used for stable integration of both lattice and spin degrees of freedom. The simulation executed for 1000 steps.",
+  "level": "3",
+  "metrics": [
+    "average_total_magnetic_energy"
+  ],
+  "ground_truth": {},
+  "time_limit": 1113,
+  "engine": "lammps"
+}

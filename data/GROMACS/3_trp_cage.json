@@ -1,0 +1,11 @@
+{
+  "id": "3_trp_cage",
+  "problem_description": "Compute the average of Root Mean Square Deviation (RMSD) of the peptide (1L2Y) in nm along the backbone. The peptide is solvated with TIP3P water molecules in a cubic box of 7 nm. The CHARMM27 force field was used to model the peptide. The enrgy minimization should be performed using the steepest-descent algorithm using minimization step size as 0.01 nm. The equilibration should be conducted using the NPT ensemble for 50,000 steps. The time steps should be kept as 2 fs. Long-range electrostatic interactions were calculated using the Particle Mesh Ewald (PME) method with a real-space cutoff of 1.4 nm. Short-range van der Waals interactions were treated using a spherical cutoff of 1.4 nm. The temperature was maintained at 250 K using the velocity-rescale thermostat with a coupling constant of 0.1 ps. Pressure was maintained at 1 atm using the Parrinello\u2013Rahman barostat with a coupling constant of 2 ps. Bond lengths within the solute were constrained using the LINCS algorithm. During the equilibration position restrain should be used (define=-DPOSRES_B). The production run should be performed for 100,000 steps using the same settings as equilibration. ",
+  "level": "2",
+  "metrics": [
+    "root_mean_square-deviation"
+  ],
+  "ground_truth": {},
+  "time_limit": 1100,
+  "engine": "gromacs"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "50_DSPC_lipid",
+  "problem_description": "Compute the average solvent accessible surface area (SASA) per lipid for a lipid bilayer system composed of 128 DSPC (1,2-distearoyl-sn-glycero-3-phosphocholine) molecules solvated in 768 water molecules. Martini_v3.0.0 force field is used for the lipid and martinit water molecules have been used. The system setup includes energy minimization, equilibration, and production runs. The eqilibration should be performed for 15,00,000 steps using 0.02 ps timesteps. In equlibration, the Pcoupltype = semi-isotropic should be set, mean while for the production runs it should use the isotropic coupling. The production run was propagated using the leap-frog integrator with a 0.02 ps time step for 15,00,000 steps. Van der Waals interactions were treated with a 1.1 nm cutoff and potential-shift modifier, while electrostatics were handled using the reaction-field method with a 1.1 nm cutoff and relative dielectric constant of 15. Temperature (340 K) and isotropic pressure (1 bar) were maintained using the velocity-rescale thermostat having tau_t = 1.0 ps and C-rescale barostat having tau_p = 4.0 ps, respectively in both equlibration and the production runs. The simulations should not use any bond constraints. The average SASA per lipid should be calculated from the production run using the gmx sasa tool, and the results should be averaged over all lipids and frames in the production trajectory and divided by total number of lipids.",
+  "level": "3",
+  "metrics": [
+    "average_sasa_per_lipid"
+  ],
+  "ground_truth": {},
+  "time_limit": 1200,
+  "engine": "gromacs"
+}

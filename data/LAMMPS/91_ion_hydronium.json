@@ -1,0 +1,12 @@
+{
+  "id": "91_ion_hydronium",
+  "problem_description": "Compute the average temperature in K, and total energy per water molecule of a system of water molecules having only 2 water molecules in it. The system is modelled using the reactive force field (ReaxFF). The system contains 7 atoms distributed as 2 atom types: oxygen (2 atoms) (type 1, mass 15.9994 amu) and hydrogen (5 atoms) (type 2, mass 1.008 amu). The atoms are placed within a cubic simulation box of dimensions 40 * 40 * 40 \u00c5^3 (in real units). The ReaxFF potential is applied with QEq charge equilibration to capture dynamic polarization and possible chemical reactions. Oxygen atoms are initially restrained via a spring to maintain the cluster's structure during equilibration, while initial charges are set to reasonable starting values (-1 for oxygen, +0.5 for hydrogen) to aid the QEq solver. The simulation uses a timestep of 0.25 fs, first equilibrating the system for 10,000 steps under a Berendsen thermostat, followed by a production run of 500,000 steps using a Langevin thermostat at 360 K in NVE ensemble (using nve/limit 0.1).",
+  "level": "3",
+  "metrics": [
+    "average_temperature",
+    "average_total_energy_per_water"
+  ],
+  "ground_truth": {},
+  "time_limit": 75,
+  "engine": "lammps"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "43_stretching_polymer",
+  "problem_description": "Compute the average pull distance in nm, and radius of gyration in nm, temperature in K, and pressure in bar for a polyethylene glycol (PEG) molecule, solvated in 1290, tip3p water molecules in a box of 6*2.6*2.6 nm^3 box. The polyethylene glycol (PEG) molecule was modeled using an all-atom representation based on the CHARMM35 force field. The PEG chain (mPEG) comprising approximately 11 repeating \u2013CH\u2082\u2013CH\u2082\u2013O\u2013 units, corresponding to a molecular weight of ~500 g/mol. The energy minimization should be performed using the steepest descent algorithm until the convergence criterion of emtol = 10 is met with define = -DFLEXIBLE, so that the water molecules should be flexible. During this minimization step, electrostatic interactions must be treated using the Particle Mesh Ewald (PME) method with a Coulomb cutoff of 1.0 nm, and van der Waals interactions should also be truncated at a 1.0 nm cutoff. Following EM, the system undergoes two distinct equilibration stages before the stretch run: a 20 ps NVT equilibration (v-rescale thermostat), succeeded by a 20 ps NPT equilibration that utilizes a c-rescale barostat. Notably, during both the NVT and NPT stages, a non-standard center-of-mass (COM) motion removal strategy is applied. By setting comm-grps = PEG, the COM motion is removed exclusively for the PEG molecule, rather than for the water or the entire system, establishing the specific environmental conditions necessary prior to the final pulling stage. The stretching of the PEG was carried out using constant-force pulling simulations, where a force of 200 kJ\u00b7mol\u207b\u00b9\u00b7nm\u207b\u00b9 in the x-direction must apply between the terminal groups (End1 and End2). Simulations were carried out using the md integrator with a 2 fs time step for 50,000 steps (100 ps). Temperature was maintained at 300 K using the v-rescale thermostat. Electrostatic interactions were treated using PME, and van der Waals interactions employed a 1.0 nm cutoff. All bonds involving hydrogen atoms were constrained using the LINCS algorithm.",
+  "level": "3",
+  "metrics": [
+    "average_temperature",
+    "average_pressure",
+    "average_pull_distance",
+    "average_radius_of_gyration"
+  ],
+  "ground_truth": {},
+  "time_limit": 1200,
+  "engine": "gromacs"
+}

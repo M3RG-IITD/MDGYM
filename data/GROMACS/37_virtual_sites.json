@@ -1,0 +1,13 @@
+{
+  "id": "37_virtual_sites",
+  "problem_description": "calculate the average principal axes of inertia in all direction in nm units for a carbon dioxide system containing 10 CO2 molecules modeled using the oplsaa.ff force field in a cubic simulation box of dimensions 10.0 \u00d7 10.0 \u00d7 10.0 nm^3. Energy minimization was performed using the steepest descent algorithm for 50000 steps with a maximum step size of 0.01 nm and an energy tolerance of 10.0. Nonbonded interactions were calculated using a group-based cutoff scheme. The critical issues in the protocol are the failure to specify angular center-of-mass motion removal (comm-mode = angular) to prevent spurious system rotation, and the generation of fresh velocities (gen_vel = yes with gen_seed = -1) at the start of production. Addressing these omissions is essential to ensure both the physically accurate dynamics of the isolated gas-phase molecules and the reproducibility of the simulation. Production run were performed using the md integrator with a time step of 0.002 ps for 5000000 steps with neighbor list updates every step. Temperature coupling was applied using the V-rescale thermostat with a coupling constant of 0.1 ps and a reference temperature of 298 K.",
+  "level": "3",
+  "metrics": [
+    "paxis1",
+    "paxis2",
+    "paxis3"
+  ],
+  "ground_truth": {},
+  "time_limit": 150,
+  "engine": "gromacs"
+}

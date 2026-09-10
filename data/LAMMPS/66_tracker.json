@@ -1,0 +1,11 @@
+{
+  "id": "66_tracker",
+  "problem_description": "Compute the average total enegry per particle for a 3D LJ fluid. The system was initialized on a FCC lattice with a reduced density of 0.8442 within a cubic simulation box of size 4*4*4 (in LJ unit). The interatomic potential should use LJ potential with parameter \u03b5 = 1.0 and \u03c3 = 1.0, and a cutoff distance of 2.5\u03c3. The tracking potential was overlaid using a hybrid/overlay pair style. A contact was defined when the interatomic distance was less than the cutoff. Only contacts exceeding a minimum lifetime threshold of 0.5 time units were considered. The system should evolved in NVE ensemble, and the initial velocitites were assigned at a reduced temperature of 2.0. The system should simulated for a total of 5000 timesteps.    ",
+  "level": "1",
+  "metrics": [
+    "average_total_energy_per_particle"
+  ],
+  "ground_truth": {},
+  "time_limit": 12,
+  "engine": "lammps"
+}

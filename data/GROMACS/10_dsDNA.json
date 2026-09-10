@@ -1,0 +1,14 @@
+{
+  "id": "10_dsDNA",
+  "problem_description": "Compute the average solvent accessible surface area (SASA) in nm^2, radius of gyration in nm, root mean square deviation (RMSD) in nm, and number of hydrogen bonds for the dsDNA\u2013protein system. The system contained two DNA chains (DNA_chain_B and DNA_chain_C), one protein chain (Protein_chain_A), 8963 water molecules, and 10 sodium ions in a simulation box of dimensions 7.48930 \u00d7 7.48930 \u00d7 5.29574 nm\u00b3 and was modeled using the AMBER99SB-ILDN force field. First, the system must be neutralized by adding counter-ions using the gmx genion command. Next, energy minimization should be performed using the steepest descent algorithm for up to 50,000 steps, utilizing a step size of 0.01 nm and an energy tolerance of 1000 kJ mol\u207b\u00b9 nm\u207b\u00b9, and all hydrogen bonds must remain strictly constrained. For all subsequent molecular dynamics phases, the protocol must integrate the equations of motion using a 0.002 ps time step alongside the Verlet cutoff scheme, and it should constrain hydrogen-containing bonds via the LINCS algorithm. To handle non-bonded interactions, the setup must treat long-range electrostatics with the Particle Mesh Ewald (PME) method using a 1.0 nm cutoff and must truncate van der Waals interactions at 1.0 nm, while periodic boundary conditions should be applied across the xyz dimensions. Following this, the system must be equilibrated in the NVT ensemble for 10 ps (5,000 steps) using the velocity-rescale thermostat (tau_t = 0.1 ps). Subsequently, the procedure requires a 20 ps (10,000 steps) NPT equilibration using the same thermostat coupled with the Parrinello\u2013Rahman barostat. Finally, a 100 ps (50,000 steps) production run must be executed under identical NPT conditions to generate the simulation trajectory. The average SASA, radius of gyration, RMSD, and number of hydrogen bonds should be calculated from the production run.",
+  "level": "3",
+  "metrics": [
+    "sasa",
+    "radius_of_gyration",
+    "rmsd",
+    "hydrogen_bonds"
+  ],
+  "ground_truth": {},
+  "time_limit": 400,
+  "engine": "gromacs"
+}
