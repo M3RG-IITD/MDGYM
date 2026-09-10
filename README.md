@@ -32,6 +32,10 @@ Tasks are organized by simulation engine:
 |3	| GPT-OSS 20B	| OpenHands	| 0%	| 0%	| 0% | 0% |
 |4	| Qwen3-Coder	| OpenHands	| 2%	| 0%	| 0% | 0% |
 
+## Architecture
+<div align="center">
+<img src="assets/MDgym_architecture.png" alt="MDGYM Architecture" width="600"/>
+</div>
 
 ### Submitting to the leaderboard
 
