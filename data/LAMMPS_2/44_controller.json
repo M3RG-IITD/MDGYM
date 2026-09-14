@@ -1,0 +1,11 @@
+{
+  "id": "44_controller",
+  "problem_description": "Compute the average teperature for a system of three-dimentional LJ fluid under temperature control via a feedback controller. The system is interacting with LJ potential with \u03b5 = 1.0 and \u03c3 = 1.0, and a cutoff distance of 2.5\u03c3. All quantitites are represented in reduced LJ units. The initial configuration of LJ particles is in FCC at a reduced density of 0.8442 within the cubic dimention of 10. Periodic boundary condition is applied in all directions and all particles are having unit mass. Initially, the velocity should be generated using Maxwell-Boltzmann distribution at a temperature of 1.44 and velocity-verlet algorithms should be used for intergration of equations of motion in NVE ensemble.  Apply a Langevin thermostat to all atoms, maintaining temperature at 0.5 (possibly variable), with a damping time of 0.5 in 500 steps. Again a feedback controller mechanism should be implemented using fix controller to drive the system's temperature from 0.5 to 1.5. A production run should be carried out to motitor the temperature till 5000 timesteps under active feedback control.",
+  "level": "2",
+  "metrics": [
+    "average_temperature"
+  ],
+  "ground_truth": {},
+  "time_limit": 75,
+  "engine": "lammps"
+}

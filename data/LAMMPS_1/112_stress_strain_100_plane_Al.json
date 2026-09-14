@@ -1,0 +1,11 @@
+{
+  "id": "112_stress_strain_100_plane_Al",
+  "problem_description": "Compute the Young's modulus in GPa of aluminum in the 100 plane. A cubic simulation box should be used with dimension 10*10*10 unit cell with periodic boundary conditions in all directions. The Aluminum atoms should be arranged in an FCC lattice of lattice parameter 4.05 A (in metal units). The interatomic interactions should be modelled using the EAM potential, specially the Al99.eam.alloy for the Al. The system should be equilibrated at 300 K using a NPT ensemble for 20 ps with a time step of 1 fs. After equilibration, a uniaxial tensile strain should be applied along the x-direction at a constant strain rate of 1e{-2} /ps while keeping the pressure in the y and z directions at zero. The simulation should be run for 20000 timesteps.",
+  "level": "1",
+  "metrics": [
+    "youngs_modulus"
+  ],
+  "ground_truth": {},
+  "time_limit": 1329,
+  "engine": "lammps"
+}

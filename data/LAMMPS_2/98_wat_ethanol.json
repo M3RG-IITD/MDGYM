@@ -1,0 +1,12 @@
+{
+  "id": "98_wat_ethanol",
+  "problem_description": "Compute the average temperature in K and the total energy (kcal/mol) for a system of a mixture of water, sodium chloride, and ethanol. The system should consist of 400 water molecules and 200 ethanol molecules and 20 each of Na+ and Cl- ions, resulting in a total of 3040 atoms. The water should modelled using the TIP4P/2005, ethanol should modelled using the OPLS-AA force field, and the ions must modeled using Lennard-Jones potentials with parameters as mentioned (pair_coeff 1 1 0.1075 2.31; 2 2 0.1004 4.3; 3 3 0.1848 3.165; 4 4 0.0 0.0; 5 5 0.066 3.5; 6 6 0.03 2.5; 7 7 0.0 0.0; 8 8 0.066 3.5; 9 9 0.17 3.12; 10 10 0.03 2.5). The simulation box should be cubic with dimensions from -24 to 24 A (real units), in all three directions, and periodic boundary conditions must applied in all directions. The intermolecular interactions were represented using a combination of Lennard-Jones and long-range Coulombic potentials with 1-4 interactions scaled by a factor of 1.0 (or not scalled down) for OPLS-AA. The lj/cut/tip4p/long pair style was employed with a cutoff of 12 A, and long-range electrostatics were treated using the particle-particle particle-mesh (PPPM solver with an accuracy of 1.0e-5). Arithmetic mixing rules are applied for cross-interactions, and molecular geometries are constrained using the SHAKE algorithm. The system was initialized by randomly placing ions, ethanol, and water molecules using molecule templates (tip4p-2005.mol and OPLS.mol) with a minimum overlap check of 1.5\u20132.0 \u00c5. The simulation was first equilibrated under the NVE ensemble with a displacement limit of 0.1 \u00c5 per timestep and a Berendsen thermostat at 300 K for 2000 timesteps to remove bad contacts. Subsequently, the system was equilibrated in the NPT ensemble at 300 K and 1 atm pressure for 50,000 timesteps using a Nose-Hoover barostat.",
+  "level": "2",
+  "metrics": [
+    "average_temperature",
+    "average_total_energy"
+  ],
+  "ground_truth": {},
+  "time_limit": 1944,
+  "engine": "lammps"
+}

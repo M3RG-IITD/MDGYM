@@ -1,0 +1,11 @@
+{
+  "id": "5_crack",
+  "problem_description": "Compute the average tensile stress in a 2D MD simulation to study crack propagation in a brittle solid modeled using a Lennard\u2013Jones interaction. The system consists of atoms arranged on a hexagonal lattice with lattice constant 0.93, confined within a rectangular simulation box. Shrink-wrapped boundary conditions should be applied in the x-and y-direction, while the z- direction is periodic. Five atom types of equal mass should be defined to distinguish bulk atoms (type 1), boundary atoms (type 4 & 5), and atoms near the crack region (type 2 & 3). All atoms interact via a Lennard\u2013Jones potential with parameters \u03f5=1.0, \u03c3=1.0, and a cutoff radius of 2.5. An initial crack or weak interface should be introduced on the left side of the sample by assigning different atom types to adjacent regions and excluding interactions between those types (using exclude type 2 3). The system should be initialized at a low temperature, and mode-I tensile loading should be applied by imposing an upward velocity on the top boundary and a linear velocity ramp across the mobile region, while constraining vertical forces on the bottom boundary. The equations of motion should be integrated using an energy-conserving ensemble with a timestep of 0.003, and the simulation should be run for 10,000 timesteps. ",
+  "level": "3",
+  "metrics": [
+    "average_tensile_stress"
+  ],
+  "ground_truth": {},
+  "time_limit": 39,
+  "engine": "lammps"
+}

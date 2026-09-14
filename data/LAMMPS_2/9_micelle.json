@@ -1,0 +1,12 @@
+{
+  "id": "9_micelle",
+  "problem_description": "Compute the average pressure and average_2D_density for a two-dimensional system of amphiphilic self-assembly using a coarse-grained bead-spring model. The system should be simulated in 2D with particle motion constrained to the plane in the box of (35.85686*35.85686*0.2 in LJ units ), and bonded amphiphilic molecules are represented using harmonic bonds between beads with FENE special bond settings applied. The system consists of four atom types: solvent (1), hydrophilic heads (2), and hydrophobic tails (3 and 4). Evolve the system with NVE dynamics, maintaining the temperature at a reduced value of 0.45 using a velocity-rescaling thermostat applied every 100 steps. To safely remove initial particle overlaps, the simulation should begin with a 1,000-step push-off stage in which non-bonded interactions are modeled using a soft repulsive pair potential with a cutoff of 1.12246. The potential prefactor is gradually increased from 1.0 to 20.0 over the course of the run using an adaptive potential scheme. After this equilibration stage, the soft potential should be replaced by a Lennard-Jones potential for a main production run of 500,000 steps. For the LJ interactions: solvent-solvent, head-head, and solvent-head interactions are attractive (cutoff 2.5, full size); tail-tail interactions are attractive (cutoff 2.5, size-reduced); and solvent-tail and head-tail interactions are purely repulsive (cutoff 1.12246) to promote amphiphilic segregation. Output thermodynamic data every 50 steps and dump atom trajectories every 100 steps to observe micelle formation.",
+  "level": "2",
+  "metrics": [
+    "average_pressure",
+    "average_2D_density"
+  ],
+  "ground_truth": {},
+  "time_limit": 81,
+  "engine": "lammps"
+}

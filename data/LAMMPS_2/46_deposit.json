@@ -1,0 +1,13 @@
+{
+  "id": "46_deposit",
+  "problem_description": "Compute the average temperature, pressure and the average total energy per particle for a system of the deposition of type 2 atoms onto a fixed substrate composed of type 1 atoms using the LJ potential in reduced units. The simulation box dimention is 5*5*10 with periodic in x and y-directions and fixed boundaried in z-direction. The substrate is having the lower portion of the box (0-3) and consiste of type 1 atoms arranged in an FCC lattice, meanwhile the type 2 atoms are dynamically deposited in a slab region at the top of the box (z=8-9). All the atoms are having the unit mass, and interactions using LJ potential with \u03b5 = 1.0 and \u03c3 = 1.0 with cutoff of 2.5 \u03c3. The substrate-deposition interactions use a longer cutoff distance of 5.0 \u03c3 to capture surface effects. Depostion atoms are moving dowward directions and are integrate using the NVE ensemble, while mobile atoms above z = 2 are coupled to (Langevin thermostat + NVE), where Langevin thermostat is used to keep the target temperature of 1.0 and a damping parameter of 0.1. The deposition occure periodically, with 100 atoms added every 100 timesteps. The simulation runs for a total of 20,000 timesteps.",
+  "level": "2",
+  "metrics": [
+    "average_temperature",
+    "average_pressure",
+    "average_total_energy_per_particle"
+  ],
+  "ground_truth": {},
+  "time_limit": 48,
+  "engine": "lammps"
+}

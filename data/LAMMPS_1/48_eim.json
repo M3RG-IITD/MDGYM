@@ -1,0 +1,11 @@
+{
+  "id": "48_eim",
+  "problem_description": "Compute the average of potential energy per particle for a NaCl system modelled using Embedded Ion Method potential. The simulation is carried out in metal units. The initial configuration should be in rock salt structure in a box of 40*40*40 A^3. The system should initially equlibrated at high temperature by assigning velocities to 1400 K usng Gaussian distribution then gradually decreasing the temperature till 300 K using Nose-Hoover thermostse and pressure should maintain at 0 bar using the Nose-Hoover barostate (anisotropically). The simulations should be executed for 10,000 steps. The interatomic interactions should be modelled using the EIM potential, specifically the pair coefficients for NaCl are from ffield.eim. The mass of Na and Cl atoms were set to 22.9898 amu and 35.453 amu, respectively.",
+  "level": "1",
+  "metrics": [
+    "average_potential_energy_per_particle"
+  ],
+  "ground_truth": {},
+  "time_limit": 303,
+  "engine": "lammps"
+}

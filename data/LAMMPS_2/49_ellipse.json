@@ -1,0 +1,11 @@
+{
+  "id": "49_ellipse",
+  "problem_description": "Compute the average rotational kinetic energy of the ellipsoidal particles in a system of mixed particles with spheres. The system is modelled using the Gay-Berne potential in the LJ units and the atom_style is ellipsoid. The system is defined in two dimensions (dimension 2) and occupies a 20x20x1 block in LJ units. The out-of-plane z-direction dynamics are strictly prevented using the fix enforce2d command. Initially the particles are arranged in a square lattice with a lattice spacing of 0.02, and all are spherical. Later, 10% of the particles were randomly converted to type 2 (ellipsoidal), and the quaternions of all particles are randomized to provide unbiased initial orientations. The mass and shape of type 1 is (1; 1,1,1) while for type 2 is (1.5; 3,1,1). The interactions parameters are such that type 1-type 1 interact via LJ, type-2-typ-2 interaction capture the anisotropic attraction between ellipsoidal, and cross-interaction is used from potential. The initial velocities were assigned at temperature 2.4. Then system was equilibrated in the NPT ensemble using fix npt/asphere with target temperature 2 and pressure from 0 to 1 for 2,000 steps to shrink the box around the dilute system. In addition, the rotational temperature is computed using the temp/asphere compute with appropriate correction to the degrees of freedom. Following equilibration, the NPT fix is removed and the dense system transitions to an NVE ensemble using fix nve/asphere for a main production run of 50,000 steps, recording forces and positions every 10 steps in production run. The entire simulation utilizes a timestep of 0.002.",
+  "level": "2",
+  "metrics": [
+    "average_rotational_kinetic_energy"
+  ],
+  "ground_truth": {},
+  "time_limit": 123,
+  "engine": "lammps"
+}

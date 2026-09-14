@@ -1,0 +1,14 @@
+{
+  "id": "75_elastic",
+  "problem_description": "Compute the bulk modulus in GPa, Shear_Modulus_1 in GPa, Shear_Modulus_2 in GPa, and Poisson_Ratio for a silicon crystalline structure which suppose to be constructed using a diamond lattice with a lattice constant of 5.43 A. The crystal structure should be a triclinic simulation box (2*3*4 in metal units) and populated with atoms placed at lattice site, and the PBC applied in all direction. Interatomic interactions should defined using the Stillinger-Weber potential. Energy minimization should used the CG algorithm. Following equlibration, small finite deformation (1e-6) should applied along the six independednt strain components defined in Voigt notations. After each deformation, the system should re-minimized to allow internal atomic relaxation. Therefore, stress responses should be used to compute the full elastic stiffness tensor via numerical differentiation of stress with respect to strain.",
+  "level": "3",
+  "metrics": [
+    "Bulk_modulus",
+    "Shear_Modulus_1",
+    "Shear_Modulus_2",
+    "Poisson_Ratio"
+  ],
+  "ground_truth": {},
+  "time_limit": 3,
+  "engine": "lammps"
+}

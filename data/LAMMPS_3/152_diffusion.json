@@ -1,0 +1,11 @@
+{
+  "id": "152_diffusion",
+  "problem_description": "Compute the diffusion diffusion coefficient of a simple atomic gas composed of point-like particles. The simulations should carried out in reduced Lennard-Jones (LJ) units in a cubic box of 60*60*60 (reduced unit) with 400 atms in it with periodic boundary conditions applied in all three spatial directions. Interactions between particles should modeled using a short-range repulsive potential strategy. Initially, a soft-core repulsive potential with a cutoff distance of 1.12246 (LJ units) and an energy scale of 100.0 need to be employed to gently remove any initial overlaps and allow the system to relax smoothly. After equilibration, the interaction potential should switched to a truncated and shifted Lennard-Jones potential in the Weeks-Chandler-Andersen (WCA) form, with \u03c3 = 1.0, \u03f5 = 1.0, and a cutoff at 2^(1/6)\u03c3, ensuring purely repulsive interactions. The time evolution of the system must integrated using the velocity-Verlet algorithm within an NVE ensemble, combined with a Langevin thermostat to maintain the temperature at T = 1.0 (reduced units). The equations of motion should integrated with a timestep of 0.01, and a neighbor list with a skin distance of 1.9 should updated every step to efficiently compute interatomic forces. The simulation protocol consisted of two stages: an initial equilibration phase of 10,000 timesteps under the soft potential, followed by a production run of 100,000 timesteps under the LJ potential. ",
+  "level": "3",
+  "metrics": [
+    "diffusion_coefficient"
+  ],
+  "ground_truth": {},
+  "time_limit": 12,
+  "engine": "lammps"
+}

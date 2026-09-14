@@ -1,0 +1,11 @@
+{
+  "id": "36_airebo",
+  "problem_description": "Compute the average potential energy per particle for a system of polyethylene (hydrocarbon polymer) using the AIREBO potential. The hydrocarbon polymer is modeled using atomic units in the metal unit system and an atomic atom style. The hydrocarbon polymer is comprised from 60 atoms (with 20 C and 40 H atoms). Polyethylene structure, which is then replicated 17 times along the x-direction, 16 times along y, and 2 times along z to build a sufficiently large bulk system. Short-range neighbour lists are constructed using a binning method with a neighbour cutoff of 0.5 \u00c5, updated every timestep with a delay of five steps. Interatomic interactions are modeled using the AIREBO potential with a Lennard\u2013Jones cutoff of 3.0 \u00c5 and both Lennard\u2013Jones and torsional interactions enabled, using appropriate carbon\u2013hydrogen parameterization. Initial velocities are assigned corresponding to a temperature of 300 K. The system is evolved under constant-energy (NVE) dynamics with a timestep of 0.0005 ps, and thermodynamic quantities are printed every 10 steps during a short production run of 1000 timesteps.",
+  "level": "2",
+  "metrics": [
+    "average_potential_energy_per_particle"
+  ],
+  "ground_truth": {},
+  "time_limit": 3150,
+  "engine": "lammps"
+}

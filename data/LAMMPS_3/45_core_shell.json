@@ -1,0 +1,14 @@
+{
+  "id": "45_core_shell",
+  "problem_description": "Compute the average temperature (temp/cs core shell) in K, pressure in bar, total potential energy per particle and coulombic energy per particle in eV for a system of three-dimensional core-shell particles under NVE ensemble. The system is having the polarizable ionic crystal using a core-shell representation to capture the electronic polarization effects. In the system Na Cores (type 1), Cl core (type 2), Na Shell (type 3), Cl Shell (type 4); and the core groups are (types 1&2) and shells are (types 3 & 4). The definition of the core-shell particles should follow as 'fix csinfo all property/atom i_CSID'. Periodic boundary condition is applied in all directions with having cubic box sizes near 24.09597 in the metal units. In total the system is having the 432 atoms. The system must first be equilibrated using a Berendsen thermostat (using fix_modify thermoberendsen temp CStemp) at 1427 K for 500 time steps. After equilibration, the Berendsen thermostat  must be removed for a 5000-step production run. The Ewald summation should be used to compute the long-range coulombic interactions with a precision of 1e-6, and the Nonbonded interactions (Born-Mayer + coulomb, with core shell interactions) should be computed with a cutoff distance of 20 A. The bond coefficients should be set according to the core-shell model. The simulation utilizes a time step of 0.002 ps. Thermodynamic properties must be output every 50 steps.",
+  "level": "3",
+  "metrics": [
+    "average_temperature",
+    "average_pressure",
+    "average_potential_energy_per_particle",
+    "average_coulombic_energy_per_particle"
+  ],
+  "ground_truth": {},
+  "time_limit": 270,
+  "engine": "lammps"
+}

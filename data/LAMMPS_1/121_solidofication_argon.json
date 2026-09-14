@@ -1,0 +1,11 @@
+{
+  "id": "121_solidofication_argon",
+  "problem_description": "Compute the average total energy per particle (in eV) for a system of argon atoms modeled using a Lennard\u2013Jones (LJ) potential. The argon atoms are initialized on a face-centered cubic (FCC) lattice with a lattice constant of 4.8 \u00c5. The simulation domain extends from 0 to 36.5 \u00c5 in the x and y directions and from 0 to 73 \u00c5 in the z direction, using metal units, with periodic boundary conditions applied in all three directions. Atoms are created only within a central region defined by x = 2 to 33.5 \u00c5, y = 5 to 33.5 \u00c5, and z = 3 to 69 \u00c5, leaving empty (vacuum-like) regions at the top (z = 69 to 73 \u00c5) and bottom (z = 0 to 3 \u00c5) of the simulation box. Interatomic interactions are described using a Lennard\u2013Jones potential with parameters \u03b5 = 0.0103 eV and \u03c3 = 3.405 \u00c5, with a cutoff distance of 10 \u00c5, and the mass of argon atoms is set to 39.948 amu. Initial velocities are assigned according to a Maxwell\u2013Boltzmann distribution at 100 K, ensuring zero net linear and angular momentum. The system is evolved in the canonical (NVT) ensemble using a Nos\u00e9\u2013Hoover thermostat to maintain a constant temperature of 100 K, with a damping parameter of 100 time units. Although regions corresponding to the top (z = 69\u201372 \u00c5) and bottom (z = 0\u20133 \u00c5) layers are defined, no atoms are created in these regions (they act as empty slabs). A time step of 0.004 ps (4 fs) is used for integrating the equations of motion, and the simulation runs for a total of 500,000 steps, corresponding to a physical time of 2 ns.",
+  "level": "1",
+  "metrics": [
+    "average_total_energy_per_particle"
+  ],
+  "ground_truth": {},
+  "time_limit": 423,
+  "engine": "lammps"
+}

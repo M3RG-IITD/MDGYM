@@ -1,0 +1,12 @@
+{
+  "id": "70_streitz",
+  "problem_description": "Compute the average charge on atom type 1 (Al), and on atom type 2 (O) for a alpha-alumina (Al = 864, and O = 1296) structure in the box with dimention of 24.73*28.56*25.97 (in metal units). The system should be modelled using the Streitz\u2013Mintmire potential (coul/streitz) for coulombic interactions and charge transfer effects, and Embedded Atom Method (eam/alloy) potential for short-range many-body interactions. Additionally, the long range interactions must modellied using the Ewald summation method. The atomic charges should be equlibrated using the fix qeq/slater scheme. The initial charges for Al (type 1) assigned as +2.8 and the corresponding negative value for oxygen atoms (types 2). The simulation should performed in NVE ensemble and the initial temperature should define at 300 K. The system should evolved for 1000 timesteps. The thermo_modify should use 'norm yes'.",
+  "level": "2",
+  "metrics": [
+    "Average_charge_on_atom_type_1",
+    "Average_charge_on_atom_type_2"
+  ],
+  "ground_truth": {},
+  "time_limit": 2670,
+  "engine": "lammps"
+}

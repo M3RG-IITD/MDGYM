@@ -1,0 +1,11 @@
+{
+  "id": "6_rdf_adf_water",
+  "problem_description": "Compute the coordination_number in the first solvation shell of the oxygen atom in liquid water. Simulation should carried out for liquid water (1500 water molecules) at 300 K using the rigid SPC/E water model in the cubic periodic box of dimension 35.50635 A (in real units). Non-bonded interactions are modeled with a 12.0 \u00c5 cutoff for both Lennard-Jones and Coulombic forces. The system is evolved with a 2.0 fs timestep in the NVT ensemble using a thermostat damping parameter of 100.0 fs, with long-range electrostatics treated by PPPM (tolerance of 1.0e-6) and molecular geometry constrained using SHAKE. Initial velocities are assigned at 300 K, and the system is equilibrated for 10,000 steps. After equilibration, it is required to compute radial distribution functions (using 100 bins) for O\u2013O, H\u2013H, and O\u2013H atom pairs to quantify short-range positional ordering, along with angular distribution functions (using 45 bins) to capture the O-O-O and O-H...O interactions. Both distributions are time-averaged and saved to files during a 10,000-step production run, with atomic trajectories dumped every 50 steps.",
+  "level": "2",
+  "metrics": [
+    "coordination_number"
+  ],
+  "ground_truth": {},
+  "time_limit": 843,
+  "engine": "lammps"
+}

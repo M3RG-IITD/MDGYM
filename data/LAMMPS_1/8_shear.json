@@ -1,0 +1,11 @@
+{
+  "id": "8_shear",
+  "problem_description": "Compute the average temperature in K for shear deformation simulation in a three-dimensional crystalline metal using an embedded-atom method (EAM) potential for Ni. An FCC crystal with lattice constant 3.52 A is constructed in a simulation box of dimensions 16.0 * 10.0 * 2.83 A^3 (in metal units) with a specified crystallographic orientation, and subjected to mixed boundary conditions that are nonperiodic in the transverse directions and periodic along the shear direction or (s s p). The system is partitioned into rigid lower and upper boundary layers (0.9 and 6.1 specify the y-coordinate boundaries that separate the lower region (y \u2264 0.9) and the upper region (y \u2265 6.1), respectively, while all other directions are left unbounded using INF), which are assigned separate atom types and held fixed to act as shear boundaries, while the intervening atoms form a mobile slab. Interatomic interactions are described using a many-body EAM potential, and neighbour lists are updated using a binning scheme appropriate for metallic systems. After initialising the mobile atoms at 300 K, the system is equilibrated for 100 steps using microcanonical dynamics with velocity-rescaling temperature control. Shear is then imposed by assigning a constant lateral velocity to the upper boundary and a linear velocity ramp across the mobile region, producing a controlled shear flow. During shear, temperature regulation is applied only to velocity components perpendicular to the sliding direction to avoid biasing the mechanical response. The shear run for a total of 10,000 steps, with a time step of 0.001 ps.",
+  "level": "1",
+  "metrics": [
+    "average_temperature"
+  ],
+  "ground_truth": {},
+  "time_limit": 12,
+  "engine": "lammps"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "68_tersoff",
+  "problem_description": "Compute the average total energy per particle for a hexagonal boron nitride (hBN) monolayer of 5 nm in size. The crystal consist of boron and nitrogen atoms. The interatomic interactions are described using the Tersoff potential with a shift parameter of 0.05, as specified by pair_style tersoff shift 0.05, which applies a small energy shift to modify the potential near the cutoff. It should used the charge atom style. The box dimention should be (46.15*48.44*100) in metal unit. PBC must applied in the all three directions. The initial velocities should assign at temperature 300 K. The system should then evolved in the NVE ensemble. The simulation should run for 8000 timesteps.",
+  "level": "1",
+  "metrics": [
+    "average_total_energy_per_particle"
+  ],
+  "ground_truth": {},
+  "time_limit": 90,
+  "engine": "lammps"
+}

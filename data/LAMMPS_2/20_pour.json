@@ -1,0 +1,11 @@
+{
+  "id": "20_pour",
+  "problem_description": "Simulate the gravity-driven pouring and settling of spherical particles. The system consists of a two-dimensional rectangular container of size 100 \u00d7 50 (in reduced units) filled with spherical granular particles that are continuously poured from the top into the container. The simulation is performed in two dimensions using the sphere atom style, which accounts for both translational and rotational motion (nve/sphere) of particles. Particle\u2013particle and particle\u2013wall interactions are modeled using a Hertzian contact force with history-dependent tangential friction with a normal stiffness of 4000, tangential damping of 100, and a friction coefficient of 0.5. Particles are inserted into a slab-shaped region near the top of the container using a pouring algorithm, with random diameters uniformly distributed between 0.5 and 1.0 and a specified local volume fraction of 0.4. A constant gravitational acceleration of magnitude of 1 units is applied in the negative y-direction, driving the particles downward into the container. The container walls are represented by rigid granular boundaries along the left, right, and bottom edges, which interact with particles through the same contact mechanics as particle\u2013particle collisions. Time integration is carried out using an NVE integrator for spherical particles with a time step of 0.001, and the system is constrained to remain strictly two-dimensional. The simulation is run for 25,000 time steps, during which simulations are expected to observe the average kinetic energy per particle.",
+  "level": "2",
+  "metrics": [
+    "average_kinetic_energy_per_particle"
+  ],
+  "ground_truth": {},
+  "time_limit": 9,
+  "engine": "lammps"
+}

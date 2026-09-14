@@ -1,0 +1,11 @@
+{
+  "id": "120_polymer_deformation",
+  "problem_description": "Compute the average strain of a system which should consist the polyethylene (PE) system modelled with a united atom approach. The system should consists of 10,000 atoms representing CH2 groups, with bonded interactions defined by 9990 bonds, 9980 angles, and 9970 dihedrals, corresponding to long linear polymer chains. All atoms belong to a single type with a mass of 14.02 g/mol, and the system is placed in a cubic simulation box of dimensions 80.06 \u00c5 (in real units) with periodic boundary conditions applied in all directions.  Interatomic interactions were described using the DREIDING force field, including harmonic potentials for bonds and angles, a multi-harmonic potential for dihedrals, and Lennard-Jones interactions for non-bonded terms. The system should gone through multiple equlibration, first the initial equlibration (nve/limit with displacement per step to 0.05 + Langevin) and the system should initialize at 500 K using random velocities. Following, the NPT equlibration at 500 K and zero pressure for 50,000 steps. Again, the coolling happens from 500 K to 100 K under NPT consitions. Finally, the equlibration should be performed at 100 K and zero pressure for 50,000 steps to obtain a stable amorphous configurations. A uniaxial tensile deformation was applied along the x-directions at a constant rate of 10^-5, while maintaining zero pressure in the lateral directions to allow relaxation. Finally, the simulation executed for 171800 timesteps.",
+  "level": "2",
+  "metrics": [
+    "average_strain"
+  ],
+  "ground_truth": {},
+  "time_limit": 2685,
+  "engine": "lammps"
+}

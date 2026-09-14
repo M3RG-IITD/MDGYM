@@ -1,0 +1,12 @@
+{
+  "id": "10_LJ_particles_sqr_ltts",
+  "problem_description": "Compute the average_potential_energy_per_particle and coordination_number in the first solvation shell for 2D Lennard-Jones (LJ) system. The system should consists of atomic particles arranged initially on a sq2 lattice with lattice spacing 0.8442 in reduced LJ units, confined within a 20 * 20 * 0.2 simulation box (in reduced unit). All atoms have unit mass and interact via a standard Lennard-Jones potential with \u03b5 = 1.0, \u03c3 = 1.0, and a cutoff of 2.5, with the potential shifted to zero at the cutoff. Particle velocities are initialised corresponding to a temperature of 5.0 in reduced LJ units, and dynamics are performed using the NVE ensemble with motion constrained to two dimensions. After running the system for 1000 timesteps to allow for melt equilibration, the system should go through energy minimisation using the conjugate gradient method with a energy tolerance of 1.0 * 10\u207b\u2076 and an force tolerance of 0.001, for up to 10,000 iterations. Post minimization, equlibrate the system for 50000 timessteps and compute the rdf and coordination number in the first solvation shell by resetting the timestep, and compute rdf for 5,000 steps in NVE ensemble.",
+  "level": "3",
+  "metrics": [
+    "average_potential_energy_per_particle",
+    "coordination_number"
+  ],
+  "ground_truth": {},
+  "time_limit": 30,
+  "engine": "lammps"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "14_nb3b",
+  "problem_description": "Compute the average_potential_energy_per_particle in eV for a three-dimensional MD simulation in LAMMPS using real units and full atom style with periodic boundary conditions in all directions. Bonded interactions must be described using a Morse potential, while angular, dihedral, and improper terms are neglected. Nonbonded interactions should be treated using a hybrid overlay scheme combining a three-body harmonic NB3B potential with pairwise Lennard\u2013Jones and Coulomb interactions, applied with a cutoff of 10.0 \u00c5 and arithmetic mixing rules. Intramolecular nonbonded interactions must exclude 1\u20132 and 1\u20133 pairs and fully include 1\u20134 interactions. Long-range electrostatic and dispersion forces should be computed using an Ewald-based k-space solver with a relative accuracy of 10\u207b\u2074. delayed neighbor lists must be constructed using a bin algorithm with a 2.0 \u00c5 skin and updated every five time steps. Time integration should be performed using a two-level RESPA scheme with a base time step of 1.0 fs, evaluating short-range forces at the inner level and k-space forces at the outer level. The system should first be energy-minimized to energy and force tolerances of 10^-6 and 10^-8, respectively, followed by velocity initialization at 298 K using a Maxwell\u2013Boltzmann distribution with zero net momentum. Finally, equilibrate the system in the NVE ensemble for 10,000 time steps while maintaining the temperature at 298 K via periodic velocity rescaling.",
+  "level": "2",
+  "metrics": [
+    "average_potential_energy_per_particle"
+  ],
+  "ground_truth": {},
+  "time_limit": 306,
+  "engine": "lammps"
+}

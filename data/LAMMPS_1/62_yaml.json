@@ -1,0 +1,12 @@
+{
+  "id": "62_yaml",
+  "problem_description": "Compute the average of temperature, and potential energy of the 3D LJ system. The system consist of identical particles interacting via the LJ potential with \u03b5 = 1.0, \u03c3 = 1.0, and a cutoff radius of 2.5\u03c3. The initial configuration should be constructed on a FCC lattice at a reduce number density of 0.8442 in a cubic box of 20 (LJ unit), and PBC is in all direction. The initial velocities are assigned at a reduced temperature of 1.44. The system was evolved using the NVE enseble. The system was first equlibrated for 100 steps and then production run should be for 1000 steps. Keep the output in the YAML format.",
+  "level": "1",
+  "metrics": [
+    "average_temperature",
+    "average_potential_energy"
+  ],
+  "ground_truth": {},
+  "time_limit": 318,
+  "engine": "lammps"
+}

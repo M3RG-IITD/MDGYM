@@ -1,0 +1,11 @@
+{
+  "id": "87_3D_lj_fluid",
+  "problem_description": "Compute the average energy per particles for a system of LJ particles in a 3D simulation shell with dimension of 60*60*60 (in LJ unit). The system contains 5000 atoms of type 1 with (pair coeff 1 1 epsilon = 1, sigma = 1, mass = 1.0) and 500 atoms of type 2 (pair coeff 1 1 epsilon = 0.5, sigma = 3.0, mass = 1.0) randomly distributed. The interactions should modelled using the LJ potential with a cutoff of 2.5\u03c3. The system is first energy-minimized using a conjugate gradient algorithm, then it is evolved using the NVE ensemble combined with a Langevin thermostat at temperature T = 1.0 and damping parameter 0.1. The timestep is 0.005, and the simulation runs for 20,000 steps.",
+  "level": "2",
+  "metrics": [
+    "coordination_number"
+  ],
+  "ground_truth": {},
+  "time_limit": 24,
+  "engine": "lammps"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "18_obstacle",
+  "problem_description": "Compute the average_drag_force_on_obstacle_1 (v_fx1) and average_drag_force_on_obstacle_2 (v_fx2) for a two-dimensional non-equilibrium molecular dynamics (NEMD) simulation to study pressure-driven flow of a Lennard-Jones (LJ) fluid past fixed obstacles in a confined channel. The system consists of a 2D rectangular domain of size 40\u00d710 (in LJ units), with periodic boundary conditions in the flow (x) direction and shrink-wrapped boundaries in the transverse (y) direction. The fluid is initialized on a hexagonal lattice with lattice spacing a=0.7, and all particles have unit mass. Interactions between particles are modeled using a truncated Lennard-Jones potential with energy parameter \u03f5=1.0, length parameter \u03c3=1.0, and cutoff radius r_c=2^(1/6) \u03c3=1.12246, ensuring purely repulsive interactions. The channel walls are formed by immobilizing particle layers at the bottom (y<1.25) and top (y>8.75) of the domain. Fluid particles between the walls are thermostatted to a temperature T=1.0 using a velocity-rescaling thermostat, while the walls are constrained by zero forces, with an additional constant downward force of magnitude 0.5 applied to the upper wall to maintain confinement. A uniform body force of magnitude 1.0 in the x-direction is applied to all fluid particles to generate Poiseuille-type flow. Two circular obstacles of radius 4.0 are placed inside the channel at positions (10,4) and (20,7), implemented via repulsive indenter potentials with force constant 100. The equations of motion are integrated using an NVE integrator with a timestep of 0.003, and the simulation is run for 1,00,000 timesteps. Two-dimensional motion is enforced throughout. ",
+  "level": "3",
+  "metrics": [
+    "average_drag_force_on_obstacle_1",
+    "average_drag_force_on_obstacle_2"
+  ],
+  "ground_truth": {},
+  "time_limit": 24,
+  "engine": "lammps"
+}

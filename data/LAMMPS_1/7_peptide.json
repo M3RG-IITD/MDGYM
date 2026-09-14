@@ -1,0 +1,11 @@
+{
+  "id": "7_peptide",
+  "problem_description": "Compute the average_temperature in K for a solvated 5-mer peptide (any combination) using a CHARMM-compatible all-atom force field in real units. The system is evolved in the NVT ensemble at 275 K using a Nose-Hoover thermostat, with nonbonded interactions described by a CHARMM-style Lennard-Jones potential with a force-switching scheme and long-range electrostatics treated via the PPPM method with tolerence 10^{-4}. The bond and improper dihedral are handelled by harmonic, and angle & dihedral should be in charmm. Fast bond and angle vibrations involving hydrogens are constrained using the SHAKE algorithm, allowing stable integration with a 2 fs timestep. The simulation is run for a total of 10,000 timesteps.",
+  "level": "1",
+  "metrics": [
+    "average_temperature"
+  ],
+  "ground_truth": {},
+  "time_limit": 462,
+  "engine": "lammps"
+}

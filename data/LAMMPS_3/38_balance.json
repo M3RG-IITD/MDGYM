@@ -1,0 +1,12 @@
+{
+  "id": "38_balance",
+  "problem_description": "Compute the average force exterted by particles in the x-direction, and y-direction for a system of particles (361) arranged initially on a hexagonal lattice with a reduced number density of 0.85 (in reduced unit) in a rectangular simulation box of 50*20 in reduced unit. A circular cluster of particles with diameter 20 (in reduced unit) was created within the simulation box. Periodic boundary conditions are applied in the z-direction, while non-periodic boundary conditions are applied in the x and y directions. The particles interact via a Lennard-Jones potential with a parameters of \u03f5=10.0 and \u03c3=1.0, and a cutoff distance of 2.5\u03c3. The system is evolved in the NVE enseble using a time step of 0.001 in reduced LJ units. Initial velocities were assigned corresponding to a temperature of 0.5 and an uniform velocity component v_x = 5 and v_y =2 was imposed on all particles. To confine the particles, repulsive walls were applied along the x and y directions using 9-3 LJ potentials with parameters (epsilon =1, sigma = 1, and cutoff=2.5). The simulation should run for a total of 1,00,000 timesteps.",
+  "level": "3",
+  "metrics": [
+    "average_force_in_x_direction",
+    "average_force_in_y_direction"
+  ],
+  "ground_truth": {},
+  "time_limit": 12,
+  "engine": "lammps"
+}

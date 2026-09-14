@@ -1,0 +1,11 @@
+{
+  "id": "83_units",
+  "problem_description": "Compute the average of total energy for a system of LJ fluid at a fixed reduced density (0.8842) in the box of 5*5*5 (in LJ unit). Initially, the LJ particles should arranged in a perfect FCC lattice, and atoms should interact via LJ potential with mass = 1, \u03c3 = 1, \u03f5 = 1 and a cutoff radius of 2.5 \u03c3. The velocities of the particles must generated using Maxwell-Boltzmann distribution at a temperature of 1.0 (in reduced unit). The system should execute in the NVE ensemble. The simulation should be executed for 1000 time steps.",
+  "level": "1",
+  "metrics": [
+    "average_total_energy"
+  ],
+  "ground_truth": {},
+  "time_limit": 6,
+  "engine": "lammps"
+}

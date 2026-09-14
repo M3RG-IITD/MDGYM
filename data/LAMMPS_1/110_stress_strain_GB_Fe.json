@@ -1,0 +1,11 @@
+{
+  "id": "110_stress_strain_GB_Fe",
+  "problem_description": "Compute the normal stress in bar of a grain boundary (GB) iron (Fe) under uniaxial tensile deformation. The simulations should be carried out in metal units. The simulation box should be periodic in the x, y and z directions. The number of atoms in the systems are 600 and the box dimension is 6.99406*247.988*4.038 A^3. The interatomic interactions were modeled using the embedded atom methods (EAM) with the eam/fs potential, specifically the Fe-C_Hepburn_Ackland.eam.fs parameterization, suitable for Fe-based systems. The system was first energy minimized using the CG algorithm, followed by equilibration using an NVE ensemble. The minimization should be performed for 1e-{25} tolerence. A uniaxial strain should applied incrementally with a strain step of 0.001 per deformation loop, for a total of 100 loops. Following an initial box-relaxation minimization, atoms located beyond \u00b150 \u00c5 from the grain boundary (GB) should removed, while atoms within \u00b145 \u00c5 need to be constrained by setting their forces to zero to stabilize the boundary region. During each deformation loop, the system must first energy-minimized, followed by a short MD run of one timestep to update the system state, after which the stress should recorded. The next strain increment must then applied, and the procedure need to be repeated.",
+  "level": "1",
+  "metrics": [
+    "normal_stress"
+  ],
+  "ground_truth": {},
+  "time_limit": 30,
+  "engine": "lammps"
+}

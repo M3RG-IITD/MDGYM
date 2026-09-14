@@ -1,0 +1,11 @@
+{
+  "id": "111_cohesive_energy_Al",
+  "problem_description": "Compute the cohesive energy in eV of aluminum. The aluminum should have the FCC crystal structure with a lattice constant of 4 A. The simulation box should be defined to span 1*1*1 (in metal unit) unit cells of the lattice and periodic boundary conditions in all directions. This small box should having 4 atoms per unit cell, as expected for an FCC lattice. The interatomic interactions should be modelled using the EAM potential, specially the Al99.eam.alloy for the Al. The simulation box must be allowed to relax isotropically under zero external pressure during CG minimization method (etol and ftol is set to 1e^{-25}). This procedure should effectively determine the zero-temperature minimum energy configuration of a single FCC aluminum unit cell. ",
+  "level": "1",
+  "metrics": [
+    "cohesive_energy"
+  ],
+  "ground_truth": {},
+  "time_limit": 0,
+  "engine": "lammps"
+}

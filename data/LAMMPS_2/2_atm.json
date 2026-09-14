@@ -1,0 +1,11 @@
+{
+  "id": "2_atm",
+  "problem_description": "Compute the average potential energy per atom by explicitly including the Axilrod Teller Muto (ATM) three-body potential, such that the total potential energy is obtained as the sum of the pairwise Lennard-Jones contribution and the three-body ATM energy term using a hybrid/overlay pair style. The system should have identical atoms of unit mass (1.0) simulated in reduced Lennard-Jones units, arranged on a face-centered cubic (FCC) lattice with lattice constant 0.65, confined within a cubic simulation box whose dimensions are x = 0 to 10, y = 0 to 10, and z = 0 to 10 (in LJ units). The Lennard-Jones interaction should use parameters epsilon = 1.0, sigma = 1.0, and a cutoff radius of 4.5, while the ATM interaction should use a cutoff of 4.5, an angular cutoff parameter of 2.5, and a strength coefficient of 0.072. The system should be initialized at a reduced temperature of 1.033 by assigning velocities from a Maxwell-Boltzmann distribution, and the dynamics should be evolved using an NVT ensemble maintaining the target temperature of 1.033 with a thermostat damping parameter of 0.05. A timestep of 0.002 should be used, output parameters should be written every 5 steps, and the simulation should be run for 100 timesteps.",
+  "level": "2",
+  "metrics": [
+    "average_potential_energy_per_atom"
+  ],
+  "ground_truth": {},
+  "time_limit": 207,
+  "engine": "lammps"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "50_fire",
+  "problem_description": "Compute the average total energy per particle for a 2D LJ system which should be simulated in LJ units. It should use the enforced2 to maintain the system in 2D. The system shoud consist of particles interacting via a LJ potential with \u03b5 = 1.0 and \u03c3 = 1.0, truncated at a cutoff distance of 2.5\u03c3, and shift the LJ potential to zero at the cutoff. A sq2 lattice with a density of 0.8442 should be used to initialize the particle positions withing a box os 20*20 with PBC in all direction. Initial velocities were assigned at the temperature of 5.0 using Maxwell-Boltzmann distribution and simulated in NVE ensemble for 5000 steps. Following the equlibration, the system should be energy minimized using the FIRE algorithm, with the ABC-FIRE modification. The minimization was performed untill the force tolerance reached to 10^-6, that effectively quenched the high-temperature liquid configuration to its corresponding inherent structure that represents the local minima.",
+  "level": "1",
+  "metrics": [
+    "average_total_energy_per_particle"
+  ],
+  "ground_truth": {},
+  "time_limit": 9,
+  "engine": "lammps"
+}

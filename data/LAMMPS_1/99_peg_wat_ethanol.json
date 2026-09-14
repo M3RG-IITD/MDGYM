@@ -1,0 +1,12 @@
+{
+  "id": "99_peg_wat_ethanol",
+  "problem_description": "Computet the average temperature in K and the total energy (kcal/mol) for a system of a mixture of water and ethanol. The system consists of 1 water molecules and 1 ethanol molecules, resulting in a total of 2 atoms. The water is modelled using the TIP4P/2005, ethanol is modelled using the OPLS-AA force field. The simulation box is cubic with dimensions from \u221225 \u00c5 to 25 \u00c5 (in real units) in all three directions, and periodic boundary conditions are applied in all directions. The intermolecular interactions were represented using a combination of Lennard-Jones and long-range Coulombic potentials. The lj/cut/coul/long pair style was employed with a cutoff of 14 \u00c5, and long-range electrostatics were treated using the particle\u2013particle particle\u2013mesh (PPPM). The system was initialized by placing the water and ethanol molecules at the center of the simulation box. The system was equlibrated using NVT ensemble  and the temperature was maintained at 300 K for 50000 timesteps.",
+  "level": "1",
+  "metrics": [
+    "average_temperature",
+    "average_total_energy"
+  ],
+  "ground_truth": {},
+  "time_limit": 6,
+  "engine": "lammps"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "118_interstitial_fault_energy",
+  "problem_description": "Compute the interstitial formation energy in eV for a single interstitial in a bulk Cu (Cu) crystal (with 2048 atoms). The three dimension periodic simulation box should be constructed using an FCC lattice with a lattice constant of 3.615 A. The simulation box should extend from -4 to 4 unit cells (metal units) in all directions which should result in a bulk-like system with PBC in all directions. The crystal should be modelled using the Embedded Atom Method (EAM) potential parameterized suing FeCuNi.eam.alloy with parameters corresponding to Cu atoms. The interstitial formation energy should determined by performing two separate energy minimizations: one for the perfect system (E_{0}) and one for the defective system with N+1 atoms after adding the a single Cu atom within a small spherical region (E_{f}) at the octahedral interstitial site at position (0, \u22121.8075, 0) \u00c5. The formation energy should be calculted using E_i = E_f \u2212 ((N+1)/N) \u00d7 E\u2080. Now, the system should be energy minimized using the conjugate gradient method with a energy and force tolerance of 1e-15 eV & eV/A, respectively.",
+  "level": "1",
+  "metrics": [
+    "interstitial_formation_energy"
+  ],
+  "ground_truth": {},
+  "time_limit": 0,
+  "engine": "lammps"
+}

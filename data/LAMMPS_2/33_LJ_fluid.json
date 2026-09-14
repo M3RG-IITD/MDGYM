@@ -1,0 +1,11 @@
+{
+  "id": "33_LJ_fluid",
+  "problem_description": "Compute the coordination number in the first solvation shell of atom type A around the atom type B for a three-dimensional binary Lennard-Jones system using reduced (LJ) units and periodic boundary conditions in all directions. The system consists of a cubic simulation box extending from \u221220 to 20 in each spatial direction and contains a total of 1600 atoms, with 1500 atoms of type A (mass = 1.0) and 100 atoms of type B (mass = 5.0) placed randomly. Atoms interact via a Lennard-Jones potential with a cutoff distance of 4.0; the interaction parameters are \u03f5=1.0,\u03c3=1.0 for A\u2013A interactions and \u03f5=0.5,\u03c3=3.0 for B\u2013B interactions. The system is first energy minimized and then equilibrated using a timestep of 0.005 in the NVE ensemble, with temperature maintained at 1.0 using a Langevin thermostat with a damping parameter of 0.1. The equilibrated run should be executed for 20,000 times steps. After equilibration, a production run is carried out for 25000 steps, during which the radial distribution function between type-B and type-A atoms is computed using 200 bins and averaged over time.",
+  "level": "2",
+  "metrics": [
+    "coordination_number"
+  ],
+  "ground_truth": {},
+  "time_limit": 21,
+  "engine": "lammps"
+}

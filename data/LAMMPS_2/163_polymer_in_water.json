@@ -1,0 +1,12 @@
+{
+    "id": "163_polymer_in_water",
+    "problem_description": "Compute the average temperature (in K) and average radius of gyration (in A) of a PEG polymer chain in a salted solution containing Na and Cl ions and water molecules. The initial configuration of the system is provided in the `mix-with-salt.data` file and the parameters for the simulation are provided in the `PARM-with-salt.lammps` file. The dimensions of the simulation box are from −11.8574 to 60.3725 Å in the x direction and from −12.1287 to 12.1287 Å in the y and z directions, with periodic boundary conditions applied in all directions. The simulation should be carried out using real units. The atom style should be set to `full` and the bond, angle, and dihedral styles should be set to `harmonic`. The potential should be described using the `lj/cut/coul/long` pair style with a cutoff of 12.0 Å, and the long-range Coulombic interactions should be computed using the PPPM method with a precision of 1e-5. The `create_atoms` command should be used to create 20 Na (sodium) ions and 20 Cl (chloride) ions at random locations in the system, ensuring that the inserted atoms are not placed within 0.5 Å of existing atoms. The charges of the Na and Cl ions should be set to +1 and −1, respectively. The system should be equilibrated using a Nosé–Hoover thermostat, and the pressure should be controlled using a Nosé–Hoover barostat within the NPT ensemble. The initial temperature should be set to 300 K, and the pressure should be set to 1 atm using the `iso 1 1 1000` command. The `recenter` command should be used to recenter the PEG polymer chain within the simulation box. The system should be equilibrated for 50,000 time steps. The temperature, pressure, and radius of gyration should be computed and averaged during the simulation.",
+    "level": "2",
+    "metrics": [
+        "average_temperature",
+        "average_radius_of_gyration"
+    ],
+    "ground_truth": {},
+    "time_limit": 5727,
+    "engine": "lammps"
+}

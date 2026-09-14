@@ -1,0 +1,11 @@
+{
+  "id": "21_prd",
+  "problem_description": "A molecular dynamics (MD) simulation needs to be performed to compute the average_potential_energy_per_particle in bulk crystalline silicon. The system consists of a three-dimensional periodic silicon crystal in the diamond cubic structure with a lattice constant of 5.431 \u00c5, constructed using a 4 * 4 * 4 unit cell (in metal units) under fully periodic boundary conditions. Interatomic interactions between silicon atoms are described using the Stillinger\u2013Weber (SW) potential, which accurately captures the bonding and angular interactions in covalently bonded semiconductors. Initial velocities are assigned at 1800 K using a Gaussian distribution, ensuring zero total linear and angular momentum. The system is equilibrated for 10,000 steps at a high temperature of 1800 K using the NVT ensemble, with temperature controlled via a thermostat utilizing a damping parameter of 0.1 ps and a timestep of 1 fs. A single vacancy defect is introduced into the crystal by removing one silicon atom (specifically atom ID 300) from the lattice. The objective is to study thermally activated diffusion events, where a neighbouring silicon atom migrates into the vacant lattice site. To sample these rare diffusion events, Parallel Replica Dynamics (PRD) should be employed for 2000 steps, enabling the simulation to reach timescales beyond those accessible by conventional MD. Moreover, the velocities should be uniformly defined to all particles during the dephasing. A transition event is formally detected when an atom undergoes a displacement greater than 0.5 \u00c5. Local atomic environments are characterized using a coordination number cutoff of 2.835 \u00c5, allowing identification of atoms participating in vacancy migration events. Energy minimization is performed after detected transition events using strict energy and force convergence criteria (tolerances of 1.0e-5 for both energy and force, bounded by a maximum of 100 iterations) to ensure the system relaxes into a new metastable state.",
+  "level": "2",
+  "metrics": [
+    "average_potential_energy_per_particle"
+  ],
+  "ground_truth": {},
+  "time_limit": 96,
+  "engine": "lammps"
+}

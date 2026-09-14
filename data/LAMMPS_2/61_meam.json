@@ -1,0 +1,11 @@
+{
+  "id": "61_meam",
+  "problem_description": "Compute the average of shear stress in bar of a 3D metallic crystal system (nickel) using the MEAM potential (specifically the Ni4 parameterization). The system is constructed as a face-centered cubic (FCC) lattice with lattice constant 3.52 \u00c5 with a crystalline orientation of [1 0 0] along x, [0 1 1] along y, and [0 -1 1] along z, and an origin shift of 0.5 along x, in a simulation box (16*10*2.828427 A^3 (in metal units)) that is periodic along the z-direction and non-periodic (shrink-wrapped) along x and y. Atoms are divided into three regions: lower and upper boundary layers, and a central mobile region (0.9 and 6.1 specify the y-coordinate boundaries that separate the lower region (y \u2264 0.9) and the upper region (y \u2265 6.1), respectively, while all other directions are left unbounded using INF.). The boundary atoms are kept frozen (or fixed) by setting their forces to zero. Initial velocities are assigned corresponding to a temperature of 300 K, and the system is equilibrated for 100 steps using a 1 fs timestep under the NVE ensemble for boundary atoms while a velocity rescaling thermostat (temp/rescale) is applied to mobile atoms. The shear deformation is introduced by setting the upper boundary to a constant velocity (1 A/ps) in the x-direction, while the linear velocity gradient is applied to the mobile atoms (0 to 1 A/ps) along the y-direction (1.4 to 8.6 A). To ensure the accurate thermal control under shear, the existing thermostat is removed and replaced with a velocity-rescaling thermostat that maintains the system at 300 K by utilizing a partial temperature compute (temp/partial 0 1 1) that calculates the temperature only from the y and z velocity components to remove the streaming x-velocity bias. The system is evolved for 5000 timesteps. The shear stress is dumping every 1000 steps using the compute stress/atom.",
+  "level": "2",
+  "metrics": [
+    "average_shear_stress"
+  ],
+  "ground_truth": {},
+  "time_limit": 90,
+  "engine": "lammps"
+}

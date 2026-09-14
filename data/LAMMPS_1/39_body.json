@@ -1,0 +1,11 @@
+{
+  "id": "39_body",
+  "problem_description": "Compute the average total energy per nanoparticle for a system of 100 nanoparticles (in 2D with number density 0.104) modelled using the body atom style (unit = lj) with nparticle bodies, where each particle is represented as a rigid collection of it's constitutents points forming polygonal shape. All particles were assigned initial velocities corresponding to a reduced temperature of 1.44 using random velocity distribution. Inter-particle interactions were modeled using the body/nparticle pair potential with a cutoff distance of 5.0 (in reduced LJ units), and interaction paramters with \u03f5=1.0. and \u03c3=1.0. The system should evolve in the nve/body integrator. A two-dimentional constraint (enforce2d) should applied to restrict particles motion in the xy-plane. The simulation should be carried out for a total of 1,00,000 timesteps.",
+  "level": "1",
+  "metrics": [
+    "average_total_energy_per_particle"
+  ],
+  "ground_truth": {},
+  "time_limit": 75,
+  "engine": "lammps"
+}
