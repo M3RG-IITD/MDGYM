@@ -1,0 +1,21 @@
+;
+; Berger lipid force field for DOPC
+; available from http://www.bioinf.uni-sb.de/RB
+; Oct 2007
+;
+
+;
+; Include forcefield parameters
+;
+#include "ffG53a6.itp"
+#include "dopc.itp"
+#include "spc.itp"
+
+[ system ]
+; name
+DOPC converted from POPC
+
+[ molecules ]
+; name	number
+DOPC     128
+SOL     4789 

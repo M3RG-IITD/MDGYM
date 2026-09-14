@@ -1,0 +1,11 @@
+{
+  "id": "5_water_sim",
+  "problem_description": "Compute the coordination number of oxygen-oxygen pairs in the first solvation shell of 7028 water molecules modeled using oplsaa.ff/spce water model in a cubic box of 6nm. Velocities were generated according to a Maxwell\u2013Boltzmann distribution at 300 K. The energy minimization should be performed using steepest-descent algorithm with a emstep of 0.005 nm, and coulombic and van der Waals cut off set to be 0.6 nm, and the water molecules should be consideres as the flexible using define = -DFLEX_SPCE, and the EM should performed until the force conversing of 200 kJ/mol/nm. Equilibration run for 10,000 steps with same parameters as of production run. The production simulations were carried out using the leap-frog integrator with a time step of 1 fs. A total of 20,000 steps were performed, corresponding to a simulation time of 20 ps. Short-range van der Waals and electrostatic interactions were treated with a cutoff distance of 0.8 nm. Long-range electrostatic interactions were computed using the Particle Mesh Ewald (PME) method with a Fourier grid spacing of 0.08 nm. The temperature of the system was maintained at 300 K using the Nose\u2013Hoover thermostat with a coupling time constant of \ud835\udf0f\ud835\udc47 = 0.2 ps. Pressure was controlled at 1 bar using the Parrinello\u2013Rahman barostat with the coupling constant of 1 ps. Moreover, the pme_order was set to 4, and the fourier_spacing was set to 0.08 nm.",
+  "level": "1",
+  "metrics": [
+    "coordination_number"
+  ],
+  "ground_truth": {},
+  "time_limit": 1000,
+  "engine": "gromacs"
+}

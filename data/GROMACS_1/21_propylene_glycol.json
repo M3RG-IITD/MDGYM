@@ -1,0 +1,13 @@
+{
+  "id": "21_propylene_glycol",
+  "problem_description": "Compute the average temperature in K, pressure in bar, and density in kg/m^3 of liquid propylene glycol. The system contained 1800 propylene glycol molecules in a cubic simulation box of dimensions 6.0 \u00d7 6.0 \u00d7 6.0 nm\u00b3 and was modeled using the gromos54a7_atb force field. Energy minimization was performed using the steepest descent algorithm for 10000 steps with an energy minimization step size parameter of 0.002 nm using the Verlet cutoff scheme with neighbor list updates every step. Molecular dynamics simulations were performed using the md integrator with a time step of 0.002 ps with neighbor list updates every 10 steps. All bonds involving hydrogen atoms were constrained during the simulation. During equilibration, electrostatic interactions were calculated using PME with a cutoff of 1.4 nm, and van der Waals interactions were truncated at 1.4 nm with dispersion corrections applied to both energy and pressure (DispCorr = EnerPres). Temperature was controlled using the V-rescale thermostat with a coupling constant of 0.1 ps and a reference temperature of 250 K. Pressure was controlled using the Parrinello\u2013Rahman barostat with a coupling constant of 2.0 ps and a reference pressure of 1.0 bar. The compressibility used for pressure coupling was 4.5e-5. Periodic boundary conditions were applied in the xyz directions. The simulation involved only energy minimization and equilibration steps, with no production run performed and equilibration executed only for 2,00,000 time steps.",
+  "level": "1",
+  "metrics": [
+    "average_temperature",
+    "average_pressure",
+    "average_density"
+  ],
+  "ground_truth": {},
+  "time_limit": 1000,
+  "engine": "gromacs"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "36_KALP15_in_DPPC",
+  "problem_description": "Compute the average temperature in K, pressure in bar, and density in kg/m^3 of a peptide\u2013lipid membrane system containing the KALP15 peptide embedded in a mixed lipid bilayer. The system consisted of 48 SM24 lipids, 27 cholesterol (CHOL) molecules, 50 SOPE lipids, and 9790 water molecules in a cubic box of 6 nm and PBC is applied in all directions. Energy minimization was performed using the steepest descent algorithm for 10000 steps with an energy minimization step size parameter of 0.002 nm using the Verlet cutoff scheme with neighbor list updates every step. Equilibration was performed in the NPT ensemble using the md integrator with a time step of 0.002 ps for 5000 steps. Long-range electrostatic interactions were calculated using the Particle Mesh Ewald (PME) method with a real-space cutoff of 1.0 nm, while van der Waals interactions were treated using a cut-off scheme with a cutoff distance of 1.0 nm. Temperature coupling was applied with a coupling constant of 0.4 ps and a reference temperature of 310 K using Berendsen thermostat, with dispersion corrections applied to both energy and pressure (DispCorr = EnerPres). Pressure coupling was applied with a coupling constant of 1.0 ps and a reference pressure of 1.0 bar using Berendsen barostat with compressibility of 4.5e-5 bar^-1.",
+  "level": "1",
+  "metrics": [
+    "average_temperature",
+    "average_pressure",
+    "average_density"
+  ],
+  "ground_truth": {},
+  "time_limit": 1000,
+  "engine": "gromacs"
+}

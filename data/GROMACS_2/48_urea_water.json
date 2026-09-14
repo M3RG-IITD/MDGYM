@@ -1,0 +1,13 @@
+{
+  "id": "48_urea_water",
+  "problem_description": "Compute the coordination number in the first solvation shell, average temperature in K, and pressure in bar for a system of 50 urea (UR) molecules solvated in 1987 spce water molecules, and Urea should modeled using the Kirkwood\u2013Buff force-field and the combination rule as 3. The system should simulated in a cubic box of size 4 \u00d7 4 \u00d7 4 nm\u00b3. Energy minimization was performed using the steepest descent algorithm for 50,000 steps using the Verlet cutoff scheme with electrostatic interactions treated using the Particle Mesh Ewald (PME) method with a real-space cutoff of 1.2 nm. Equilibration simulations should be carried out using the md integrator with a time step of 1 fs for 50,000 steps. Temperature was maintained at 300 K using the Nose\u2013Hoover thermostat, and pressure was controlled using the Parrinello\u2013Rahman barostat. Electrostatic interactions were treated using the PME method, and van der Waals interactions employed a cutoff of 1.0 nm. All bonds involving hydrogen atoms were constrained. The production run should also be performed using the md integrator with a time step of 1 fs for 50,000 steps under the same conditions as the equilibration run. Periodic boundary conditions were applied in all directions.",
+  "level": "2",
+  "metrics": [
+    "average_temperature",
+    "average_pressure",
+    "coordination_number"
+  ],
+  "ground_truth": {},
+  "time_limit": 1000,
+  "engine": "gromacs"
+}

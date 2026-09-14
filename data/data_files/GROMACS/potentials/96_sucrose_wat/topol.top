@@ -1,0 +1,12 @@
+#include "gromos54a7_atb.ff/forcefield.itp"
+
+#include "sucrose.itp"
+#include "gromos54a7_atb.ff/spce.itp"
+
+[ system ]
+O7LP in water
+
+[ molecules ]
+; Compound        #molecules
+O7LP    1
+SOL               872

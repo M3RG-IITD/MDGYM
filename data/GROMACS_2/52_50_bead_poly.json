@@ -1,0 +1,13 @@
+{
+  "id": "52_50_bead_poly",
+  "problem_description": "Compute the average temperature in K, pressure in bar, radius of gyration in nm for a 50-bead polymer in water (SPC/E potential) having 11188 water molecules. The polymer should have 50 beads, each representing a monomer. Each bead and water must use Lorentz-Berthelot mixing rules for their interactions. The interaction parameters for the polymer beads should be set to sigma = 0.4 nm and epsilon = 1.0 kJ/mol. The bond length between adjacent beads should be 0.1530 nm and the force constant for the bonds should be 330000.0 kJ/mol/nm^2. The angle between three consecutive beads should be 111 degrees with a force constant of 100.0 kJ/mol/rad^2. The polymer should be simulated in a cubic box of size 7.0 nm with periodic boundary conditions. Energy minimization should be performed for 50000 steps, followed by a 20 ps equilibration in NPT ensemble using 2 fs timestep at 300 K and 1 bar using V-rescale thermostat and Berendsen barostat. Finally, a 200 ps production run should be performed in NPT ensemble with Nose-Hoover thermostat and Parrinello-Rahman barostat and 2 fs as the time steps. The coulombic interactions should be calculated using the Particle Mesh Ewald (PME) method with a cutoff of 1.0 nm, and the van der Waals cutoff of 1.0 nm. ",
+  "level": "2",
+  "metrics": [
+    "average_temperature",
+    "average_pressure",
+    "average_radius_of_gyration"
+  ],
+  "ground_truth": {},
+  "time_limit": 883,
+  "engine": "gromacs"
+}

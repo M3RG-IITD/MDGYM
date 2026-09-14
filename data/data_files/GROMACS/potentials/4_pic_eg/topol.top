@@ -1,0 +1,17 @@
+#include "./ffG53a6.itp"
+#include "./amphiPIC.itp"
+#include "./ions.itp"
+#include "./water.itp"
+#include "./eg.itp"
+
+[ system ]
+; Name
+dispersed dyes in water
+
+[ molecules ]
+; compound     mols
+
+APIC               1
+HECX		1100	
+SOL         5601
+CL               1

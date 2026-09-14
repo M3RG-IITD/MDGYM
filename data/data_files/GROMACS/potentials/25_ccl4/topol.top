@@ -1,0 +1,45 @@
+Include forcefield parameters
+#include "gromos54a7_atb.ff/forcefield.itp"
+
+[ moleculetype ]
+; Name   nrexcl
+M486     3
+[ atoms ]
+;  nr  type  resnr  resid  atom  cgnr  charge    mass
+    1 CLOpt    1    M486    Cl3    1    0.123  35.4530
+    2     C    1    M486     C1    2   -0.492  12.0110
+    3 CLOpt    1    M486     Cl    3    0.123  35.4530
+    4 CLOpt    1    M486    Cl1    4    0.123  35.4530
+    5 CLOpt    1    M486    Cl2    5    0.123  35.4530
+; total charge of the molecule:   0.000
+[ bonds ]
+;  ai   aj  funct   c0         c1
+    1    2    2   0.1790   2.1847e+06
+    2    3    2   0.1790   2.1847e+06
+    2    4    2   0.1790   2.1847e+06
+    2    5    2   0.1790   2.1847e+06
+[ pairs ]
+;  ai   aj  funct  ;  all 1-4 pairs but the ones excluded in GROMOS itp
+[ angles ]
+;  ai   aj   ak  funct   angle     fc
+    1    2    3    2    109.50   618.00
+    1    2    4    2    109.50   618.00
+    1    2    5    2    109.50   618.00
+    3    2    4    2    109.50   618.00
+    3    2    5    2    109.50   618.00
+    4    2    5    2    109.50   618.00
+[ dihedrals ]
+; GROMOS improper dihedrals
+;  ai   aj   ak   al  funct   angle     fc
+[ dihedrals ]
+;  ai   aj   ak   al  funct    ph0      cp     mult
+[ exclusions ]
+;  ai   aj  funct  ;  GROMOS 1-4 exclusions
+
+[ system ]
+; Name
+CCL4
+
+[ molecules ]
+; Compound        #mols
+M486              512

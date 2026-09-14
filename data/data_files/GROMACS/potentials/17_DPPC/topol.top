@@ -1,0 +1,10 @@
+#include "ffG43A1-S3.itp"
+#include "lipids_43A1-S3.itp"
+#include "water.itp" ; SPCE
+
+[system]
+DPPC in SPCE
+
+[molecules]
+DPPC 100
+SOL 3205

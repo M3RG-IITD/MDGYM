@@ -1,0 +1,13 @@
+{
+  "id": "11_AA_DMPC",
+  "problem_description": "Compute the average temperature in K, pressure in bar, and density in kg/m^3 of the DMPC lipid bilayer system in water. The system contained 128 DMPC lipid molecules and 3840 TIP3P water molecules in a simulation box of dimensions 6.29095 \u00d7 6.33055 \u00d7 6.35764 nm\u00b3. Energy minimization should performed using the steepest descent algorithm for 100000 steps with a step size of 0.002 nm using the Verlet cutoff scheme. Long-range electrostatic interactions must treated using the Particle Mesh Ewald (PME) method with a cutoff of 1.2 nm during minimization and 1.0 nm during equilibration and production, to account for Van der Waals interactions, a switching function was applied at 0.9 nm using the vdw-type = switch modifier. constraints should be applied to all bonds using the LINCS. The molecular dynamics simulations were performed with a time step of 0.002 ps. During equilibration in the NPT ensemble, the Nose\u2013Hoover thermostat maintained the temperature at 303 K, while pressure was controlled using the Parrinello\u2013Rahman barostat at 1.013 bar with a coupling constant of 10 ps and the pressure coupling type should be set as semiisotropic. Bond constraints were applied using LINCS for all bonds during equilibration and hydrogen bonds. The equilibration cunducted for 10,000 steps, and the production run was performed for 25,000 steps with the same parameters as the equilibration run except pressure  which should be kept at 1 bar.",
+  "level": "2",
+  "metrics": [
+    "average_temperature",
+    "average_pressure",
+    "average_density"
+  ],
+  "ground_truth": {},
+  "time_limit": 400,
+  "engine": "gromacs"
+}

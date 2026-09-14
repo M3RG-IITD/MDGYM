@@ -1,0 +1,12 @@
+{
+  "id": "24_alanine_dipeptide",
+  "problem_description": "To compute the average temperature in K and pressure in bar of an alanine dipeptide system, the setup must consist of a single alanine dipeptide molecule in a cubic box of 3.71 nm and must be modeled using the charmm27.ff force field. Molecular dynamics equilibration should be performed using the md integrator with a time step of 0.002 ps for 500000 steps, and neighbor list updates must be performed every 5 steps using the Verlet cutoff scheme. Long-range electrostatic interactions must be calculated using the Particle Mesh Ewald (PME) method with a real-space cutoff of 0.8 nm, while van der Waals interactions should be truncated at 0.8 nm, and all bonds must be constrained during the simulations. Building upon the previous step, this phase must be executed as a continuation run (continuation = yes and gen_vel = no), utilizing the exact configuration and velocities from the prior trajectory rather than generating a fresh start. The system should be maintained in the NVT ensemble with pressure coupling explicitly disabled; consequently, any reported average pressure represents an instantaneous observable rather than a regulated target. To accurately account for long-range van der Waals interactions, dispersion corrections must be applied to both energy and pressure (DispCorr = EnerPres). Crucially, this setup should not be a plain equilibration, but rather a biased molecular dynamics simulation employing umbrella sampling via PLUMED. Specifically, the plumed-bias.dat configuration must apply harmonic restraints to the backbone dihedrals: the phi torsion (defined by atoms 5, 7, 9, 15) and the psi torsion (defined by atoms 7, 9, 15, 17). Both dihedrals should be strongly restrained using a spring constant (KAPPA) of 500 kJ mol\u207b\u00b9 rad\u207b\u00b2, with the target dihedral angles (AT) driven to -2 radians for phi and 2 radians for psi. Temperature coupling must be applied using a velocity-rescale thermostat with a coupling constant of 0.1 ps and a reference temperature of 300 K. Finally, pressure coupling should not be applied during the equilibration stage, and periodic boundary conditions must be applied in the xyz directions. The average temperature and pressure should be calculated from the production run.",
+  "level": "3",
+  "metrics": [
+    "average_temperature",
+    "average_pressure"
+  ],
+  "ground_truth": {},
+  "time_limit": 1200,
+  "engine": "gromacs"
+}

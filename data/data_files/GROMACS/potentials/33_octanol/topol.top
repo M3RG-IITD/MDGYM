@@ -1,0 +1,12 @@
+; Include forcefield parameters and molecular topol files
+#include "oplsaa.ff/forcefield.itp"
+#include "ocoh_opls.itp"
+
+[ system ]
+; Name
+OcOH Pure Solvent
+
+[ molecules ]
+; Compound        #mols
+OcOH               512
+

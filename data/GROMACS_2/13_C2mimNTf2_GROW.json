@@ -1,0 +1,13 @@
+{
+  "id": "13_C2mimNTf2_GROW",
+  "problem_description": "Compute the average temperature in K, pressure in bar, and density in kg/m^3 of the ionic liquid system composed of 1-ethyl-3-methylimidazolium (C2mim) cations and bis(trifluoromethylsulfonyl)imide (NTf2) anions. The system contained 216 C2mim cations and 216 NTf2 anions in a cubic simulation box of dimensions 4.51420 \u00d7 4.51420 \u00d7 4.51420 nm\u00b3. Energy minimization was performed using the steepest descent algorithm for 100000 steps with a step size of 0.002 nm using the Verlet cutoff scheme. Long-range electrostatic interactions were treated using the Particle Mesh Ewald (PME) method with a cutoff of 1.2 nm during minimization; and 1.0 nm during equilibration (50,000 steps) and production (1,00,000 steps), while van der Waals interactions were truncated at the same cutoff distances. Molecular dynamics simulations were performed with a time step of 0.002 ps. Hydrogen-containing bonds were constrained using the LINCS algorithm. The system was equilibrated and simulated in the NPT ensemble using the velocity-rescale thermostat and the Parrinello\u2013Rahman barostat at 300 K and 1 bar (with tau_p = 2.0 ps). Periodic boundary conditions were applied in the xyz directions.",
+  "level": "2",
+  "metrics": [
+    "average_temperature",
+    "average_pressure",
+    "average_density"
+  ],
+  "ground_truth": {},
+  "time_limit": 500,
+  "engine": "gromacs"
+}

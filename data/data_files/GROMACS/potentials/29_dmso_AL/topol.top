@@ -1,0 +1,38 @@
+[ defaults ]
+; nbfunc        comb-rule       gen-pairs       fudgeLJ fudgeQQ
+  1             1               no              1.0     1.0
+
+[ atomtypes ]
+   SD    32.06000       0.000       A   1.34449E-02   3.23180E-05
+   OD    15.99940       0.000       A   1.46494E-03   9.08063E-07
+   CD    15.03500       0.000       A   1.08168E-02   3.05651E-05
+
+[ moleculetype ]
+; name  nrexcl
+DMSO	3
+
+[ atoms ]
+;   nr    type   resnr  residu  atom    cgnr    charge
+    1     SD     1	DMSO	SD	1	 0.139
+    2     CD     1	DMSO	CD1	1	 0.160
+    3     OD     1	DMSO	OD	1	-0.459
+    4     CD     1	DMSO	CD2	1	 0.160
+
+[ constraints ]
+;  ai    aj funct          b0       kb
+    1     2     1 	0.180	
+    1     3     1 	0.153	
+    1     4     1 	0.180	
+    2     3     1       0.2677365318
+    4     3     1       0.2677365318
+    2     4     1       0.2704550881
+
+;A. Laaksonen, J. Phys. Chem. A, 105,2001,1702
+
+[ system ]
+; Name
+DMSO system in water
+
+[ molecules ]
+; Compound        #mols
+DMSO              250

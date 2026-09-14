@@ -1,0 +1,12 @@
+#include "gromos54a7_atb.ff/forcefield.itp"
+
+#include "aspirin.itp"
+#include "gromos54a7_atb.ff/spce.itp"
+
+[ system ]
+LZXY in water
+
+[ molecules ]
+; Compound        #molecules
+LZXY    1
+SOL               873

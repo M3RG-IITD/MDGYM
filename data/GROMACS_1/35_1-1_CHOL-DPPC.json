@@ -1,0 +1,13 @@
+{
+  "id": "35_1-1_CHOL-DPPC",
+  "problem_description": "Compute the average temperature in K, pressure in bar, and density in kg/m^3 of a cholesterol\u2013DPPC lipid bilayer system. The system consisted of 256 cholesterol (CHOL) molecules, 256 DPPC lipids, and 15499 water molecules in a rectangular simulation box of dimensions 10.15 \u00d7 10.50 \u00d7 8.78 nm^3. Energy minimization should performed using the steepest descent algorithm for 10000 steps with a step size of 0.002 nm. NPT equilibration was conducted using the md integrator with a time step of 0.002 ps for 5000 steps with neighbor list updates every 5 steps. Long-range electrostatic interactions were calculated using the Particle Mesh Ewald (PME) method with a real-space cutoff of 1.2 nm, while van der Waals interactions were treated using a cut-off scheme with a cutoff distance of 1.2 nm. Temperature coupling was applied with a coupling constant of 1.0 ps and a reference temperature of 323 K for all components using nose-hoover thermostats. Pressure coupling was applied with a coupling constant of 2.0 ps and a reference pressure of 1.01325 bar with compressibility of 4.5e-5 bar^-1 using Parrinello-Rahman, with dispersion corrections applied to both energy and pressure (DispCorr = EnerPres). Production simulations were performed using the md integrator with a time step of 0.002 ps for 10000 steps using the same thermostat and barostat parameters. The fourierspace grid for PME should be set to 0.15 nm and the pme_order should be set to 6.",
+  "level": "1",
+  "metrics": [
+    "average_temperature",
+    "average_pressure",
+    "average_density"
+  ],
+  "ground_truth": {},
+  "time_limit": 1300,
+  "engine": "gromacs"
+}

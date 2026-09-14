@@ -1,0 +1,13 @@
+{
+  "id": "19_popc_CLR_bilayr_in_water",
+  "problem_description": "Compute the average temperature in K, pressure in bar, and density in kg/m^3 of the POPC\u2013cholesterol lipid bilayer system solvated in water. The system contained 880 POPC lipids, 220 cholesterol (CLR) molecules, and 38500 water molecules in a simulation box of dimensions 16.98330 \u00d7 16.98330 \u00d7 8.45397 nm\u00b3 and was modeled using the gromos54a7 force field. Energy minimization was performed using the steepest descent algorithm with a time step parameter of 0.002 for 10000 steps. In EM, the coulombtype should be reaction-field with the cut-off of 0.8 nm. equilibration should be performed using the md integrator with a time step of 0.002 ps and neighbor list updates every 10 steps. All bonds were constrained during the simulation. Long-range electrostatic interactions during equilibration were calculated using the Particle Mesh Ewald (PME) method with a real-space cutoff of 1.0 nm, while van der Waals interactions were truncated at 1.0 nm. The system was equilibrated in the NPT ensemble with a reference temperature of 300 K using velocity-rescale thermostat and pressure of 1 bar using Berendsen barostat for 10,000 steps with a coupling constant of 10 ps and the pressure coupling type should be set as semiisotropic. Equilibration should  apply dispersion corrections to both energy and pressure (DispCorr = EnerPres).Periodic boundary conditions were applied in the xyz directions. The simulation does not involve with the production run, and the average temperature, pressure, and density should be calculated from the equilibration run.",
+  "level": "2",
+  "metrics": [
+    "average_temperature",
+    "average_pressure",
+    "average_density"
+  ],
+  "ground_truth": {},
+  "time_limit": 500,
+  "engine": "gromacs"
+}

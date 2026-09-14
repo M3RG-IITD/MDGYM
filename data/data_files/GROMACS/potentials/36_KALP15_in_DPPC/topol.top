@@ -1,0 +1,39 @@
+;
+[ defaults ]
+; nbfunc	comb-rule	gen-pairs	fudgeLJ	fudgeQQ
+1		3		yes		0.5	0.5
+;
+#include "./OPLSaa.db"
+#include "./sm18-24.itp"
+#include "./sope.itp"
+#include "./chol.itp"
+;
+[ moleculetype ]
+; molname	nrexcl
+SOL		2
+
+[ atoms ]
+; id	at type	res nr 	residu name	at name		cg nr	charge
+1     OT3       1       SOL              OW             1       -0.834
+2     HT3       1       SOL             HW1             1        0.417
+3     HT3       1       SOL             HW2             1        0.417
+
+[ settles ]
+; i	j	funct	length
+1	1	0.09572	0.15139
+
+[ exclusions ]
+1	2	3
+2	1	3
+3	1	2
+
+;
+[ system ]
+M14 bilayer
+;
+[ molecules ]
+SM24       48
+CHOL       16
+SOPE       50
+CHOL       11
+SOL      9790

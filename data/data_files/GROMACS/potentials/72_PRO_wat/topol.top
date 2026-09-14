@@ -1,0 +1,236 @@
+;
+;	File 'topol.top' was generated
+;	By user: unknown (93529)
+;	On host: khas023
+;	At date: Mon Apr  6 09:52:22 2026
+;
+;	This is a standalone topology file
+;
+;	Created by:
+;	              :-) GROMACS - gmx pdb2gmx, 2021.4-plumed-2.8.0 (-:
+;	
+;	Executable:   /home/apps/centos7/gromacs/2021.4/gcc9.1_ompi4.1.2/bin/gmx_mpi
+;	Data prefix:  /home/apps/centos7/gromacs/2021.4/gcc9.1_ompi4.1.2
+;	Working dir:  /scratch/mse/phd/msz208502/dev_gromacs/polymers/22_PRO_wat
+;	Command line:
+;	  gmx_mpi pdb2gmx -f 22_PRO.pdb -o processed.gro -water tip3p -ignh -ff charmm27
+;	Force field was read from the standard GROMACS share directory.
+;
+
+; Include forcefield parameters
+#include "charmm27.ff/forcefield.itp"
+
+[ moleculetype ]
+; Name            nrexcl
+Protein_chain_A     3
+
+[ atoms ]
+;   nr       type  resnr residue  atom   cgnr     charge       mass  typeB    chargeB      massB
+; residue   1 PRO rtp PRO  q  0.0
+     1         NP      1    PRO      N      1      -0.07     14.007
+     2         HC      1    PRO     H1      2       0.24      1.008
+     3         HC      1    PRO     H2      3       0.24      1.008
+     4        CP3      1    PRO     CD      4       0.16     12.011
+     5         HA      1    PRO    HD1      5       0.09      1.008
+     6         HA      1    PRO    HD2      6       0.09      1.008
+     7        CP1      1    PRO     CA      7       0.16     12.011
+     8         HB      1    PRO     HA      8       0.09      1.008
+     9        CP2      1    PRO     CB      9      -0.18     12.011
+    10         HA      1    PRO    HB1     10       0.09      1.008
+    11         HA      1    PRO    HB2     11       0.09      1.008
+    12        CP2      1    PRO     CG     12      -0.18     12.011
+    13         HA      1    PRO    HG1     13       0.09      1.008
+    14         HA      1    PRO    HG2     14       0.09      1.008
+    15         CC      1    PRO      C     15       0.34     12.011
+    16         OC      1    PRO    OT1     16      -0.67    15.9994
+    17         OC      1    PRO    OT2     17      -0.67    15.9994   ; qtot 0
+
+[ bonds ]
+;  ai    aj funct            c0            c1            c2            c3
+    1     2     1 
+    1     3     1 
+    1     4     1 
+    1     7     1 
+    4     5     1 
+    4     6     1 
+    4    12     1 
+    7     8     1 
+    7     9     1 
+    7    15     1 
+    9    10     1 
+    9    11     1 
+    9    12     1 
+   12    13     1 
+   12    14     1 
+   15    16     1 
+   15    17     1 
+
+[ pairs ]
+;  ai    aj funct            c0            c1            c2            c3
+    1    10     1 
+    1    11     1 
+    1    13     1 
+    1    14     1 
+    1    16     1 
+    1    17     1 
+    2     5     1 
+    2     6     1 
+    2     8     1 
+    2     9     1 
+    2    12     1 
+    2    15     1 
+    3     5     1 
+    3     6     1 
+    3     8     1 
+    3     9     1 
+    3    12     1 
+    3    15     1 
+    4     8     1 
+    4    10     1 
+    4    11     1 
+    4    15     1 
+    5     7     1 
+    5     9     1 
+    5    13     1 
+    5    14     1 
+    6     7     1 
+    6     9     1 
+    6    13     1 
+    6    14     1 
+    7    13     1 
+    7    14     1 
+    8    10     1 
+    8    11     1 
+    8    12     1 
+    8    16     1 
+    8    17     1 
+    9    16     1 
+    9    17     1 
+   10    13     1 
+   10    14     1 
+   10    15     1 
+   11    13     1 
+   11    14     1 
+   11    15     1 
+   12    15     1 
+
+[ angles ]
+;  ai    aj    ak funct            c0            c1            c2            c3
+    2     1     3     5 
+    2     1     4     5 
+    2     1     7     5 
+    3     1     4     5 
+    3     1     7     5 
+    4     1     7     5 
+    1     4     5     5 
+    1     4     6     5 
+    1     4    12     5 
+    5     4     6     5 
+    5     4    12     5 
+    6     4    12     5 
+    1     7     8     5 
+    1     7     9     5 
+    1     7    15     5 
+    8     7     9     5 
+    8     7    15     5 
+    9     7    15     5 
+    7     9    10     5 
+    7     9    11     5 
+    7     9    12     5 
+   10     9    11     5 
+   10     9    12     5 
+   11     9    12     5 
+    4    12     9     5 
+    4    12    13     5 
+    4    12    14     5 
+    9    12    13     5 
+    9    12    14     5 
+   13    12    14     5 
+    7    15    16     5 
+    7    15    17     5 
+   16    15    17     5 
+
+[ dihedrals ]
+;  ai    aj    ak    al funct            c0            c1            c2            c3            c4            c5
+    2     1     4     5     9 
+    2     1     4     6     9 
+    2     1     4    12     9 
+    3     1     4     5     9 
+    3     1     4     6     9 
+    3     1     4    12     9 
+    7     1     4     5     9 
+    7     1     4     6     9 
+    7     1     4    12     9 
+    2     1     7     8     9 
+    2     1     7     9     9 
+    2     1     7    15     9 
+    3     1     7     8     9 
+    3     1     7     9     9 
+    3     1     7    15     9 
+    4     1     7     8     9 
+    4     1     7     9     9 
+    4     1     7    15     9 
+    1     4    12     9     9 
+    1     4    12    13     9 
+    1     4    12    14     9 
+    5     4    12     9     9 
+    5     4    12    13     9 
+    5     4    12    14     9 
+    6     4    12     9     9 
+    6     4    12    13     9 
+    6     4    12    14     9 
+    1     7     9    10     9 
+    1     7     9    11     9 
+    1     7     9    12     9 
+    8     7     9    10     9 
+    8     7     9    11     9 
+    8     7     9    12     9 
+   15     7     9    10     9 
+   15     7     9    11     9 
+   15     7     9    12     9 
+    1     7    15    16     9 
+    1     7    15    17     9 
+    8     7    15    16     9 
+    8     7    15    17     9 
+    9     7    15    16     9 
+    9     7    15    17     9 
+    7     9    12     4     9 
+    7     9    12    13     9 
+    7     9    12    14     9 
+   10     9    12     4     9 
+   10     9    12    13     9 
+   10     9    12    14     9 
+   11     9    12     4     9 
+   11     9    12    13     9 
+   11     9    12    14     9 
+
+[ dihedrals ]
+;  ai    aj    ak    al funct            c0            c1            c2            c3
+   15     7    17    16     2 
+
+; Include Position restraint file
+#ifdef POSRES
+#include "posre.itp"
+#endif
+
+; Include water topology
+#include "charmm27.ff/tip3p.itp"
+
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       1000       1000       1000
+#endif
+
+; Include topology for ions
+#include "charmm27.ff/ions.itp"
+
+[ system ]
+; Name
+UNNAMED in water
+
+[ molecules ]
+; Compound        #mols
+Protein_chain_A     1
+SOL               876

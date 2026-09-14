@@ -1,0 +1,344 @@
+; Gromacs topology of the amphi-PIC molecule
+; NOTE: for use with the Gromacs program, the extension of this file should be changed to from .txt to .itp
+
+[ moleculetype ]
+; Name nrexcl
+PIC     3
+
+[ atoms ]
+;   nr      type  resnr resid  atom  cgnr   charge     mass 
+     1       C       1  PIC    R1A     1    -0.14   12.0110   
+     2       C       1  PIC    R1B     2    -0.14   12.0110   
+     3       C       1  PIC    R1C     3    -0.14   12.0110   
+     4       C       1  PIC    R1D     4    -0.14   12.0110   
+     5       C       1  PIC    R1E     5     0.14   12.0110   
+     6       C       1  PIC    R1F     6     0.09   12.0110   
+     7       N       1  PIC    N2A     7     0.08   14.0170   
+     8       C       1  PIC    R2D     8    -0.17   12.0110   
+     9       C       1  PIC    R2E     9    -0.22   12.0110   
+    10       C       1  PIC    R2F    10     0.23   12.0110   
+    11       C       1  PIC    L1A    11    -0.46   12.0110   
+    12       N       1  PIC    N3A    12     0.08   14.0170   
+    13       C       1  PIC    R3B    13     0.23   12.0110   
+    14       C       1  PIC    R3C    14    -0.22   12.0110   
+    15       C       1  PIC    R3D    15    -0.17   12.0110   
+    16       C       1  PIC    R3E    16     0.14   12.0110   
+    17       C       1  PIC    R3F    17     0.09   12.0110   
+    18       C       1  PIC    R4A    18    -0.14   12.0110   
+    19       C       1  PIC    R4D    19    -0.14   12.0110   
+    20       C       1  PIC    R4E    20    -0.14   12.0110   
+    21       C       1  PIC    R4F    21    -0.14   12.0110   
+    22      HC       1  PIC    H1A    22     0.14    1.0080   
+    23      HC       1  PIC    H1B    23     0.14    1.0080   
+    24      HC       1  PIC    H1C    24     0.14    1.0080   
+    25      HC       1  PIC    H1D    25     0.14    1.0080   
+    26      HC       1  PIC    H2D    26     0.17    1.0080   
+    27      HC       1  PIC    H2E    27     0.17    1.0080   
+    28      HC       1  PIC    L1H    28     0.18    1.0080   
+    29      HC       1  PIC    H3C    29     0.17    1.0080   
+    30      HC       1  PIC    H3D    30     0.17    1.0080   
+    31      HC       1  PIC    H4A    31     0.14    1.0080   
+    32      HC       1  PIC    H4D    32     0.14    1.0080   
+    33      HC       1  PIC    H4E    33     0.14    1.0080   
+    34      HC       1  PIC    H4F    34     0.14    1.0080   
+    35     CH2       1  PIC    T2A    35     0.15   14.0270
+    36     CH3       1  PIC    T3A    36    0.000   15.0350 ;edited
+    37     CH2       1  PIC    T2B    37     0.15   14.0270 ; edited
+    38     CH3       1  PIC    T3B    38    0.000   15.0350 ; edited
+
+;    38     CH2       1  PIC    T2C    38    0.000   14.0270
+;    39     CH2       1  PIC    T2D    39    0.000   14.0270
+;    40     CH2       1  PIC    T2E    40    0.000   14.0270
+;    41     CH2       1  PIC    T2F    41    0.000   14.0270
+;    42     CH2       1  PIC    T2G    42    0.000   14.0270
+;    43     CH2       1  PIC    T2H    43    0.000   14.0270
+;    44     CH2       1  PIC    T2I    44    0.000   14.0270
+;    45     CH2       1  PIC    T2J    45    0.000   14.0270
+;    46     CH2       1  PIC    T2K    46    0.000   14.0270
+;    47     CH2       1  PIC    T2L    47    0.000   14.0270
+;    48     CH2       1  PIC    T2M    48    0.000   14.0270
+;    49     CH2       1  PIC    T2N    49    0.000   14.0270
+;    50     CH2       1  PIC    T2O    50    0.000   14.0270
+;    51     CH2       1  PIC    T2P    51    0.000   14.0270
+;    52     CH2       1  PIC    T2Q    52    0.000   14.0270
+;    53     CH3       1  PIC    T2R    53    0.000   15.0350
+
+[ bonds ]
+; ai  aj  fu    c0, c1, ...
+   1   2   2    gb_16    gb_16 ;   R1A  R1B   
+   2   3   2    gb_16    gb_16 ;   R1B  R1C
+   3   4   2    gb_16    gb_16 ;   R1C  R1D
+   4   5   2    gb_16    gb_16 ;   R1D  R1E
+   5   6   2    gb_16    gb_16 ;   R1E  R1F
+   6   1   2    gb_16    gb_16 ;   R1F  R1A
+   6   7   2    gb_16    gb_16 ;   R1F  N2A
+   5   8   2    gb_16    gb_16 ;   R1E  R2D
+   7  10   2    gb_16    gb_16 ;   N2A  R2F
+   7  35   2    gb_27    gb_27 ;   N2A  T2A
+   8   9   2    gb_16    gb_16 ;   R2D  R2E
+   9  10   2    gb_16    gb_16 ;   R2E  R2F
+  10  11   2    gb_16    gb_16 ;   R2F  L1A
+  11  13   2    gb_16    gb_16 ;   L1A  R3B
+  12  13   2    gb_16    gb_16 ;   N3A  R3B
+  12  17   2    gb_16    gb_16 ;   N3A  R3F
+  12  37   2    gb_27    gb_27 ;   N3A  T2B  ;edited
+  13  14   2    gb_16    gb_16 ;   R3B  R3C
+  14  15   2    gb_16    gb_16 ;   R3C  R3D
+  15  16   2    gb_16    gb_16 ;   R3D  R3E
+  16  17   2    gb_16    gb_16 ;   R3E  R3F
+  16  19   2    gb_16    gb_16 ;   R3E  R4D
+  18  17   2    gb_16    gb_16 ;   R4A  R3F
+  18  21   2    gb_16    gb_16 ;   R4A  R4F
+  19  20   2    gb_16    gb_16 ;   R4D  R4E
+  20  21   2    gb_16    gb_16 ;   R4E  R4F
+   1  22   2    gb_3     gb_3  ;   R1A  H1A
+   2  23   2    gb_3     gb_3  ;   R1B  H1B
+   3  24   2    gb_3     gb_3  ;   R1C  H1C
+   4  25   2    gb_3     gb_3  ;   R1D  H1D
+   8  26   2    gb_3     gb_3  ;   R2D  H2D
+   9  27   2    gb_3     gb_3  ;   R2E  H2E
+  11  28   2    gb_3     gb_3  ;   L1A  L1H
+  14  29   2    gb_3     gb_3  ;   R3C  H3C
+  15  30   2    gb_3     gb_3  ;   R3D  H3D
+  18  31   2    gb_3     gb_3  ;   R4A  H4A
+  19  32   2    gb_3     gb_3  ;   R4D  H4D
+  20  33   2    gb_3     gb_3  ;   R4E  H4E
+  21  34   2    gb_3     gb_3  ;   R4F  H4F
+  37  38   2    gb_27    gb_27 ;   T2B  T3B  ; edited
+  35  36   2    gb_27    gb_27 ;   T2A  T3A  ; edited
+ 
+ ; 35  37   2    gb_27    gb_27 ;   T2A  T2B
+ ; 37  38   2    gb_27    gb_27 ;   T2B  T2C
+ ; 38  39   2    gb_27    gb_27 ;   T2C  T2D
+ ; 39  40   2    gb_27    gb_27 ;   T2D  T2E
+ ; 40  41   2    gb_27    gb_27 ;   T2E  T2F
+ ; 41  42   2    gb_27    gb_27 ;   T2F  T2G
+ ; 42  43   2    gb_27    gb_27 ;   T2G  T2H
+ ; 43  44   2    gb_27    gb_27 ;   T2H  T2I
+ ; 44  45   2    gb_27    gb_27 ;   T2I  T2J
+ ; 45  46   2    gb_27    gb_27 ;   T2J  T2K
+ ; 46  47   2    gb_27    gb_27 ;   T2K  T2L
+ ; 47  48   2    gb_27    gb_27 ;   T2L  T2M
+ ; 48  49   2    gb_27    gb_27 ;   T2M  T2N
+ ; 49  50   2    gb_27    gb_27 ;   T2N  T2O
+ ; 50  51   2    gb_27    gb_27 ;   T2O  T2P
+ ; 51  52   2    gb_27    gb_27 ;   T2P  T2Q
+ ; 52  53   2    gb_27    gb_27 ;   T2Q  T2R
+
+
+
+;[ pairs ]
+; All 1-4 interactions and closer have been turned off, here some are turned on again.
+; ai  aj  fu    c0, c1, ...
+;   7  38   1          ; N2A  T4D
+;  35  39   1          ; T2A  T4E
+;  37  40   1          ; T4C  T4F
+;  38  41   1          ; T4D  T4G
+;  39  42   1          ; T4E  T4H
+;  40  43   1          ; T4F  T4I
+;  41  44   1          ; T4G  T4J
+;  42  45   1          ; T4H  T4K
+;  43  46   1          ; T4I  T4L
+;  44  47   1          ; T4J  T4M
+;  45  48   1          ; T4K  T4N
+;  46  49   1          ; T4L  T4O
+;  47  50   1          ; T4M  T4P
+;  48  51   1          ; T4N  T4Q
+;  49  52   1          ; T4O  T4R
+;  50  53   1          ; T4P  T4S
+
+  
+
+[ exclusions ]
+; 1-5 interactions are turned off for atom pairs which are too close to each other.
+; i  excluded from i
+  1   9  25
+  2   8  35        
+  3   7   9  26
+  4  10  22  35    
+  5  11  23
+  6  24
+  7  26
+  8  35           
+ 10  22
+ 11  16
+ 12  20  30
+ 13  19  31
+ 14  18  20
+ 15  21  37        ; edited
+ 16  34
+ 17  33
+ 18  32
+ 19  31  37        ; edited
+ 20  30
+ 21  37            ; edited
+ 
+[ angles ]
+; ai  aj  ak  fu    c0, c1, ...
+   6   1   2   2    ga_27  ga_27 ;   R1F  R1A  R1B
+   2   1  22   2    ga_25  ga_25 ;   R1B  R1A  H1A
+   6   1  22   2    ga_25  ga_25 ;   R1F  R1A  H1A
+   1   2   3   2    ga_27  ga_27 ;   R1A  R1B  R1C   
+   1   2  23   2    ga_25  ga_25 ;   R1A  R1B  H1B   
+   3   2  23   2    ga_25  ga_25 ;   R1C  R1B  H1B   
+   2   3   4   2    ga_27  ga_27 ;   R1B  R1C  R1D
+   2   3  24   2    ga_25  ga_25 ;   R1B  R1C  H1C
+   4   3  24   2    ga_25  ga_25 ;   R1D  R1C  H1C
+   3   4   5   2    ga_27  ga_27 ;   R1C  R1D  R1E
+   3   4  25   2    ga_25  ga_25 ;   R1C  R1D  H1D
+   5   4  25   2    ga_25  ga_25 ;   R1E  R1D  H1D
+   4   5   6   2    ga_27  ga_27 ;   R1D  R1E  R1F
+   4   5   8   2    ga_27  ga_27 ;   R1D  R1E  R2D
+   6   5   8   2    ga_27  ga_27 ;   R1F  R1E  R2D
+   5   6   1   2    ga_27  ga_27 ;   R1E  R1F  R1A
+   7   6   1   2    ga_27  ga_27 ;   N2A  R1F  R1A
+   7   6   5   2    ga_27  ga_27 ;   N2A  R1F  R1E
+   6   7  10   2    ga_27  ga_27 ;   R1F  N2A  R2F 
+   6   7  35   2    ga_27  ga_27 ;   R1F  N2A  T2A ; edited 
+  10   7  35   2    ga_27  ga_27 ;   R2F  N2A  T2A ; edited
+   5   8   9   2    ga_27  ga_27 ;   R1E  R2D  R2E
+   5   8  26   2    ga_25  ga_25 ;   R1E  R2D  H2D
+   9   8  26   2    ga_25  ga_25 ;   R2E  R2D  H2D
+   8   9  10   2    ga_27  ga_27 ;   R2D  R2E  R2F
+   8   9  27   2    ga_25  ga_25 ;   R2D  R2E  H2E
+  10   9  27   2    ga_25  ga_25 ;   R2F  R2E  H2E
+   7  10   9   2    ga_27  ga_27 ;   N2A  R2F  R2E
+   7  10  11   2    ga_27  ga_27 ;   N2A  R2F  L1A
+   9  10  11   2    ga_27  ga_27 ;   R2E  R2F  L1A
+  10  11  13   2    ga_27  ga_27 ;   R2F  L1A  R3B
+  10  11  28   2    ga_25  ga_25 ;   R2F  L1A  L1H
+  13  11  28   2    ga_25  ga_25 ;   R2F  L1A  L1H
+  13  12  17   2    ga_27  ga_27 ;   R3B  N3A  R3F
+  13  12  37   2    ga_27  ga_27 ;   R3B  N3A  T2B ; edited
+  17  12  37   2    ga_27  ga_27 ;   R3F  N3A  T2B ; edited
+  11  13  12   2    ga_27  ga_27 ;   L1A  R3B  N3A
+  11  13  14   2    ga_27  ga_27 ;   L1A  R3B  R3C
+  12  13  14   2    ga_27  ga_27 ;   N3A  R3B  R3C
+  13  14  15   2    ga_27  ga_27 ;   R3B  R3C  R3D
+  13  14  29   2    ga_25  ga_25 ;   R3B  R3C  H3C
+  15  14  29   2    ga_25  ga_25 ;   R3D  R3C  H3C
+  14  15  16   2    ga_27  ga_27 ;   R3C  R3D  R3E
+  14  15  30   2    ga_25  ga_25 ;   R3C  R3D  H3D
+  16  15  30   2    ga_25  ga_25 ;   R3E  R3D  H3D
+  15  16  17   2    ga_27  ga_27 ;   R3D  R3E  R3F
+  15  16  19   2    ga_27  ga_27 ;   R3D  R3E  R4D
+  19  16  17   2    ga_27  ga_27 ;   R4D  R3E  R3F
+  16  17  12   2    ga_27  ga_27 ;   R3E  R3F  N3A
+  16  17  18   2    ga_27  ga_27 ;   R3E  R3F  R4A
+  18  17  12   2    ga_27  ga_27 ;   R4A  R3F  N3A
+  17  18  21   2    ga_27  ga_27 ;   R3F  R4A  R4F
+  17  18  31   2    ga_25  ga_25 ;   R3F  R4A  H4A
+  21  18  31   2    ga_25  ga_25 ;   R4F  R4A  H4A
+  16  19  20   2    ga_27  ga_27 ;   R3E  R4D  R4E
+  16  19  32   2    ga_25  ga_25 ;   R3E  R4D  H4D
+  20  19  32   2    ga_25  ga_25 ;   R4E  R4D  H4D
+  19  20  21   2    ga_27  ga_27 ;   R4D  R4E  R4F
+  19  20  33   2    ga_25  ga_25 ;   R4D  R4E  H4E
+  21  20  33   2    ga_25  ga_25 ;   R4F  R4E  H4E
+  20  21  18   2    ga_27  ga_27 ;   R4E  R4F  R4A
+  20  21  34   2    ga_25  ga_25 ;   R4E  R4F  H4F
+  18  21  34   2    ga_25  ga_25 ;   R4A  R4F  H4F
+   7  35  36   2    ga_15  ga_15 ;   N2A  T2A  T3A ; edited
+  12  37  38   2    ga_15  ga_15 ;   N3A  T2B  T3A ; edited
+
+;  37  38  39   2    ga_15  ga_15 ;   T2B  T2C  T2D
+;  38  39  40   2    ga_15  ga_15 ;   T2C  T2D  T2E
+;  39  40  41   2    ga_15  ga_15 ;   T2D  T2E  T2F
+;  40  41  42   2    ga_15  ga_15 ;   T2E  T2F  T2G
+;  41  42  43   2    ga_15  ga_15 ;   T2F  T2G  T2H
+;  42  43  44   2    ga_15  ga_15 ;   T2G  T2H  T2I
+;  43  44  45   2    ga_15  ga_15 ;   T2H  T2I  T2J
+;  44  45  46   2    ga_15  ga_15 ;   T2I  T2J  T2K
+;  45  46  47   2    ga_15  ga_15 ;   T2J  T2K  T2L
+;  46  47  48   2    ga_15  ga_15 ;   T2K  T2L  T2M
+;  47  48  49   2    ga_15  ga_15 ;   T2L  T2M  T2N
+;  48  49  50   2    ga_15  ga_15 ;   T2M  T2N  T2O
+;  49  50  51   2    ga_15  ga_15 ;   T2N  T2O  T2P
+;  50  51  52   2    ga_15  ga_15 ;   T2O  T2P  T2Q
+;  51  52  53   2    ga_15  ga_15 ;   T2P  T2Q  T2R
+
+
+
+[ dihedrals ]
+; ai  aj  ak  al  fu    c0, c1, m, ...
+   1   2   3   4   2      gi_1   gi_1 ; imp   R1A  R1B  R1C  R1D   
+  18  21  20  19   2      gi_1   gi_1 ; imp   R4A  R4F  R4E  R4D   
+   1   6   5   4   2      gi_1   gi_1 ; imp   R1A  R1F  R1E  R1D   
+  18  17  16  19   2      gi_1   gi_1 ; imp   R4A  R3F  R3E  R4D   
+   1   2   6  22   2      gi_1   gi_1 ; imp   R1A  R1B  R1F  H1A   
+  18  21  17  31   2      gi_1   gi_1 ; imp   R4A  R4F  R3F  H4A   
+   2   3   4   5   2      gi_1   gi_1 ; imp   R1B  R1C  R1D  R1E
+  21  20  19  16   2      gi_1   gi_1 ; imp   R4F  R4E  R4D  R3E
+   2   1   6   5   2      gi_1   gi_1 ; imp   R1B  R1A  R1F  R1E 
+  21  18  17  16   2      gi_1   gi_1 ; imp   R4F  R4A  R3F  R3E 
+   2   1   3  23   2      gi_1   gi_1 ; imp   R1B  R1A  R1C  H1B 
+  21  18  20  34   2      gi_1   gi_1 ; imp   R4F  R4A  R4E  H4F 
+   6   1   2   3   2      gi_1   gi_1 ; imp   R1F  R1A  R1B  R1C 
+  17  18  21  20   2      gi_1   gi_1 ; imp   R3F  R4A  R4F  R4E     
+   6   5   4   3   2      gi_1   gi_1 ; imp   R1F  R1E  R1D  R1C 
+  17  16  19  20   2      gi_1   gi_1 ; imp   R3F  R3E  R4D  R4E
+   6   1   5   7   2      gi_1   gi_1 ; imp   R1F  R1A  R1E  N2A 
+  17  18  16  12   2      gi_1   gi_1 ; imp   R3F  R4A  R3E  N3A     
+  24   2   4   3   2      gi_1   gi_1 ; imp   H1C  R1B  R1D  R1C 
+  33  21  19  20   2      gi_1   gi_1 ; imp   H4E  R4F  R4D  R4E 
+   5   4   6   8   2      gi_1   gi_1 ; imp   R1E  R1D  R1F  R2D
+  16  19  17  15   2      gi_1   gi_1 ; imp   R3E  R4D  R3F  R3D
+   4   3   5  25   2      gi_1   gi_1 ; imp   R1D  R1C  R1E  H1D
+  19  20  16  32   2      gi_1   gi_1 ; imp   R4D  R4E  R3E  H4D
+   7   6   5   8   2      gi_1   gi_1 ; imp   N2A  R1F  R1E  R2D   
+  12  17  16  15   2      gi_1   gi_1 ; imp   N3A  R3F  R3E  R3D   
+   7  10   9   8   2      gi_1   gi_1 ; imp   N2A  R2F  R2E  R2D   
+  12  13  14  15   2      gi_1   gi_1 ; imp   N3A  R3B  R3C  R3D   
+   7   6  10  35   2      gi_1   gi_1 ; imp   N2A  R1F  R2F  T2A  ; edited 
+  12  17  13  37   2      gi_1   gi_1 ; imp   N3A  R3F  R3B  T2B  ; edited   
+   6   5   8   9   2      gi_1   gi_1 ; imp   R1F  R1E  R2D  R2E
+  17  16  15  14   2      gi_1   gi_1 ; imp   R3F  R3E  R3D  R3C
+   6   7  10   9   2      gi_1   gi_1 ; imp   R1F  N2A  R2F  R2E 
+  17  12  13  14   2      gi_1   gi_1 ; imp   R3F  N3A  R3B  R3C 
+   6   7   5   1   2      gi_1   gi_1 ; imp   R1F  N2A  R1E  R1A 
+  17  12  16  18   2      gi_1   gi_1 ; imp   R3F  N2A  R3E  R4F 
+  10   7   6   5   2      gi_1   gi_1 ; imp   R2F  N2A  R1F  R1E 
+  13  12  17  16   2      gi_1   gi_1 ; imp   R3B  N2A  R3F  R3E     
+  10   9   8   5   2      gi_1   gi_1 ; imp   R2F  R2E  R2D  R1E 
+  13  14  15  16   2      gi_1   gi_1 ; imp   R3B  R3C  R3D  R3E
+  10   7   9  11   2      gi_1   gi_1 ; imp   R2F  N2A  R2E  L1A 
+  13  12  14  11   2      gi_1   gi_1 ; imp   R3B  N2A  R3C  L1A     
+   4   6   8   5   2      gi_1   gi_1 ; imp   R1D  R1F  R2D  R1E 
+  19  17  15  16   2      gi_1   gi_1 ; imp   R4D  R3F  R3D  R3E 
+   9   8  10  27   2      gi_1   gi_1 ; imp   R2E  R2D  R2F  H2E
+  14  15  13  29   2      gi_1   gi_1 ; imp   R3C  R3D  R3B  H3C
+   8   5   9  26   2      gi_1   gi_1 ; imp   R2D  R1E  R2E  H2D
+  15  16  14  30   2      gi_1   gi_1 ; imp   R3D  R3E  R3B  H3D
+   6   7  35  36   1      gd_34  gd_34; pro   R1F  N2A  T2A  T3A ; edited
+  10   7  35  36   1      gd_34  gd_34; pro   R2F  N2A  T2A  T3A ; edited
+  13  12  37  38   1      gd_34  gd_34; pro   R3B  N2A  T2B  T3B ; edited
+  17  12  37  38   1      gd_34  gd_34; pro   R3F  N2A  T2B  T3B ; edited
+
+; for the tail
+;   7  35  37  38   1      gd_34  gd_34; pro   N2A  T2A  T2B  T2C
+;  10   7  35  37   1      gd_34  gd_34; pro   R2F  N2A  T2A  T2B 
+;  35  37  38  39   1      gd_34  gd_34; pro   T2A  T2B  T2C  T2D
+;  37  38  39  40   1      gd_34  gd_34; pro   T2B  T2C  T2D  T2E
+;  38  39  40  41   1      gd_34  gd_34; pro   T2C  T2D  T2E  T2F
+;  39  40  41  42   1      gd_34  gd_34; pro   T2D  T2E  T2F  T2G
+;  40  41  42  43   1      gd_34  gd_34; pro   T2E  T2F  T2G  T2H
+;  41  42  43  44   1      gd_34  gd_34; pro   T2F  T2G  T2H  T2I
+;  42  43  44  45   1      gd_34  gd_34; pro   T2G  T2H  T2I  T2J
+;  33  44  45  46   1      gd_34  gd_34; pro   T2H  T2I  T2J  T2K
+;  44  45  46  47   1      gd_34  gd_34; pro   T2I  T2J  T2K  T2L
+;  45  46  47  48   1      gd_34  gd_34; pro   T2J  T2K  T2L  T2M
+;  46  47  48  49   1      gd_34  gd_34; pro   T2K  T2L  T2M  T2N
+;  47  48  49  50   1      gd_34  gd_34; pro   T2L  T2M  T2N  T2O
+;  48  49  50  51   1      gd_34  gd_34; pro   T2M  T2N  T2O  T2P
+;  49  50  51  52   1      gd_34  gd_34; pro   T2N  T2O  T2P  T2Q
+;  50  51  52  53   1      gd_34  gd_34; pro   T2O  T2P  T2Q  T2R
+
+
+
+;  Add terms to the standard force field, to make the twisting between the two quinoline rings agree with the result of quantum chemical calculations. 
+  10  11  13  14   1     0.0  -1.5  1 ; pro   R2F  L1A  R3B  R3C
+   9  10  11  13   1     0.0  -1.5  1 ; pro 
+  10  11  13  14   1     0.0  -30.0  2 ; pro   R2F  L1A  R3B  R3C
+   9  10  11  13   1     0.0  -30.0  2 ; pro 
+  10  11  13  14   1     0.0  3.0  6 ; pro   R2F  L1A  R3B  R3C
+   9  10  11  13   1     0.0  3.0  6 ; pro 

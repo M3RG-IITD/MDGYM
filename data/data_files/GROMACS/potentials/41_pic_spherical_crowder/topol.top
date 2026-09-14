@@ -1,0 +1,22 @@
+#include "./ffG53a6.itp"
+#include "./amphiPIC2.itp"
+#include "./amphiPIC.itp"
+#include "./cro.itp"
+#include "./ions.itp"
+#include "./water.itp"
+
+[ system ]
+; Name
+dispersed dyes in crowders in water
+
+[ molecules ]
+; compound   	  mols
+PIC2               1
+PIC                4
+RO1                1
+RO2                1
+RO3                1
+RO4                1
+RO5                1
+SOL         8805
+CL               5

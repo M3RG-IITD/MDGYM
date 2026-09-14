@@ -1,0 +1,13 @@
+{
+  "id": "26_ch2cl2_box",
+  "problem_description": "Compute the average temperature in K, pressure in bar, and density in kg/m^3 of a dichloromethane (CH2Cl2) liquid system.  The system consisted of 512 dichloromethane molecules (DCME) in a cubic simulation box of dimensions 5.0 \u00d7 5.0 \u00d7 5.0 nm\u00b3 and was modeled using the gromos54a7_atb.ff force field. Energy minimization was carried out using the steepest descent algorithm for 10000 steps with an energy minimization step size of 0.002 nm using the Verlet cutoff scheme with neighbor list updates every step, and it should use the PME coulombic type and the rcoulomb and rvdw as 1.2 nm. Molecular dynamics equilibration was performed using the md integrator with a time step of 0.002 ps for 10000 steps with neighbor list updates every 5 steps. During equilibration, electrostatic and van der Waals interactions were computed using a cut-off scheme with a cutoff distance of 1.4 nm. Temperature coupling was applied using the Berendsen thermostat with a coupling constant of 0.1 ps and a reference temperature of 300 K. Pressure coupling was applied using the Berendsen barostat with a coupling constant of 5 ps and a reference pressure of 1.0 bar. The compressibility used for pressure coupling was 4.5e-5 bar\u207b\u00b9. Production simulations were performed using the md integrator with a time step of 0.001 ps for 100000 steps using the same thermostat and barostat parameters.",
+  "level": "1",
+  "metrics": [
+    "average_temperature",
+    "average_pressure",
+    "average_density"
+  ],
+  "ground_truth": {},
+  "time_limit": 600,
+  "engine": "gromacs"
+}

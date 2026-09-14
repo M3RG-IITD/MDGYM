@@ -1,0 +1,14 @@
+{
+  "id": "46_hTLR7_in_water",
+  "problem_description": "Compute the average hbond of the protein, temperature in K, density in kg/m^3, and pressure in bar for a protein system consisting of human Toll-like receptor 7 (hTLR7) with two protein chains (A and B), solvated in 57,459 water molecules and 18 chloride ions in a simulation box of 14.14 \u00d7 14.14 \u00d7 9.99 nm^3. The system was modeled using the CHARMM36-jul2022 force field. Energy minimization was performed using the steepest descent algorithm for 50,000 steps. This was followed by NVT equilibration using the md integrator with a 2 fs time step for 50,000 steps (100 ps), maintaining the temperature at 300 K using the V-rescale thermostat with a coupling constant of 0.1 ps. For keeping the protein to be in the initial configuration, define = -DPOSRES should be used. Production simulations were carried out using the md integrator with a 2 fs time step for 10,000 steps (20 ps), maintaining the same temperature suing thermostat and pressure at 1 bar using the Parrinello-Rahman barostat with a coupling constant of 2.0 ps and compressibility of 4.5 \u00d7 10^-5 bar^-1. Electrostatic interactions were treated using PME, and a cutoff of 1.2 nm was applied for both Coulomb and van der Waals interactions with a cutoff of 1.2 nm. Hydrogen bonds were constrained using the LINCS algorithm, and periodic boundary conditions were applied in all directions. A Van der Waals force-switch modifier starting at 1.0 nm was employed across all molecular dynamics stages, and long-range dispersion corrections were omitted (DispCorr = no) during the production phase. For computing the average hbond, the gmx hbond tool should be used to analyze the number of hydrogen bonds formed between the protein and water molecules throughout the production run. The fourierspacing for PME was set to 0.16 nm during both equilibration and production runs. The simulation should not involve with NPT equilibration. The average temperature, pressure, density, and hbond should be calculated from the production run.",
+  "level": "3",
+  "metrics": [
+    "average_temperature",
+    "average_pressure",
+    "average_density",
+    "average_hbond"
+  ],
+  "ground_truth": {},
+  "time_limit": 1200,
+  "engine": "gromacs"
+}

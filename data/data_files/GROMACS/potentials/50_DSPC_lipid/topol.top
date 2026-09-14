@@ -1,0 +1,11 @@
+#include "martini_v3.0.0.itp"
+#include "martini_v3.0.0_ffbonded_v2.itp"
+#include "martini_v3.0.0_phospholipids_PC_v2.itp"
+#include "martini_v3.0.0_solvents_v1.itp"
+
+[ system ]
+DSPC BILAYER SELF-ASSEMBLY
+
+[ molecules ]
+DSPC 128
+W    768

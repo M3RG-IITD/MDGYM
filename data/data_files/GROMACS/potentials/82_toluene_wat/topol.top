@@ -1,0 +1,12 @@
+#include "gromos54a7_atb.ff/forcefield.itp"
+
+#include "toluene.itp"
+#include "gromos54a7_atb.ff/spce.itp"
+
+[ system ]
+HO7A in water
+
+[ molecules ]
+; Compound        #molecules
+HO7A    1
+SOL               875

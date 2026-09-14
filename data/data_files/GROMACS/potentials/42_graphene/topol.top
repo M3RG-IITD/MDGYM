@@ -1,0 +1,28 @@
+; Include forcefield parameters
+#include "./amber96.ff/forcefield.itp"
+
+; Include topology for GRA
+#include "./gfn_1.itp"
+; include position restraint
+#ifdef POSRES
+#include "porse1.itp"
+#endif
+
+;Include topology for GRA2
+#include "./gfn_2.itp"
+
+#ifdef POSRES
+#include "porse2.itp"
+#endif
+
+#include "./amber96.ff/spce.itp"
+
+[ system ]
+; Name
+GRA in water
+
+[ molecules ]
+; Compound        #mols
+GRA                 1
+GRA2                1
+SOL              2911

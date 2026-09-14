@@ -1,0 +1,49 @@
+;
+;	File 'topol.top' was generated
+;	By user: root (93529)
+;	On host: khas003
+;	At date: Sun Apr  5 18:44:29 2026
+;
+;	This is a standalone topology file
+;
+;	Created by:
+;	              :-) GROMACS - gmx pdb2gmx, 2021.4-plumed-2.8.0 (-:
+;	
+;	Executable:   /home/apps/centos7/gromacs/2021.4/gcc9.1_ompi4.1.2/bin/gmx_mpi
+;	Data prefix:  /home/apps/centos7/gromacs/2021.4/gcc9.1_ompi4.1.2
+;	Working dir:  /scratch/mse/phd/msz208502/dev_gromacs/polymers/11_ALA_LYS_wat
+;	Command line:
+;	  gmx_mpi pdb2gmx -f ALA_LYS.pdb -o processed.gro -water tip3p -ignh -ff charmm27
+;	Force field was read from the standard GROMACS share directory.
+;
+
+; Include forcefield parameters
+#include "charmm27.ff/forcefield.itp"
+
+; Include chain topologies
+#include "topol_Protein_chain_A.itp"
+#include "topol_Protein_chain_A2.itp"
+
+; Include water topology
+#include "charmm27.ff/tip3p.itp"
+
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       1000       1000       1000
+#endif
+
+; Include topology for ions
+#include "charmm27.ff/ions.itp"
+
+[ system ]
+; Name
+UNNAMED in water
+
+[ molecules ]
+; Compound        #mols
+Protein_chain_A     1
+Protein_chain_A2     1
+SOL         870
+CL               1

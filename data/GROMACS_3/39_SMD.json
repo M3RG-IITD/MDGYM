@@ -1,0 +1,14 @@
+{
+  "id": "39_SMD",
+  "problem_description": "Compute the average pullforce in kJ/mol/nm,temperature in K, pressure in bar, and density in kg/m^3 of a solvated protein (2BEG) complex system. The system consisted of five protein chains of 2BEG and 10675 water molecules, 31 sodium ions, and 21 chloride ions in a simulation box of dimensions 6.560 \u00d7 4.362 \u00d7 12.000 nm^3 and protein was modeled using the gromos53a6.ff force field. Initially, energy minimization must be performed using the steepest descent algorithm for 50,000 steps with an energy tolerance of 1000. Throughout all simulation phases, periodic boundary conditions must be applied in all three spatial dimensions, the non-bonded interaction cutoffs for both electrostatics and van der Waals forces must be explicitly set to 1.4 nm (rcoulomb = rvdw = 1.4 nm), and all bonds must be constrained using the all-bonds algorithm. Following minimization, equilibration must be performed in the NPT ensemble using the md integrator with a time step of 0.002 ps for 50,000 steps, with neighbor list updates executing every 5 steps. During this NPT phase, position restraints must be applied utilizing define = -DPOSRES, and the system should be regulated using a Berendsen thermostat (\u03c4 = 0.1 ps) targeted to a reference temperature of 310 K, alongside a Berendsen barostat (\u03c4 = 2.0 ps) set to a reference pressure of 1.0 bar with a compressibility of 4.5e-5 bar\u207b\u00b9. Crucially, this equilibration is followed by the most important stage: the steered molecular dynamics (SMD) pulling run, which must be executed for 250,000 steps (500 ps) to properly compute the pull force. For this SMD production phase, the position restraints must be altered to define = -DPOSRES_B, and the coupling algorithms should be switched to a Nos\u00e9-Hoover thermostat (\u03c4 = 1.0 ps) and a Parrinello-Rahman barostat (\u03c4 = 2.0 ps), while ensuring that dispersion corrections are applied to both energy and pressure (DispCorr = EnerPres). The SMD setup must execute an umbrella-type pull between the designated pull groups, Chain_A and Chain_B of the 2BEG complex, with the pulling geometry strictly confined to the Z-axis (pull_coord1_dim = N N Y). Finally, this targeted separation must be driven at a constant pulling rate of 0.01 nm/ps (10 nm/ns) utilizing a harmonic force constant of 1000 kJ/mol/nm\u00b2.",
+  "level": "3",
+  "metrics": [
+    "average_temperature",
+    "average_pressure",
+    "average_density",
+    "average_pullforce"
+  ],
+  "ground_truth": {},
+  "time_limit": 3000,
+  "engine": "gromacs"
+}

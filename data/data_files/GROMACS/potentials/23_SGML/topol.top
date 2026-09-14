@@ -1,0 +1,11 @@
+; 100 SGML + 3162 SOL 
+#include "ffG43A1-S3.itp"
+#include "lipids_43A1-S3.itp"
+#include "water.itp"
+
+[ system ]
+100 SGML in water
+
+[molecules]
+SGML 100 
+SOL 3162

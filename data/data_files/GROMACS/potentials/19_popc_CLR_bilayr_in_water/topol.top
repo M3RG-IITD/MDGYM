@@ -1,0 +1,30 @@
+; we will be using heavy hydrogens in our protein
+
+#define HEAVY_H                             
+
+; You should think about what this means.  Have we used heavy hydrogens in our lipids?  How might you find out?  When would this matter?  
+
+
+; Include forcefield parameters
+#include "gromos54a7.ff/forcefield.itp".    
+#include "gromos54a7.ff/vdw_OML_CH3L.itp"   ; contains atom types used by POPC
+
+; Include lipid topology
+#include "gromos54a7.ff/popc.itp".          
+#include "gromos54a7.ff/CLR.itp"            
+
+; Include water topology
+#include "gromos54a7.ff/spc.itp"
+
+; Include topology for ions
+#include "gromos54a7.ff/ions.itp"
+
+[ system ]
+; Name
+POPC + CLR bilayer in water
+
+[ molecules ]
+; Compound        #mols
+POPC               880
+CLR                220
+SOL                38500

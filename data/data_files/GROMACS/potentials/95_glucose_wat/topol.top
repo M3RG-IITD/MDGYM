@@ -1,0 +1,12 @@
+#include "gromos54a7_atb.ff/forcefield.itp"
+
+#include "glucose.itp"
+#include "gromos54a7_atb.ff/spce.itp"
+
+[ system ]
+S5R7 in water
+
+[ molecules ]
+; Compound        #molecules
+S5R7    1
+SOL               873

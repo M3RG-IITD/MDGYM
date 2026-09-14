@@ -1,0 +1,9 @@
+#include "gromos54a7_atb.ff/forcefield.itp"
+
+#include "H2.itp"
+
+[ system ]
+Hydrogen molecule
+
+[ molecules ]
+7Y9E	101

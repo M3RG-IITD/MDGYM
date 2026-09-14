@@ -1,0 +1,15 @@
+#include "gromos54a7_atb.ff/forcefield.itp"
+
+#include "benzene.itp"
+
+; Include water topology
+#include "gromos54a7_atb.ff/spce.itp"
+
+
+[ system ]
+Benzene in water
+
+[ molecules ]
+; Compound   #mols
+Q37H      1
+SOL               879

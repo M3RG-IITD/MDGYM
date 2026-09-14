@@ -1,0 +1,12 @@
+#include "./gromos45a3.ff/forcefield.itp"
+#include "gnd.itp"
+#include "./gromos45a3.ff/spc.itp" ; SPCE
+#include "./gromos45a3.ff/ions.itp" ; ions
+
+[system]
+DPPC in SPCE
+
+[molecules]
+GND 32
+SOL 230
+CL- 32 

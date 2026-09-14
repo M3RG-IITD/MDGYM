@@ -1,0 +1,55 @@
+[ defaults ]
+; nbfunc        comb-rule       gen-pairs       fudgeLJ fudgeQQ
+  1             1               no              1.0     1.0
+
+[ atomtypes ]
+;type   mass	       charge    ptype c6            c12
+MeAN     0.00000       0.000       D   0.90571E-02   0.26212E-04 ; (*)
+ CAN     0.00000       0.000       D   0.51454E-02   0.12167E-04 ; (*)
+ NAN     0.00000       0.000       D   0.26955E-02   0.28943E-05 ; (*)
+  D1     9.49031       0.000       A   0.0           0.0
+  D2    31.56239       0.000       A   0.0           0.0
+
+[ moleculetype ]
+; name  nrexcl
+Acetonitril        2
+
+[ atoms ]
+;   nr  type    resnr   residu  atom    cgnr    charge	mass
+1       D1       1       MeCN    D1AN    1        0.000   9.49031
+2       D2       1       MeCN    D2AN    1        0.000  31.56239
+3       MeAN     1       MeCN    C3AN    1        0.206   0.00000 ; (*)
+4	CAN      1       MeCN    C4AN    1        0.247   0.00000 ; (*)
+5       NAN      1       MeCN    N5AN    1	 -0.453   0.00000 ; (*)
+
+[ constraints ]
+;  ai  aj funct           b0
+1       2	1	   0.26300
+
+[ dummies2 ]
+;  ai    aj    ak       funct   a
+    3     1     2       1       0.2652197
+    4     1     2       1      	0.8203527
+    5     1     2       1	1.2652197	
+
+
+[ exclusions ]
+3       4       5
+4	5	3
+5	4	3
+
+;(*) chrg and LJ from: E.Guardia et. al., Mol. Simul. 26, 2001, 2878;
+;A rigid two mass system with the same mom. of inertia 
+;as MeCN is used to provide a linear molecule. Me, C and
+;N are defined as dummies relativ to D1 and D2.
+;rho=743 g/l, DHvap=32.82 KJ/mol
+;Ch. Freudenberger 12/03/03
+
+[ system ]
+; Name
+MeCN 
+
+[ molecules ]
+; Compound        #mols
+;MeCN               300
+Acetonitril	300

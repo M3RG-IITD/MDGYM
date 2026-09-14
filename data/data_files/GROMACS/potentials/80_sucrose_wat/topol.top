@@ -1,0 +1,11 @@
+#include "gromos54a7_atb.ff/forcefield.itp"
+#include "sucrose.itp"
+#include "gromos54a7_atb.ff/spce.itp"
+
+[ system ]
+Sucrose in water
+
+[ molecules ]
+; Compound    #molecules
+ND5R	       1
+SOL               867

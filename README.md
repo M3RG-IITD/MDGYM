@@ -19,9 +19,9 @@ Tasks are organized by simulation engine:
 
 | Engine  | Tasks |
 |---------|-------|
-| GROMACS | 75   |
+| GROMACS | 100   |
 | LAMMPS  | 99    | 
-| **Total** | **174** |
+| **Total** | **199** |
 
 ## Leaderboard 🏆
 

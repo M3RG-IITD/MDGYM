@@ -1,0 +1,308 @@
+Include forcefield parameters
+#include "gromos54a7_atb.ff/forcefield.itp"
+
+;----------------------------TITLE -----------------------------------------------------------------------------------------
+;   Cholesterol
+;
+; This file was generated at 17:34 on 2026-01-28 by
+;
+;                  Automatic Topology Builder  
+;
+;                   REVISION 2025-01-17 09:57:26
+;---------------------------------------------------------------------------------------------------------------------------
+; Authors     : Martin Stroet, Bertrand Caron, Alpeshkumar K. Malde, Thomas Lee, Alan E. Mark
+;
+; Institute   : Molecular Dynamics group, 
+;               School of Chemistry and Molecular Biosciences (SCMB),
+;               The University of Queensland, QLD 4072, Australia
+; URL         : https://atb.uq.edu.au
+; Citations   : 1. Malde AK, Zuo L, Breeze M, Stroet M, Poger D, Nair PC, Oostenbrink C, Mark AE.
+;                  An Automated force field Topology Builder (ATB) and repository: version 1.0.
+;                  Journal of Chemical Theory and Computation, 2011, 7, 4026-4037.
+;               2. Stroet M, Caron B, Visscher K, Geerke D, Malde AK, Mark AE.
+;                  Automated Topology Builder version 3.0: Prediction of solvation free enthalpies in water and hexane.
+;                  DOI:10.1021/acs.jctc.8b00768
+;
+; Disclaimer  : 
+;      While every effort has been made to ensure the accuracy and validity of parameters provided below
+;      the assignment of parameters is being based on an automated procedure combining data provided by a
+;      given user as well as calculations performed using third party software. They are provided as a guide.
+;      The authors of the ATB cannot guarantee that the parameters are complete or that the parameters provided
+;      are appropriate for use in any specific application. Users are advised to treat these parameters with discretion
+;      and to perform additional validation tests for their specific application if required. Neither the authors
+;      of the ATB or The University of Queensland except any responsibly for how the parameters may be used.
+;
+; Release notes and warnings: 
+;  (1) The topology is based on a set of atomic coordinates and other data provided by the user after
+;      after quantum mechanical optimization of the structure using different levels of theory depending on
+;      the nature of the molecule.
+;  (2) In some cases the automatic bond, bond angle and dihedral type assignment is ambiguous.
+;      In these cases alternative type codes are provided at the end of the line.
+;  (3) While bonded parameters are taken where possible from the nominated force field non-standard bond, angle and dihedral
+;      type code may be incorporated in cases where an exact match could not be found. These are marked as "non-standard"
+;      or "uncertain" in comments.
+;  (4) In some cases it is not possible to assign an appropriate parameter automatically. "%%" is used as a place holder
+;      for those fields that could not be determined automatically. The parameters in these fields must be assigned manually
+;      before the file can be used.
+;---------------------------------------------------------------------------------------------------------------------------
+; Input Structure : CHOL
+; Output          : UNITED ATOM topology
+;	Use in conjunction with the corresponding united atom PDB file.
+;---------------------------------------------------------------------------------------------------------------------------
+; Citing this topology file
+; ATB molid: 1908250
+; ATB Topology Hash: 59f9c
+;---------------------------------------------------------------------------------------------------------------------------
+; Initial Guess Topology Generation:
+; The topology was generated from AM1 optimized geometry and MOPAC charges.
+; Bonded and van der Waals parameters were taken from the GROMOS 54A7 parameter set.
+;---------------------------------------------------------------------------------------------------------------------------
+;
+;
+[ moleculetype ]
+; Name   nrexcl
+CHOL     3
+[ atoms ]
+;  nr  type  resnr  resid  atom  cgnr  charge    mass
+    1   CH3    1    CHOL    C19    1    0.008  15.0350
+    2   CH1    1    CHOL    C17    2   -0.021  13.0190
+    3   CH3    1    CHOL    C18    3    0.009  15.0350
+    4   CH2    1    CHOL    C16    4    0.003  14.0270
+    5   CH2    1    CHOL    C15    5    0.001  14.0270
+    6   CH2    1    CHOL    C14    6    0.005  14.0270
+    7   CH1    1    CHOL    C13    7   -0.005  13.0190
+    8   CH3    1    CHOL    C20    8    0.007  15.0350
+    9   CH1    1    CHOL    C12    9   -0.006  13.0190
+   10   CH2    1    CHOL    C11   10    0.007  14.0270
+   11   CH2    1    CHOL    C10   11    0.008  14.0270
+   12   CH1    1    CHOL     C9   12   -0.019  13.0190
+   13   CH1    1    CHOL     C8   13    0.011  13.0190
+   14   CH2    1    CHOL     C7   14    0.052  14.0270
+   15     C    1    CHOL     C6   15   -0.163  12.0110
+   16    HC    1    CHOL     H9   16    0.119   1.0080
+   17     C    1    CHOL     C5   17   -0.097  12.0110
+   18   CH2    1    CHOL     C4   18    0.023  14.0270
+   19     C    1    CHOL     C1   19    0.034  12.0110
+   20    HC    1    CHOL     H2   20    0.075   1.0080
+   21  OAlc    1    CHOL    O28   21   -0.330  15.9994
+   22  HS14    1    CHOL    H74   22    0.197   1.0080
+   23   CH2    1    CHOL     C2   23    0.035  14.0270
+   24   CH2    1    CHOL     C3   24    0.019  14.0270
+   25     C    1    CHOL    C26   25   -0.004  12.0110
+   26   CH3    1    CHOL    C27   26    0.029  15.0350
+   27   CH1    1    CHOL    C25   27   -0.000  13.0190
+   28   CH2    1    CHOL    C24   28    0.007  14.0270
+   29   CH2    1    CHOL    C23   29    0.018  14.0270
+   30     C    1    CHOL    C21   30   -0.046  12.0110
+   31   CH3    1    CHOL    C22   31    0.024  15.0350
+; total charge of the molecule:  -0.000
+[ bonds ]
+;  ai   aj  funct   c0         c1
+    1    2    2   0.1520   5.4300e+06
+    2    3    2   0.1520   5.4300e+06
+    2    4    2   0.1520   5.4300e+06
+    4    5    2   0.1520   5.4300e+06
+    5    6    2   0.1520   5.4300e+06
+    6    7    2   0.1530   7.1500e+06
+    7    8    2   0.1520   5.4300e+06
+    7    9    2   0.1530   7.1500e+06
+    9   10    2   0.1540   4.2166e+06
+    9   30    2   0.1560   3.0819e+06
+   10   11    2   0.1530   7.1500e+06
+   11   12    2   0.1520   5.4300e+06
+   12   13    2   0.1520   5.4300e+06
+   12   30    2   0.1560   3.0819e+06
+   13   14    2   0.1520   5.4300e+06
+   13   27    2   0.1530   7.1500e+06
+   14   15    2   0.1480   5.7300e+06
+   15   16    2   0.1100   1.2100e+07
+   15   17    2   0.1340   1.0500e+07
+   17   18    2   0.1490   1.4189e+07
+   17   25    2   0.1510   3.7279e+06
+   18   19    2   0.1530   7.1500e+06
+   19   20    2   0.1130   7.0483e+06
+   19   21    2   0.1430   8.1800e+06
+   19   23    2   0.1520   5.4300e+06
+   21   22    2   0.0971   7.9547e+06
+   23   24    2   0.1520   5.4300e+06
+   24   25    2   0.1530   7.1500e+06
+   25   26    2   0.1530   7.1500e+06
+   25   27    2   0.1540   4.2166e+06
+   27   28    2   0.1520   5.4300e+06
+   28   29    2   0.1520   5.4300e+06
+   29   30    2   0.1520   5.4300e+06
+   30   31    2   0.1520   5.4300e+06
+[ pairs ]
+;  ai   aj  funct  ;  all 1-4 pairs but the ones excluded in GROMOS itp
+    1    5    1
+    2    6    1
+    3    5    1
+    4    7    1
+    5    8    1
+    5    9    1
+    6   10    1
+    6   30    1
+    7   11    1
+    7   12    1
+    7   29    1
+    7   31    1
+    8   10    1
+    8   30    1
+    9   13    1
+    9   28    1
+   10   13    1
+   10   29    1
+   10   31    1
+   11   14    1
+   11   27    1
+   11   29    1
+   11   31    1
+   12   15    1
+   12   25    1
+   12   28    1
+   13   16    1
+   13   17    1
+   13   24    1
+   13   26    1
+   13   29    1
+   13   31    1
+   14   18    1
+   14   25    1
+   14   28    1
+   14   30    1
+   15   19    1
+   15   24    1
+   15   26    1
+   15   27    1
+   16   18    1
+   16   25    1
+   17   20    1
+   17   21    1
+   17   23    1
+   17   28    1
+   18   22    1
+   18   24    1
+   18   26    1
+   18   27    1
+   19   25    1
+   20   22    1
+   20   24    1
+   21   24    1
+   22   23    1
+   23   26    1
+   23   27    1
+   24   28    1
+   25   29    1
+   26   28    1
+   27   30    1
+   28   31    1
+[ angles ]
+;  ai   aj   ak  funct   angle     fc
+    1    2    3    2    109.50   520.00
+    1    2    4    2    109.50   520.00
+    3    2    4    2    111.00   530.00
+    2    4    5    2    111.00   530.00
+    4    5    6    2    111.00   530.00
+    5    6    7    2    111.00   530.00
+    6    7    8    2    109.50   520.00
+    6    7    9    2    111.00   530.00
+    8    7    9    2    111.00   530.00
+    7    9   10    2    111.00   530.00
+    7    9   30    2    120.00   560.00
+   10    9   30    2    103.00   420.00
+    9   10   11    2    109.50   520.00
+   10   11   12    2    104.00   490.00
+   11   12   13    2    120.00   560.00
+   11   12   30    2    104.00   490.00
+   13   12   30    2    111.00   530.00
+   12   13   14    2    109.50   520.00
+   12   13   27    2    109.50   520.00
+   14   13   27    2    109.50   520.00
+   13   14   15    2    111.00   530.00
+   14   15   16    2    115.00    50.00
+   14   15   17    2    126.00   640.00
+   16   15   17    2    120.00   505.00
+   15   17   18    2    120.00   560.00
+   15   17   25    2    126.00   640.00
+   18   17   25    2    120.00   560.00
+   17   18   19    2    111.00   530.00
+   18   19   20    2    109.60   450.00
+   18   19   21    2    111.00   530.00
+   18   19   23    2    111.00   530.00
+   20   19   21    2    109.00  1680.51
+   20   19   23    2    110.00   285.00
+   21   19   23    2    109.50   520.00
+   19   21   22    2    109.50   450.00
+   19   23   24    2    109.50   520.00
+   23   24   25    2    111.00   530.00
+   17   25   24    2    109.50   520.00
+   17   25   26    2    109.50   520.00
+   17   25   27    2    111.00   530.00
+   24   25   26    2    109.50   520.00
+   24   25   27    2    109.50   520.00
+   26   25   27    2    111.00   530.00
+   13   27   25    2    111.00   530.00
+   13   27   28    2    111.00   530.00
+   25   27   28    2    111.00   530.00
+   27   28   29    2    111.00   530.00
+   28   29   30    2    111.00   530.00
+    9   30   12    2    100.00   475.00
+    9   30   29    2    120.00   560.00
+    9   30   31    2    109.50   520.00
+   12   30   29    2    109.50   520.00
+   12   30   31    2    111.00   530.00
+   29   30   31    2    109.50   520.00
+[ dihedrals ]
+; GROMOS improper dihedrals
+;  ai   aj   ak   al  funct   angle     fc
+   17   15   18   25    2      0.00   167.36
+   15   14   16   17    2      0.00   167.36
+   19   18   23   21    2     35.26   334.72
+   13   12   14   27    2     35.26   334.72
+   12   13   11   30    2     35.26   334.72
+    9   30   10    7    2     35.26   334.72
+   27   13   28   25    2     35.26   334.72
+    7    9    8    6    2     35.26   334.72
+    2    3    4    1    2     35.26   334.72
+[ dihedrals ]
+;  ai   aj   ak   al  funct    ph0      cp     mult
+    2    4    5    6    1      0.00     5.92    3
+    3    2    4    5    1      0.00     5.92    3
+    4    5    6    7    1      0.00     5.92    3
+    5    6    7    9    1    180.00     1.00    3
+    8    7    9   10    1      0.00     5.92    3
+    9   10   11   12    1    180.00     1.00    3
+   10    9   30   12    1      0.00     5.92    3
+   10   11   12   13    1      0.00     5.92    3
+   11   12   13   14    1      0.00     5.92    3
+   12   13   14   15    1      0.00     5.92    3
+   13   12   30    9    1      0.00     5.92    3
+   13   14   15   17    1      0.00     1.00    6
+   13   27   28   29    1      0.00     5.92    3
+   14   13   27   28    1      0.00     5.92    3
+   14   15   17   18    1    180.00    41.80    2
+   15   17   18   19    1    180.00     1.00    6
+   17   18   19   23    1      0.00     5.92    3
+   18   17   25   24    1    180.00     1.00    6
+   18   19   23   24    1      0.00     5.92    3
+   19   23   24   25    1      0.00     5.92    3
+   23   19   21   22    1      0.00     1.26    3
+   23   24   25   17    1      0.00     5.92    3
+   24   25   27   13    1      0.00     5.92    3
+   27   28   29   30    1      0.00     5.92    3
+   28   29   30   12    1      0.00     5.92    3
+   30    9   10   11    1    180.00     1.00    3
+[ exclusions ]
+;  ai   aj  funct  ;  GROMOS 1-4 exclusions
+
+; Include water topology
+#include "./gromos54a7_atb.ff/spc.itp"
+
+[ system ]
+; Name
+Cholestrol system in water
+
+[ molecules ]
+; Compound        #mols
+CHOL		  134
+SOL              1969

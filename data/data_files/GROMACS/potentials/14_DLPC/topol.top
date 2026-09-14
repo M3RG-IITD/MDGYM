@@ -1,0 +1,11 @@
+#include "ffG43A1-S3.itp"
+#include "lipids_43A1-S3.itp"
+#include "water.itp"
+
+[system]
+DLPC in SPC/E
+
+[molecules]
+DLPC 100
+SOL 3205
+

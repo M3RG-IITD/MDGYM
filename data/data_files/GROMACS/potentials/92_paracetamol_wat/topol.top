@@ -1,0 +1,12 @@
+#include "gromos54a7_atb.ff/forcefield.itp"
+
+#include "paracetamol.itp"
+#include "gromos54a7_atb.ff/spce.itp"
+
+[ system ]
+VMLF in water
+
+[ molecules ]
+; Compound        #molecules
+VMLF    1
+SOL               874

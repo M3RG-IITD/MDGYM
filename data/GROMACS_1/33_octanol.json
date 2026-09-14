@@ -1,0 +1,13 @@
+{
+  "id": "33_octanol",
+  "problem_description": "Compute the average temperature in K, pressure in bar, and density in kg/m^3 of octanol liquid system. The system consisted of 512 octanol molecules in a cubic simulation box of dimensions 5.13 \u00d7 5.13 \u00d7 5.13 nm\u00b3 and was modeled using the oplsaa.ff force field. Energy minimization was performed using the steepest descent algorithm for 10000 steps with a step size of 0.002 nm. Molecular dynamics equilibration was performed in the NPT ensemble using the md integrator with a time step of 0.002 ps for 2000000 steps with neighbor list updates every 5 steps. Long-range electrostatic interactions were calculated using the Particle Mesh Ewald (PME) method with a real-space cutoff of 1.2 nm, while van der Waals interactions used a cut-off scheme with a cutoff distance of 1.2 nm. All bonds should be constraints using the LINCS algorithm. Temperature coupling was applied with a coupling constant of 0.1 ps and a reference temperature of 298 K. Pressure coupling was applied with a coupling constant of 2.0 ps and a reference pressure of 1.0 bar. Production simulations were performed using the md integrator with a time step of 0.002 ps for 50000 steps using the same thermostat and barostat parameters.",
+  "level": "1",
+  "metrics": [
+    "average_temperature",
+    "average_pressure",
+    "average_density"
+  ],
+  "ground_truth": {},
+  "time_limit": 800,
+  "engine": "gromacs"
+}

@@ -1,0 +1,12 @@
+#include "gromos54a7_atb.ff/forcefield.itp"
+
+#include "cytosine.itp"
+#include "gromos54a7_atb.ff/spce.itp"
+
+[ system ]
+F213 in water
+
+[ molecules ]
+; Compound        #molecules
+F213    1
+SOL               876

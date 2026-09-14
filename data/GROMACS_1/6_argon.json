@@ -1,0 +1,12 @@
+{
+  "id": "6_argon",
+  "problem_description": "Compute the average density in kg/m^3 and the coordination number for the liquid argon system. The system consisted of 108 argon atoms with a mass of 39.948 amu, in a cubic box of size 3 nm. The intermolecular interactions were described using the 12\u20136 Lennard\u2013Jones potential with parameters \ud835\udf0e = 0.341 nm and \ud835\udf00 = 2.7458 \u00d7 10\u22122 kJ mol\u22121. Lorentz\u2013Berthelot mixing rules were employed for non-bonded interactions. The energy minimization should be performed using steepest-descent algorithm with a total steps of 50000 with emstep of 0.01 nm. The equlibration run for 5,00,000 steps with 1 fs timesteps and it should use the leap-frog integrator. The temperature was maintained at 87.21 K using the velocity-rescale (v-rescale) thermostat with coupling constant of 1 ps and pressure was controlled at 1 bar using Berendsen barostat with coupling constant of 2 ps. This simulation should not involve with production run, all the analysis should be performed only on equilibration outputs. The rdf should be computed using the gromacs tool gmx rdf.",
+  "level": "1",
+  "metrics": [
+    "average_density",
+    "coordination_number"
+  ],
+  "ground_truth": {},
+  "time_limit": 200,
+  "engine": "gromacs"
+}

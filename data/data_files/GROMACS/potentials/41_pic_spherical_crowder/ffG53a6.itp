@@ -1,0 +1,12 @@
+; This is the main Gromacs topology file.
+; NOTE: for use with the Gromacs program, the extension of this file should be changed to from .txt to .itp
+
+#define _FF_GROMOS96
+#define _FF_GROMOS42A2
+
+[ defaults ]
+; nbfunc	comb-rule	gen-pairs	fudgeLJ	fudgeQQ
+  1    		    1		   no		  1.0  	1.0
+
+#include "./ffG53a6nb.itp"
+#include "./ffG53a6bon.itp"

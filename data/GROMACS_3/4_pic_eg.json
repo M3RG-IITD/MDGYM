@@ -1,0 +1,11 @@
+{
+  "id": "4_pic_eg",
+  "problem_description": "Compute the average interaction energy of single PIC dye (1,1'-Diethyl-2,2'-cyanine iodide) in kJ/mol with single ethylene glycol molecules which has been solvated in SPC/E water molecules of the cubix box of 10 nm. The force-field parameters of PIC dye is using GROMOS53a6 and for ethylene glycol GROMOS54a7 force-field parameters are used. We have packed 1100 EG molecules in the simulation box. Energy minimization was performed using the steepest descent algorithm, where electrostatic interactions were treated using the Particle Mesh Ewald (PME) method with a Coulomb cutoff (rcoulomb) of 1.4 nm, and van der Waals interactions were computed using a cutoff of 1.4 nm and the EM should follow the convergence criteria emtol = 100. A timestep of 2 fs was used for all the simulations. The equilibration should be performed for 200 ps in NPT ensemble where pressure was maintained at 1 atm using the Berendsen barostat and the temperature was maintained at 298 K using the Berendsen thermostat with coupling constants of 0.5 ps and 0.1 ps respectively. Dispersion interactions were modeled using the Lennard-Jones potential with a cut-off distance of 1.4 nm. Electrostatic interactions were computed with a cutoff of 1.4 nm and beyond the cutoff, the energy was computed using the reaction-field method with the reaction field relative permittivity of 54. All-bonds were constrained using the LINCS algorithm.  Finally, the production run was performed for 20 ps in NPT ensemble under the same conditions as the equilibration phase, it uses only the constrained on h-bonds using LINCS. The average interaction energy should be calculated from the production run.",
+  "level": "3",
+  "metrics": [
+    "average_interaction_energy"
+  ],
+  "ground_truth": {},
+  "time_limit": 1000,
+  "engine": "gromacs"
+}

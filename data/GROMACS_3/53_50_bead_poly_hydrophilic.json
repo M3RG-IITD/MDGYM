@@ -1,0 +1,14 @@
+{
+  "id": "53_50_bead_poly_hydrophilic",
+  "problem_description": "Compute the average temperature in K, pressure in bar, radius of gyration in nm, and end-to-end distance in nm for a 50-bead hydrophilic polymer in water (SPC/E potential) having 11188 water molecules. The polymer should have  50 beads, each representing a hydrophilic monomer. Each bead must have a hydrophilic interaction with water (sigma = 0.3582785, epsilon = 1.5) or nonbonded_params. The interaction parameters for the polymer beads should be set to sigma = 0.4 nm and epsilon = 1.0 kJ/mol. The bond length between adjacent beads should be 0.1530 nm and the force constant for the bonds should be 330000.0 kJ/mol/nm^2. The angle between three consecutive beads should be 111 degrees with a force constant of 100.0 kJ/mol/rad^2. The polymer should be simulated in a cubic box of size 7.0 nm with periodic boundary conditions. Energy minimization should be performed for 50000 steps, followed by a 20 ps equilibration in NPT ensemble at 300 K and 1 bar using V-rescale thermostat and Berendsen barostat. Finally, a 200 ps production run should be performed in NPT ensemble with Nose-Hoover thermostat and Parrinello-Rahman barostat and 2 fs as the time steps. The coulombic interactions should be calculated using the Particle Mesh Ewald (PME) method with a cutoff of 1.0 nm, and the van der Waals cutoff of 1.0 nm. The thermostat coupling constant (tau_t) changes from 0.5 ps during NPT equilibration with the V-rescale thermostat to 1.0 ps during the production run with the Nose\u2013Hoover thermostat. It also use the DispCorr = EnerPres in both equilibration and production stages, which accounts for long-range dispersion corrections to energy and pressure.",
+  "level": "3",
+  "metrics": [
+    "average_temperature",
+    "average_pressure",
+    "average_radius_of_gyration",
+    "average_end_to_end_distance"
+  ],
+  "ground_truth": {},
+  "time_limit": 924,
+  "engine": "gromacs"
+}

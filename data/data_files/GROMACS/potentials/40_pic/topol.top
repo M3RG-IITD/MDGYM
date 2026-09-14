@@ -1,0 +1,15 @@
+#include "./ffG53a6.itp"
+#include "./amphiPIC.itp"
+#include "./ions.itp"
+#include "./water.itp"
+
+[ system ]
+; Name
+dye in water
+
+[ molecules ]
+; compound     mols
+
+APIC               1
+SOL         4037
+CL               1

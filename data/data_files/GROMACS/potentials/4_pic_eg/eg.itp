@@ -1,0 +1,44 @@
+;Include forcefield parameters
+;#include "gromos54a7_atb.ff/forcefield.itp"
+
+[ moleculetype ]
+; Name   nrexcl
+HECX     3
+[ atoms ]
+;  nr  type  resnr  resid  atom  cgnr  charge    mass
+    1     H    1    HECX     H6    1    0.440   1.0080
+    2  OAlc    1    HECX     O2    2   -0.707  15.9994
+    3   CH2    1    HECX     C2    3    0.267  14.0270
+    4   CH2    1    HECX     C1    4    0.267  14.0270
+    5  OAlc    1    HECX     O1    5   -0.707  15.9994
+    6     H    1    HECX     H1    6    0.440   1.0080
+; total charge of the molecule:   0.000
+[ bonds ]
+;  ai   aj  funct   c0         c1
+    1    2    2   0.0971   7.9547e+06
+    2    3    2   0.1430   8.1800e+06
+    3    4    2   0.1520   5.4300e+06
+    4    5    2   0.1430   8.1800e+06
+    5    6    2   0.0971   7.9547e+06
+[ pairs ]
+;  ai   aj  funct  ;  all 1-4 pairs but the ones excluded in GROMOS itp
+    1    4    1
+    2    5    1
+    3    6    1
+[ angles ]
+;  ai   aj   ak  funct   angle     fc
+    1    2    3    2    109.50   450.00
+    2    3    4    2    109.50   520.00
+    3    4    5    2    109.50   520.00
+    4    5    6    2    109.50   450.00
+[ dihedrals ]
+; GROMOS improper dihedrals
+;  ai   aj   ak   al  funct   angle     fc
+[ dihedrals ]
+;  ai   aj   ak   al  funct    ph0      cp     mult
+    1    2    3    4    1      0.00     1.26    3
+    2    3    4    5    1      0.00     5.92    3
+    3    4    5    6    1      0.00     1.26    3
+[ exclusions ]
+;  ai   aj  funct  ;  GROMOS 1-4 exclusions
+
