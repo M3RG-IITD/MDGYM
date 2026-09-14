@@ -367,34 +367,6 @@ def main():
 
         csv_file.close()
 
-        # Compute aggregate scores
-        total_score = sum(s for _, _, s, _ in results_summary)
-        avg_score = total_score / len(results_summary) if results_summary else 0.0
-        passed = sum(1 for _, ok, _, _ in results_summary if ok)
-
-        # Build summary lines (shared between console and log)
-        summary_lines = [
-            "",
-            "=" * 60,
-            f"Session Summary  [{session_id}]",
-            "=" * 60,
-        ]
-        for name, ok, score, msg in results_summary:
-            status = "PASS" if ok else "FAIL"
-            summary_lines.append(f"  [{status}]  score={score:.3f}  {name}  —  {msg}")
-        summary_lines += [
-            "",
-            f"  Problems : {len(results_summary)}  |  Passed: {passed}  |  Failed: {len(results_summary) - passed}",
-            f"  Total score  : {total_score:.3f}",
-            f"  Average score: {avg_score:.3f}",
-            f"  Results under: {session_dir}",
-            "=" * 60,
-        ]
-
-        summary_text = "\n".join(summary_lines)
-        print(summary_text)
-        logger.info(summary_text)
-
         print(f"  CSV saved  : {csv_path}")
         logger.info(f"Session CSV saved to: {csv_path}")
 
